@@ -17,9 +17,24 @@ public abstract class BaseElement {
     protected final String name;
     protected final String locator;
 
+    /**
+     * Constructor with explicit name for the element
+     * @param locator CSS or XPath selector
+     * @param name Descriptive name for logging and debugging
+     */
     public BaseElement(String locator, String name) {
         this.element = $(locator);
         this.name = name;
+        this.locator = locator;
+    }
+    
+    /**
+     * Constructor using locator as the name
+     * @param locator CSS or XPath selector
+     */
+    public BaseElement(String locator) {
+        this.element = $(locator);
+        this.name = locator; // Use locator as the name
         this.locator = locator;
     }
 
@@ -290,6 +305,11 @@ public abstract class BaseElement {
 
     @Override
     public String toString() {
-        return String.format("Element '%s' [%s]", name, locator);
+        // If name is the same as locator (when using the single-param constructor), 
+        // just show the element type and locator to avoid redundancy
+        if (name.equals(locator)) {
+            return String.format("%s [%s]", getClass().getSimpleName(), locator);
+        }
+        return String.format("%s '%s' [%s]", getClass().getSimpleName(), name, locator);
     }
 }

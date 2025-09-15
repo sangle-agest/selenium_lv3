@@ -26,6 +26,6 @@ public class AgodaBaseTest {
     @BeforeMethod
     public void setUpTest() {
         // Set base URL for Agoda
-        Configuration.baseUrl = "https://www.agoda.com";
+        Configuration.baseUrl = ConfigManager.getAgodaUrl();
     }
 }

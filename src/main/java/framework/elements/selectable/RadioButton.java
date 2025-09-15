@@ -1,6 +1,7 @@
 package framework.elements.selectable;
 
 import framework.elements.core.BaseElement;
+import framework.utils.LogUtils;
 
 /**
  * Radio button element wrapper
@@ -14,8 +15,17 @@ public class RadioButton extends BaseElement {
      * Select the radio button
      */
     public void select() {
-        if (!isSelected()) {
-            click();
+        LogUtils.logAction(toString(), "Selecting radio button");
+        try {
+            if (!isSelected()) {
+                click();
+                LogUtils.logSuccess(toString(), "Radio button selected successfully");
+            } else {
+                LogUtils.logSuccess(toString(), "Radio button already selected");
+            }
+        } catch (Exception e) {
+            LogUtils.logError(toString(), "Failed to select radio button", e);
+            throw e;
         }
     }
 
@@ -23,11 +33,24 @@ public class RadioButton extends BaseElement {
      * Check if the radio button is selected
      */
     public boolean isSelected() {
-        return element.isSelected();
+        LogUtils.logAction(toString(), "Checking if radio button is selected");
+        try {
+            boolean selected = element.isSelected();
+            LogUtils.logSuccess(toString(), "Radio button is " + (selected ? "selected" : "not selected"));
+            return selected;
+        } catch (Exception e) {
+            LogUtils.logError(toString(), "Failed to check if radio button is selected", e);
+            throw e;
+        }
     }
 
     @Override
     public String toString() {
-        return String.format("Radio button '%s' [%s]", getName(), isSelected() ? "selected" : "not selected");
+        try {
+            return String.format("Radio button '%s' [%s] {%s}", 
+                getName(), getLocator(), isSelected() ? "selected" : "not selected");
+        } catch (Exception e) {
+            return String.format("Radio button '%s' [%s]", getName(), getLocator());
+        }
     }
 }

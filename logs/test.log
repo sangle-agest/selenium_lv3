@@ -1,0 +1,283 @@
+16:20:14.659 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+16:20:14.661 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+16:20:14.661 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+16:20:14.661 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+16:20:14.662 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+16:20:14.670 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+16:20:14.670 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+16:20:14.670 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+16:20:14.671 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+16:20:14.671 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:20:14.671 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:20:14.671 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:20:14.672 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:20:14.672 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+16:20:14.672 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+16:20:14.672 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+16:20:14.673 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+16:20:14.673 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+16:20:14.674 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+16:20:14.674 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+16:20:14.674 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+16:20:14.674 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting remote grid URL
+16:20:14.675 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: remoteGridUrl
+16:20:14.675 [TestNG-test-Surefire test-1] WARN  ElementActions - ⚠️ ConfigManager - Warning: Property not found: remoteGridUrl
+16:20:14.675 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Using default value for remoteGridUrl: 
+16:20:14.675 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Remote grid URL not configured
+16:20:14.685 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting Agoda URL
+16:20:14.687 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: agoda.url
+16:20:14.687 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property agoda.url = https://www.agoda.com/
+16:20:14.688 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Agoda URL: https://www.agoda.com/
+16:20:14.746 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting up test
+16:20:14.780 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 21 - let's create a new webdriver
+16:20:16.055 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.80 linux
+16:20:21.687 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHotelSearchTest - Result: Test setup completed successfully
+16:20:21.713 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Starting TC 01: Search and Sort Hotel Successfully
+16:20:21.713 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Searching for destination: Bangkok
+16:20:21.714 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Searching for destination: Bangkok
+16:20:21.795 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Clearing and typing text: Bangkok
+16:20:21.821 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Waiting to be visible
+16:20:21.833 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:20:21.835 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:20:21.835 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:20:21.835 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:20:21.913 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Result: Element became visible
+16:20:22.534 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: 'Bangkok'} - Result: Text cleared and typed successfully
+16:20:23.726 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHomePage - Result: Selected destination: Bangkok
+16:20:23.726 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting dates: Check-in 7 days from now, stay for 3 nights
+16:20:23.728 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Setting dates with check-in offset: 7, check-out offset: 10
+16:20:23.729 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Clicking
+16:20:23.729 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Waiting to be clickable
+16:20:23.729 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:20:23.729 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:20:23.729 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:20:23.729 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:20:23.830 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Element became clickable
+16:20:23.940 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Clicked successfully
+16:20:24.963 [TestNG-test-Surefire test-1] WARN  ElementActions - ⚠️ AgodaHomePage - Warning: No available days found using common selectors, trying generic approach
+16:20:25.496 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHomePage - Result: Dates set successfully
+16:20:25.497 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting occupancy: 2 adults, 1 child
+16:20:25.498 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Setting occupancy: 2 adults, 1 children
+16:20:25.499 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Clicking
+16:20:25.500 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Waiting to be clickable
+16:20:25.500 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:20:25.501 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:20:25.503 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:20:25.503 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:20:25.529 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Element became clickable
+16:20:25.645 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Clicked successfully
+16:20:36.777 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757928036709.0.html]]
+16:20:37.128 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757928036709.0.png]]
+16:20:37.164 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - Thread 21 is dead. Let's close its webdriver ChromeDriver: chrome on linux (b1e0e52b68fb7613f173a7d44f47d535).
+16:23:26.310 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+16:23:26.314 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+16:23:26.314 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+16:23:26.314 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+16:23:26.315 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+16:23:26.325 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+16:23:26.326 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+16:23:26.326 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+16:23:26.327 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+16:23:26.327 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:23:26.327 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:23:26.327 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:23:26.328 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:23:26.328 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+16:23:26.328 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+16:23:26.328 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+16:23:26.329 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+16:23:26.329 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+16:23:26.329 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+16:23:26.329 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+16:23:26.330 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+16:23:26.330 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting remote grid URL
+16:23:26.330 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: remoteGridUrl
+16:23:26.330 [TestNG-test-Surefire test-1] WARN  ElementActions - ⚠️ ConfigManager - Warning: Property not found: remoteGridUrl
+16:23:26.331 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Using default value for remoteGridUrl: 
+16:23:26.331 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Remote grid URL not configured
+16:23:26.348 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting Agoda URL
+16:23:26.348 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: agoda.url
+16:23:26.348 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property agoda.url = https://www.agoda.com/
+16:23:26.348 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Agoda URL: https://www.agoda.com/
+16:23:26.404 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting up test
+16:23:26.433 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 21 - let's create a new webdriver
+16:23:27.617 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.80 linux
+16:23:34.098 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHotelSearchTest - Result: Test setup completed successfully
+16:23:34.164 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Starting TC 01: Search and Sort Hotel Successfully
+16:23:34.164 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Searching for destination: Bangkok
+16:23:34.165 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Searching for destination: Bangkok
+16:23:34.239 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Clearing and typing text: Bangkok
+16:23:34.266 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Waiting to be visible
+16:23:34.278 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:23:34.279 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:23:34.279 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:23:34.279 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:23:34.334 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Result: Element became visible
+16:23:34.699 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: 'Bangkok'} - Result: Text cleared and typed successfully
+16:23:35.880 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHomePage - Result: Selected destination: Bangkok
+16:23:35.881 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting dates: Check-in 7 days from now, stay for 3 nights
+16:23:35.883 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Setting dates with check-in offset: 7, check-out offset: 10
+16:23:35.883 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Clicking
+16:23:35.883 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Waiting to be clickable
+16:23:35.883 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:23:35.883 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:23:35.884 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:23:35.884 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:23:35.997 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Element became clickable
+16:23:36.099 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Clicked successfully
+16:23:37.126 [TestNG-test-Surefire test-1] WARN  ElementActions - ⚠️ AgodaHomePage - Warning: No available days found using common selectors, trying generic approach
+16:23:37.655 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHomePage - Result: Dates set successfully
+16:23:37.656 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting occupancy: 2 adults, 1 child
+16:23:37.657 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Setting occupancy: 2 adults, 1 children
+16:23:37.658 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Clicking
+16:23:37.659 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Waiting to be clickable
+16:23:37.660 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:23:37.661 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:23:37.662 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:23:37.662 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:23:37.700 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Element became clickable
+16:23:37.779 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Clicked successfully
+16:23:49.013 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757928228926.0.html]]
+16:23:49.393 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757928228926.0.png]]
+16:23:49.431 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - Thread 21 is dead. Let's close its webdriver ChromeDriver: chrome on linux (4a02e57fea0183d1b13388637ab583f6).
+16:34:17.855 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+16:34:17.861 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+16:34:17.861 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+16:34:17.862 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+16:34:17.862 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+16:34:17.867 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+16:34:17.868 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+16:34:17.868 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+16:34:17.868 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+16:34:17.868 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:34:17.868 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:34:17.868 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:34:17.869 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:34:17.869 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+16:34:17.869 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+16:34:17.869 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+16:34:17.869 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+16:34:17.870 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+16:34:17.870 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+16:34:17.870 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+16:34:17.870 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+16:34:17.870 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting remote grid URL
+16:34:17.870 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: remoteGridUrl
+16:34:17.871 [TestNG-test-Surefire test-1] WARN  ElementActions - ⚠️ ConfigManager - Warning: Property not found: remoteGridUrl
+16:34:17.871 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Using default value for remoteGridUrl: 
+16:34:17.871 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Remote grid URL not configured
+16:34:17.883 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting Agoda URL
+16:34:17.883 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: agoda.url
+16:34:17.884 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property agoda.url = https://www.agoda.com/
+16:34:17.884 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Agoda URL: https://www.agoda.com/
+16:34:17.933 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting up test
+16:34:17.970 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 21 - let's create a new webdriver
+16:34:19.087 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.80 linux
+16:34:25.510 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHotelSearchTest - Result: Test setup completed successfully
+16:34:25.538 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Starting TC 01: Search and Sort Hotel Successfully
+16:34:25.539 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Searching for destination: Bangkok
+16:34:25.539 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Searching for destination: Bangkok
+16:34:25.599 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Clearing and typing text: Bangkok
+16:34:25.616 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Waiting to be visible
+16:34:25.626 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:34:25.626 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:34:25.626 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:34:25.626 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:34:25.700 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Result: Element became visible
+16:34:25.968 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: 'Bangkok'} - Result: Text cleared and typed successfully
+16:34:27.125 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHomePage - Result: Selected destination: Bangkok
+16:34:27.125 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting dates: Check-in 7 days from now, stay for 3 nights
+16:34:27.127 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Setting dates with check-in offset: 7, check-out offset: 10
+16:34:27.128 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Clicking
+16:34:27.128 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Waiting to be clickable
+16:34:27.128 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:34:27.128 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:34:27.128 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:34:27.128 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:34:27.219 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Element became clickable
+16:34:27.295 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Clicked successfully
+16:34:28.342 [TestNG-test-Surefire test-1] WARN  ElementActions - ⚠️ AgodaHomePage - Warning: No available days found using common selectors, trying generic approach
+16:34:28.862 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHomePage - Result: Dates set successfully
+16:34:28.862 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting occupancy: 2 adults, 1 child
+16:34:28.863 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Setting occupancy: 2 adults, 1 children
+16:34:28.863 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Clicking
+16:34:28.863 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Waiting to be clickable
+16:34:28.864 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:34:28.864 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:34:28.864 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:34:28.865 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:34:28.879 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Element became clickable
+16:34:28.939 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Clicked successfully
+16:34:31.968 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHomePage - Result: Occupancy set successfully using JavaScript
+16:34:39.249 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+16:34:39.252 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+16:34:39.253 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+16:34:39.253 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+16:34:39.253 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+16:34:39.258 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+16:34:39.259 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+16:34:39.259 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+16:34:39.259 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+16:34:39.260 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:34:39.260 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:34:39.260 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:34:39.261 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:34:39.261 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+16:34:39.261 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+16:34:39.262 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+16:34:39.262 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+16:34:39.262 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+16:34:39.262 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+16:34:39.263 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+16:34:39.263 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+16:34:39.263 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting remote grid URL
+16:34:39.263 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: remoteGridUrl
+16:34:39.263 [TestNG-test-Surefire test-1] WARN  ElementActions - ⚠️ ConfigManager - Warning: Property not found: remoteGridUrl
+16:34:39.264 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Using default value for remoteGridUrl: 
+16:34:39.264 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Remote grid URL not configured
+16:34:39.279 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting Agoda URL
+16:34:39.279 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: agoda.url
+16:34:39.280 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property agoda.url = https://www.agoda.com/
+16:34:39.280 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Agoda URL: https://www.agoda.com/
+16:34:39.325 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting up test
+16:34:39.360 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 21 - let's create a new webdriver
+16:34:40.321 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.80 linux
+16:34:44.384 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHotelSearchTest - Result: Test setup completed successfully
+16:34:44.410 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Starting TC 01: Search and Sort Hotel Successfully
+16:34:44.412 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Searching for destination: Bangkok
+16:34:44.413 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Searching for destination: Bangkok
+16:34:45.479 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Clearing and typing text: Bangkok
+16:34:45.490 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Waiting to be visible
+16:34:45.496 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:34:45.496 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:34:45.496 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:34:45.497 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:34:45.525 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Result: Element became visible
+16:34:45.947 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: 'Bangkok'} - Result: Text cleared and typed successfully
+16:34:47.096 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHomePage - Result: Selected destination: Bangkok
+16:34:47.097 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting dates: Check-in 7 days from now, stay for 3 nights
+16:34:47.099 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Setting dates with check-in offset: 7, check-out offset: 10
+16:34:47.100 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Clicking
+16:34:47.100 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Waiting to be clickable
+16:34:47.101 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:34:47.101 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:34:47.101 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:34:47.101 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:34:47.177 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Element became clickable
+16:34:47.267 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Clicked successfully
+16:34:48.343 [TestNG-test-Surefire test-1] WARN  ElementActions - ⚠️ AgodaHomePage - Warning: No available days found using common selectors, trying generic approach
+16:34:48.864 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHomePage - Result: Dates set successfully
+16:34:48.864 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting occupancy: 2 adults, 1 child
+16:34:48.865 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 AgodaHomePage - Setting occupancy: 2 adults, 1 children
+16:34:48.865 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Clicking
+16:34:48.865 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Waiting to be clickable
+16:34:48.866 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+16:34:48.866 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+16:34:48.866 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+16:34:48.866 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+16:34:48.881 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Element became clickable
+16:34:48.948 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Clicked successfully
+16:34:51.977 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ AgodaHomePage - Result: Occupancy set successfully using JavaScript
+16:35:02.158 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757928902043.0.html]]
+16:35:02.429 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757928902043.0.png]]
+16:35:02.483 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - Thread 21 is dead. Let's close its webdriver ChromeDriver: chrome on linux (dd54f65f2c44dff16d3c7b710531bddf).

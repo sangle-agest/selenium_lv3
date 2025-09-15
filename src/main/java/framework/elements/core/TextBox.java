@@ -119,9 +119,13 @@ public class TextBox extends BaseElement {
 
     @Override
     public String toString() {
-        String value = getValue();
-        return String.format("TextBox '%s' [%s] {value: '%s'}", getName(), getLocator(), 
-            value.length() > 20 ? value.substring(0, 17) + "..." : value);
+        try {
+            String value = element.getValue();
+            return String.format("TextBox '%s' [%s] {value: '%s'}", getName(), getLocator(), 
+                value.length() > 20 ? value.substring(0, 17) + "..." : value);
+        } catch (Exception e) {
+            return String.format("TextBox '%s' [%s]", getName(), getLocator());
+        }
     }
 
     /**

@@ -1,27 +1,27 @@
 package framework.pages.agoda;
 
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
 import framework.base.BasePage;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
-import static com.codeborne.selenide.Condition.*;
+import framework.elements.core.*;
+import framework.utils.LogUtils;
 
 public class SearchResultsPage extends BasePage {
     // Search results
-    private final ElementsCollection hotelCards = $$("[data-selenium='hotelCard']");
-    private final SelenideElement sortDropdown = $("[data-selenium='sortDropdown']");
-    private final ElementsCollection sortOptions = $$("[data-selenium='sortOption']");
+    private final ElementCollection hotelCards = new ElementCollection("[data-selenium='hotel-item']", "Hotel Cards");
+    private final Button sortDropdown = new Button("[data-selenium='sortingDropdown']", "Sort Dropdown");
+    private final ElementCollection sortOptions = new ElementCollection("[data-selenium='sortingOption']", "Sort Options");
     
     // Filters
-    private final ElementsCollection starRatingFilters = $$("[data-selenium='starRatingFilter']");
+    private final ElementCollection starRatingFilters = new ElementCollection("[data-selenium='star-rating-filter']", "Star Rating Filters");
     
     /**
      * Get number of hotels in search results
      * @return Number of hotel cards displayed
      */
     public int getNumberOfResults() {
-        return hotelCards.size();
+        LogUtils.logAction("SearchResultsPage", "Getting number of search results");
+        int count = hotelCards.size();
+        LogUtils.logSuccess("SearchResultsPage", "Found " + count + " hotel results");
+        return count;
     }
 
     /**
@@ -29,10 +29,28 @@ public class SearchResultsPage extends BasePage {
      * @param sortBy Sort criteria (e.g., "Price (low to high)", "Rating")
      */
     public void sortResultsBy(String sortBy) {
+        LogUtils.logAction("SearchResultsPage", "Sorting results by: " + sortBy);
         sortDropdown.click();
-        sortOptions.find(text(sortBy)).click();
+        
+        // Find and click on the sort option
+        boolean found = false;
+        for (int i = 0; i < sortOptions.size(); i++) {
+            BaseElement option = sortOptions.get(i);
+            if (option.getText().contains(sortBy)) {
+                option.click();
+                found = true;
+                break;
+            }
+        }
+        
+        if (!found) {
+            LogUtils.logWarning("SearchResultsPage", "Sort option not found: " + sortBy);
+        } else {
+            LogUtils.logSuccess("SearchResultsPage", "Results sorted by: " + sortBy);
+        }
+        
         // Wait for results to update
-        hotelCards.first().shouldBe(visible);
+        hotelCards.first().waitForVisible();
     }
 
     /**
@@ -40,9 +58,27 @@ public class SearchResultsPage extends BasePage {
      * @param stars Number of stars (1-5)
      */
     public void filterByStarRating(int stars) {
-        starRatingFilters.find(attribute("data-stars", String.valueOf(stars))).click();
+        LogUtils.logAction("SearchResultsPage", "Filtering by " + stars + " star rating");
+        
+        // Find and click on the star rating filter
+        boolean found = false;
+        for (int i = 0; i < starRatingFilters.size(); i++) {
+            BaseElement filter = starRatingFilters.get(i);
+            if (filter.getAttribute("data-value").equals(String.valueOf(stars))) {
+                filter.click();
+                found = true;
+                break;
+            }
+        }
+        
+        if (!found) {
+            LogUtils.logWarning("SearchResultsPage", stars + " star rating filter not found");
+        } else {
+            LogUtils.logSuccess("SearchResultsPage", "Applied " + stars + " star rating filter");
+        }
+        
         // Wait for results to update
-        hotelCards.first().shouldBe(visible);
+        hotelCards.first().waitForVisible();
     }
 
     /**
@@ -50,9 +86,15 @@ public class SearchResultsPage extends BasePage {
      * @param index Index of hotel in results (0-based)
      */
     public void selectHotel(int index) {
+        LogUtils.logAction("SearchResultsPage", "Selecting hotel at index: " + index);
+        
         if (index >= 0 && index < hotelCards.size()) {
-            scrollIntoView(hotelCards.get(index));
+            hotelCards.get(index).scrollIntoView();
             hotelCards.get(index).click();
+            LogUtils.logSuccess("SearchResultsPage", "Selected hotel at index: " + index);
+        } else {
+            LogUtils.logError("SearchResultsPage", "Invalid hotel index: " + index, 
+                    new IndexOutOfBoundsException("Index: " + index + ", Size: " + hotelCards.size()));
         }
     }
 
@@ -62,7 +104,11 @@ public class SearchResultsPage extends BasePage {
      * @return Hotel name
      */
     public String getHotelName(int index) {
-        return hotelCards.get(index).$("[data-selenium='hotelName']").getText();
+        LogUtils.logAction("SearchResultsPage", "Getting hotel name at index: " + index);
+        String name = new Label(hotelCards.get(index).getLocator() + " [data-selenium='hotel-name']", 
+                "Hotel Name[" + index + "]").getText();
+        LogUtils.logSuccess("SearchResultsPage", "Got hotel name: " + name);
+        return name;
     }
 
     /**
@@ -71,6 +117,10 @@ public class SearchResultsPage extends BasePage {
      * @return Hotel price as string
      */
     public String getHotelPrice(int index) {
-        return hotelCards.get(index).$("[data-selenium='hotelPrice']").getText();
+        LogUtils.logAction("SearchResultsPage", "Getting hotel price at index: " + index);
+        String price = new Label(hotelCards.get(index).getLocator() + " [data-selenium='display-price']", 
+                "Hotel Price[" + index + "]").getText();
+        LogUtils.logSuccess("SearchResultsPage", "Got hotel price: " + price);
+        return price;
     }
 }

@@ -108,24 +108,24 @@ public class AutoCompleteBox extends BaseElement {
      * Get number of suggestions
      */
     public int getSuggestionsCount() {
-        LogUtils.logAction(toString(), "Getting suggestions count");
+        // Don't log here to avoid recursion with toString()
         try {
-            int count = suggestions.size();
-            LogUtils.logSuccess(toString(), String.format("Found %d suggestions", count));
-            return count;
+            return suggestions.size();
         } catch (Exception e) {
-            LogUtils.logWarning(toString(), "Failed to get suggestions count: " + e.getMessage());
             return 0;
         }
     }
 
     @Override
     public String toString() {
-        String value = getValue();
-        return String.format("AutoComplete '%s' [%s] {value: '%s', suggestions: %d}", 
-            getName(), getLocator(),
-            value.length() > 20 ? value.substring(0, 17) + "..." : value,
-            getSuggestionsCount());
+        // Don't call getValue() here to avoid recursion
+        try {
+            int count = suggestions.size();
+            return String.format("AutoComplete '%s' [%s] {suggestions: %d}", 
+                getName(), getLocator(), count);
+        } catch (Exception e) {
+            return String.format("AutoComplete '%s' [%s]", getName(), getLocator());
+        }
     }
 
     /**

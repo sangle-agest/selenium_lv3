@@ -1,6 +1,7 @@
 package framework.elements.media;
 
 import framework.elements.core.BaseElement;
+import framework.utils.LogUtils;
 
 /**
  * Icon element wrapper
@@ -14,13 +15,26 @@ public class Icon extends BaseElement {
      * Get icon class or type
      */
     public String getIconType() {
-        String className = element.getAttribute("class");
-        // Common icon class patterns: fa-*, icon-*, material-icons, etc.
-        return className != null ? className : "";
+        LogUtils.logAction(toString(), "Getting icon type/class");
+        try {
+            String className = element.getAttribute("class");
+            // Common icon class patterns: fa-*, icon-*, material-icons, etc.
+            String iconType = className != null ? className : "";
+            LogUtils.logSuccess(toString(), "Got icon type: " + iconType);
+            return iconType;
+        } catch (Exception e) {
+            LogUtils.logError(toString(), "Failed to get icon type", e);
+            throw e;
+        }
     }
 
     @Override
     public String toString() {
-        return String.format("Icon '%s' [type: %s]", getName(), getIconType());
+        try {
+            return String.format("Icon '%s' [%s] {type: %s}", 
+                getName(), getLocator(), getIconType());
+        } catch (Exception e) {
+            return String.format("Icon '%s' [%s]", getName(), getLocator());
+        }
     }
 }

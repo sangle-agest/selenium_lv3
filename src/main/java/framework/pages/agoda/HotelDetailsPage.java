@@ -1,33 +1,29 @@
 package framework.pages.agoda;
 
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
 import framework.base.BasePage;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
-import static com.codeborne.selenide.Condition.*;
+import framework.elements.core.*;
 
 public class HotelDetailsPage extends BasePage {
     // Hotel information
-    private final SelenideElement hotelName = $("[data-selenium='hotelName']");
-    private final SelenideElement hotelAddress = $("[data-selenium='hotelAddress']");
-    private final SelenideElement hotelRating = $("[data-selenium='hotelRating']");
+    private final Label hotelName = new Label("[data-selenium='hotelName']", "Hotel Name");
+    private final Label hotelAddress = new Label("[data-selenium='hotelAddress']", "Hotel Address");
+    private final Label hotelRating = new Label("[data-selenium='hotelRating']", "Hotel Rating");
     
     // Room selection
-    private final ElementsCollection roomTypes = $$("[data-selenium='roomType']");
-    private final ElementsCollection roomPrices = $$("[data-selenium='roomPrice']");
-    private final ElementsCollection bookButtons = $$("[data-selenium='bookButton']");
+    private final ElementCollection roomTypes = new ElementCollection("[data-selenium='roomType']", "Room Types");
+    private final ElementCollection roomPrices = new ElementCollection("[data-selenium='roomPrice']", "Room Prices");
+    private final ElementCollection bookButtons = new ElementCollection("[data-selenium='bookButton']", "Book Buttons");
     
     // Amenities and facilities
-    private final ElementsCollection amenities = $$("[data-selenium='amenity']");
-    private final SelenideElement showAllAmenitiesButton = $("[data-selenium='showAllAmenities']");
+    private final ElementCollection amenities = new ElementCollection("[data-selenium='amenity']", "Amenities");
+    private final Button showAllAmenitiesButton = new Button("[data-selenium='showAllAmenities']", "Show All Amenities");
 
     /**
      * Get hotel name from details page
      * @return Hotel name
      */
     public String getHotelName() {
-        waitForElementVisible(hotelName);
+        hotelName.waitForVisible();
         return hotelName.getText();
     }
 
@@ -51,7 +47,7 @@ public class HotelDetailsPage extends BasePage {
      * Get available room types
      * @return List of room type names
      */
-    public ElementsCollection getRoomTypes() {
+    public ElementCollection getRoomTypes() {
         return roomTypes;
     }
 
@@ -69,7 +65,7 @@ public class HotelDetailsPage extends BasePage {
      * @param index Room index in the list
      */
     public void bookRoom(int index) {
-        scrollIntoView(bookButtons.get(index));
+        bookButtons.get(index).scrollIntoView();
         bookButtons.get(index).click();
     }
 
@@ -77,7 +73,7 @@ public class HotelDetailsPage extends BasePage {
      * Show all amenities
      */
     public void showAllAmenities() {
-        if (showAllAmenitiesButton.is(visible)) {
+        if (showAllAmenitiesButton.isDisplayed()) {
             showAllAmenitiesButton.click();
         }
     }
@@ -86,7 +82,7 @@ public class HotelDetailsPage extends BasePage {
      * Get list of amenities
      * @return List of amenity names
      */
-    public ElementsCollection getAmenities() {
+    public ElementCollection getAmenities() {
         return amenities;
     }
 }
