@@ -264,24 +264,44 @@ public class SearchResultsPage extends BasePage {
     /**
      * Get hotel location by index
      * @param index Index of hotel in results (0-based)
-     * @return Hotel location
+     * @return Hotel location or empty string if not found
      */
     public String getHotelLocation(int index) {
         LogUtils.logAction(this.toString(), "Getting hotel location at index: " + index);
         try {
-            // Very simple approach - just use the hotel name if it contains location info
+            // First get the hotel name, which we'll use as a fallback
             String hotelName = getHotelName(index);
-            if (hotelName.contains("Da Nang") || hotelName.contains("Danang")) {
-                LogUtils.logSuccess(this.toString(), "Found location in hotel name: " + hotelName);
-                return hotelName;
-            }
             
-            // If we made it here, just return a default
-            LogUtils.logWarning(this.toString(), "Could not find location text, returning default value");
-            return "Da Nang, Vietnam";
+            // Try to find the location element which is often displayed with the hotel
+            try {
+                ElementCollection allHotelItems = new ElementCollection("[data-selenium='hotel-item']", "All Hotel Items");
+                if (index >= allHotelItems.size()) {
+                    LogUtils.logWarning(this.toString(), "Index out of bounds: " + index + ", max: " + (allHotelItems.size() - 1));
+                    return hotelName; // Return hotel name as fallback
+                }
+                
+                // Try with JavaScript as it's more flexible
+                String js = 
+                    "const hotel = document.querySelectorAll('[data-selenium=\"hotel-item\"]')[" + index + "];" +
+                    "if (!hotel) return '';" +
+                    "const locationEl = hotel.querySelector('[data-selenium=\"hotel-address\"], [data-selenium=\"location\"], .Address__Address, .location');" +
+                    "return locationEl ? locationEl.textContent.trim() : '';";
+                
+                String location = (String) Selenide.executeJavaScript(js);
+                if (location != null && !location.isEmpty()) {
+                    LogUtils.logSuccess(this.toString(), "Found hotel location using JavaScript: " + location);
+                    return location;
+                }
+                
+                LogUtils.logWarning(this.toString(), "Could not find location element, using hotel name as fallback: " + hotelName);
+                return hotelName; // Return hotel name as fallback
+            } catch (Exception e) {
+                LogUtils.logWarning(this.toString(), "Error finding location, using hotel name as fallback: " + e.getMessage());
+                return hotelName; // Return hotel name as fallback
+            }
         } catch (Exception e) {
             LogUtils.logError(this.toString(), "Failed to get hotel location", e);
-            return "Da Nang, Vietnam"; // Default fallback
+            return ""; // Return empty string on error
         }
     }
 }
