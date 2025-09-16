@@ -28,23 +28,17 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
     public void initializePages() {
         LogUtils.logAction("AgodaHotelSearchTest", "Setting up test");
         
-        try {
-            // Open Agoda website (using baseUrl from AgodaBaseTest)
-            // Don't add a slash as the URL already has one
-            open("");
-            
-            // Wait a moment for the page to start loading
-            sleep(2000); // 2 seconds
-            
-            homePage = new AgodaHomePage();
-            searchResultsPage = new SearchResultsPage();
-            
-            LogUtils.logSuccess("AgodaHotelSearchTest", "Test setup completed successfully");
-        } catch (Exception e) {
-            LogUtils.logAction("AgodaHotelSearchTest", "Failed to initialize test: " + e.getMessage());
-            // Still throw the exception to fail the test
-            throw e;
-        }
+        // Open Agoda website (using baseUrl from AgodaBaseTest)
+        // Don't add a slash as the URL already has one
+        open("");
+        
+        // Wait a moment for the page to start loading
+        sleep(2000); // 2 seconds
+        
+        homePage = new AgodaHomePage();
+        searchResultsPage = new SearchResultsPage();
+        
+        LogUtils.logSuccess("AgodaHotelSearchTest", "Test setup completed successfully");
     }
     
     /**
@@ -140,62 +134,52 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
             LogUtils.logSuccess("AgodaHotelSearchTest", "Search results displayed: " + resultCount + " hotels found");
             Assert.assertTrue(resultCount > 0, "Search should return at least one hotel");
             
-            // Check only the first hotel that's available
+            // Check hotel location
             LogUtils.logAction("AgodaHotelSearchTest", "Verifying at least one hotel is available in the expected location");
             
-            try {
-                String hotelName = searchResultsPage.getHotelName(0);  // Just check the first hotel
-                String hotelLocation = searchResultsPage.getHotelLocation(0);
-                LogUtils.logAction("AgodaHotelSearchTest", "First hotel: " + hotelName + " in " + hotelLocation);
-                
-                // Use location keywords from test data for verification
-                boolean isValidLocation = isInExpectedLocation(hotelName, hotelLocation, testData.getExpectedLocationKeywords());
-                
-                Assert.assertTrue(isValidLocation, 
-                        "First hotel should be in " + testData.getDestination() + " but was in " + hotelLocation);
-                
-                LogUtils.logSuccess("AgodaHotelSearchTest", "Hotel verification successful");
-            } catch (Exception e) {
-                LogUtils.logWarning("AgodaHotelSearchTest", "Could not verify hotel: " + e.getMessage());
-                // Don't fail the test if we can't verify the hotel
-            }
+            // Get hotel details - these methods should handle their own exceptions in the page object
+            String hotelName = searchResultsPage.getHotelName(0);  // Just check the first hotel
+            String hotelLocation = searchResultsPage.getHotelLocation(0);
+            LogUtils.logAction("AgodaHotelSearchTest", "First hotel: " + hotelName + " in " + hotelLocation);
+            
+            // Use location keywords from test data for verification
+            boolean isValidLocation = isInExpectedLocation(hotelName, hotelLocation, testData.getExpectedLocationKeywords());
+            
+            Assert.assertTrue(isValidLocation, 
+                    "First hotel should be in " + testData.getDestination() + " but was in " + hotelLocation);
+            
+            LogUtils.logSuccess("AgodaHotelSearchTest", "Hotel verification successful");
             
             // Step 4: Sort results by price (low to high)
             LogUtils.logAction("AgodaHotelSearchTest", "Step 4: Sorting results by '" + testData.getSortOption() + "'");
             
-            try {
-                searchResultsPage.sortResultsBy(testData.getSortOption());
+            searchResultsPage.sortResultsBy(testData.getSortOption());
+            
+            // Get prices - the page object methods should handle exceptions internally
+            double firstPrice = searchResultsPage.getHotelPrice(0);
+            LogUtils.logAction("AgodaHotelSearchTest", "First hotel price: " + firstPrice);
+            
+            // Try to get the second hotel price if available
+            if (searchResultsPage.getNumberOfResults() > 1) {
+                double secondPrice = searchResultsPage.getHotelPrice(1);
+                LogUtils.logAction("AgodaHotelSearchTest", "Second hotel price: " + secondPrice);
                 
-                // Try to get price of first hotel
-                try {
-                    double firstPrice = searchResultsPage.getHotelPrice(0);
-                    LogUtils.logAction("AgodaHotelSearchTest", "First hotel price: " + firstPrice);
-                    
-                    // Try to get the second hotel price if possible
-                    try {
-                        double secondPrice = searchResultsPage.getHotelPrice(1);
-                        LogUtils.logAction("AgodaHotelSearchTest", "Second hotel price: " + secondPrice);
-                        
-                        // Verify prices are in ascending order (if we have two prices)
-                        if (firstPrice > secondPrice) {
-                            LogUtils.logWarning("AgodaHotelSearchTest", 
-                                "Hotels are not sorted correctly. First hotel price: " + firstPrice + 
-                                ", Second hotel price: " + secondPrice);
-                        } else {
-                            LogUtils.logSuccess("AgodaHotelSearchTest", "Verified price sorting is working");
-                        }
-                    } catch (Exception e) {
-                        LogUtils.logWarning("AgodaHotelSearchTest", "Could not get second hotel price: " + e.getMessage());
-                    }
-                } catch (Exception e) {
-                    LogUtils.logWarning("AgodaHotelSearchTest", "Could not verify first hotel price: " + e.getMessage());
+                // Verify prices are in ascending order
+                if (firstPrice > 0 && secondPrice > 0) {
+                    Assert.assertTrue(firstPrice <= secondPrice, 
+                        "Hotels should be sorted by price (low to high), but first price (" + 
+                        firstPrice + ") is greater than second price (" + secondPrice + ")");
+                    LogUtils.logSuccess("AgodaHotelSearchTest", "Verified price sorting is working");
+                } else {
+                    LogUtils.logWarning("AgodaHotelSearchTest", 
+                        "Could not verify price sorting, at least one price is 0 or negative. " +
+                        "First: " + firstPrice + ", Second: " + secondPrice);
                 }
-            } catch (Exception e) {
-                LogUtils.logWarning("AgodaHotelSearchTest", "Could not perform sorting: " + e.getMessage());
+            } else {
+                LogUtils.logWarning("AgodaHotelSearchTest", "Only one hotel found, can't verify sorting");
             }
             
             LogUtils.logSuccess("AgodaHotelSearchTest", "TC 01: Search and Sort Hotel Successfully - PASSED");
-            
         } finally {
             // Clean up - close any additional tabs/windows
             cleanupTabs();
@@ -228,11 +212,6 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
      */
     private void cleanupTabs() {
         LogUtils.logAction("AgodaHotelSearchTest", "Cleaning up tabs/windows");
-        try {
-            // Use the new utility method to close all windows except the first one
-            BrowserUtils.closeAllWindowsExceptFirst();
-        } catch (Exception e) {
-            LogUtils.logWarning("AgodaHotelSearchTest", "Error during tab cleanup: " + e.getMessage());
-        }
+        BrowserUtils.closeAllWindowsExceptFirst();
     }
 }
