@@ -1,0 +1,1 @@
+{"uuid":"71a627c6-e20f-43b7-85a9-bb2cb926cc83","name":"tests.agoda.AgodaHotelSearchTest","children":["89311ea9-d7ef-41d9-96a9-d5ed4e0fae9d"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1758011151489,"stop":1758011151527}],"afters":[],"start":1758011151455,"stop":1758011190700}

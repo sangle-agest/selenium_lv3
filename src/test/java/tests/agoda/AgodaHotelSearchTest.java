@@ -153,27 +153,21 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
             // Step 4: Sort results by price (low to high)
             LogUtils.logAction("AgodaHotelSearchTest", "Step 4: Sorting results by '" + testData.getSortOption() + "'");
             
-            searchResultsPage.sortResultsBy(testData.getSortOption());
+            // Use the specialized sorting method instead of the general one for better reliability
+            if (testData.getSortOption().toLowerCase().contains("price")) {
+                searchResultsPage.sortByLowestPrice();
+            } else {
+                searchResultsPage.sortResultsBy(testData.getSortOption());
+            }
             
-            // Get prices - the page object methods should handle exceptions internally
-            double firstPrice = searchResultsPage.getHotelPrice(0);
-            LogUtils.logAction("AgodaHotelSearchTest", "First hotel price: " + firstPrice);
+            // Verify all hotel prices are in ascending order
+            int numHotelsToCheck = Math.min(searchResultsPage.getNumberOfResults(), 5); // Check up to 5 hotels
             
-            // Try to get the second hotel price if available
-            if (searchResultsPage.getNumberOfResults() > 1) {
-                double secondPrice = searchResultsPage.getHotelPrice(1);
-                LogUtils.logAction("AgodaHotelSearchTest", "Second hotel price: " + secondPrice);
-                
-                // Verify prices are in ascending order
-                if (firstPrice > 0 && secondPrice > 0) {
-                    Assert.assertTrue(firstPrice <= secondPrice, 
-                        "Hotels should be sorted by price (low to high), but first price (" + 
-                        firstPrice + ") is greater than second price (" + secondPrice + ")");
-                    LogUtils.logSuccess("AgodaHotelSearchTest", "Verified price sorting is working");
-                } else {
-                    LogUtils.logWarning("AgodaHotelSearchTest", 
-                        "Could not verify price sorting, at least one price is 0 or negative. " +
-                        "First: " + firstPrice + ", Second: " + secondPrice);
+            if (numHotelsToCheck > 1) {
+                boolean isSorted = verifyPriceSorting(searchResultsPage, numHotelsToCheck);
+                if (isSorted) {
+                    LogUtils.logSuccess("AgodaHotelSearchTest", "Verified price sorting is working for " + 
+                                      numHotelsToCheck + " hotels");
                 }
             } else {
                 LogUtils.logWarning("AgodaHotelSearchTest", "Only one hotel found, can't verify sorting");
@@ -213,5 +207,59 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
     private void cleanupTabs() {
         LogUtils.logAction("AgodaHotelSearchTest", "Cleaning up tabs/windows");
         BrowserUtils.closeAllWindowsExceptFirst();
+    }
+    
+    /**
+     * Helper method to verify hotel prices are in ascending order
+     * 
+     * @param searchResultsPage The search results page object
+     * @param numHotelsToCheck Number of hotels to check
+     * @return true if all prices are in ascending order, false otherwise
+     */
+    private boolean verifyPriceSorting(SearchResultsPage searchResultsPage, int numHotelsToCheck) {
+        LogUtils.logAction("AgodaHotelSearchTest", "Verifying price sorting for " + numHotelsToCheck + " hotels");
+        
+        // Get prices for all hotels to check
+        double[] prices = new double[numHotelsToCheck];
+        boolean allPricesValid = true;
+        
+        // Collect all prices
+        for (int i = 0; i < numHotelsToCheck; i++) {
+            prices[i] = searchResultsPage.getHotelPrice(i);
+            LogUtils.logAction("AgodaHotelSearchTest", "Hotel " + (i+1) + " price: " + prices[i]);
+            
+            // Check if we got a valid price (greater than 0)
+            if (prices[i] <= 0) {
+                LogUtils.logWarning("AgodaHotelSearchTest", "Invalid price for hotel " + (i+1) + ": " + prices[i]);
+                allPricesValid = false;
+            }
+        }
+        
+        // If any price is invalid, we can't verify sorting
+        if (!allPricesValid) {
+            LogUtils.logWarning("AgodaHotelSearchTest", 
+                "Could not verify price sorting, some hotels have invalid prices (0 or negative)");
+            return false;
+        }
+        
+        // Check if prices are in ascending order
+        boolean isSorted = true;
+        for (int i = 0; i < numHotelsToCheck - 1; i++) {
+            if (prices[i] > prices[i+1]) {
+                LogUtils.logError("AgodaHotelSearchTest", 
+                    "Hotels are not properly sorted by price. Hotel " + (i+1) + " price (" + 
+                    prices[i] + ") is greater than hotel " + (i+2) + " price (" + prices[i+1] + ")", 
+                    new AssertionError("Price sorting failed"));
+                
+                Assert.fail("Hotels should be sorted by price (low to high), but hotel " + (i+1) + 
+                    " price (" + prices[i] + ") is greater than hotel " + (i+2) + 
+                    " price (" + prices[i+1] + ")");
+                
+                isSorted = false;
+                break;
+            }
+        }
+        
+        return isSorted;
     }
 }
