@@ -25,9 +25,6 @@ public class AgodaHomePage extends BasePage {
     
     // Room occupancy components
     private final Button occupancyButton = new Button("[data-element-name='occupancy-box']", "Occupancy Button");
-    
-    // Search button
-    private final Button searchButton = new Button("[data-selenium='searchButton']", "Search Button");
 
     /**
      * Search for a destination
@@ -121,7 +118,17 @@ public class AgodaHomePage extends BasePage {
      * @param children Number of children
      */
     public void setOccupancy(int adults, int children) {
-        LogUtils.logAction(this.toString(), "Setting occupancy: " + adults + " adults, " + children + " children");
+        setOccupancy(adults, children, 1); // Default to 1 room
+    }
+    
+    /**
+     * Set room occupancy with room count
+     * @param adults Number of adults
+     * @param children Number of children
+     * @param rooms Number of rooms
+     */
+    public void setOccupancy(int adults, int children, int rooms) {
+        LogUtils.logAction(this.toString(), "Setting occupancy: " + adults + " adults, " + children + " children, " + rooms + " rooms");
         
         try {
             // Open occupancy panel
@@ -131,7 +138,7 @@ public class AgodaHomePage extends BasePage {
             // For the new Agoda interface, we need to interact with the popup directly
             // We'll use JavaScript to set the values since the interface might be complex
             String setOccupancyScript = 
-                "function setOccupancy(adults, children) {\n" +
+                "function setOccupancy(adults, children, rooms) {\n" +
                 "    // First find all buttons in the occupancy popup\n" +
                 "    const adultPlusBtn = Array.from(document.querySelectorAll('button')).find(btn => \n" +
                 "        btn.textContent.includes('+') && \n" +
@@ -142,22 +149,49 @@ public class AgodaHomePage extends BasePage {
                 "    const childPlusBtn = Array.from(document.querySelectorAll('button')).find(btn => \n" +
                 "        btn.textContent.includes('+') && \n" +
                 "        (btn.closest('[aria-label*=\"child\"]') || btn.closest('[data-selenium*=\"child\"]')));\n" +
+                "    const roomPlusBtn = Array.from(document.querySelectorAll('button')).find(btn => \n" +
+                "        btn.textContent.includes('+') && \n" +
+                "        (btn.closest('[aria-label*=\"room\"]') || btn.closest('[data-selenium*=\"room\"]')));\n" +
+                "    const roomMinusBtn = Array.from(document.querySelectorAll('button')).find(btn => \n" +
+                "        btn.textContent.includes('-') && \n" +
+                "        (btn.closest('[aria-label*=\"room\"]') || btn.closest('[data-selenium*=\"room\"]')));\n" +
                 "    \n" +
-                "    // Get current adults value\n" +
+                "    // Get current values\n" +
                 "    let currentAdults = 2; // Default\n" +
                 "    const adultValueEl = document.querySelector('[data-selenium=\"adultValue\"]');\n" +
                 "    if (adultValueEl && adultValueEl.getAttribute('data-value')) {\n" +
                 "        currentAdults = parseInt(adultValueEl.getAttribute('data-value'));\n" +
                 "    }\n" +
                 "    \n" +
-                "    // Adjust adults\n" +
+                "    let currentRooms = 1; // Default\n" +
+                "    const roomValueEl = document.querySelector('[data-selenium=\"roomValue\"]');\n" +
+                "    if (roomValueEl && roomValueEl.getAttribute('data-value')) {\n" +
+                "        currentRooms = parseInt(roomValueEl.getAttribute('data-value'));\n" +
+                "    }\n" +
+                "    \n" +
+                "    // First adjust rooms\n" +
+                "    if (currentRooms < rooms) {\n" +
+                "        for (let i = currentRooms; i < rooms; i++) {\n" +
+                "            if (roomPlusBtn) roomPlusBtn.click();\n" +
+                "            console.log('Increased rooms to ' + (i+1));\n" +
+                "        }\n" +
+                "    } else if (currentRooms > rooms) {\n" +
+                "        for (let i = currentRooms; i > rooms; i--) {\n" +
+                "            if (roomMinusBtn) roomMinusBtn.click();\n" +
+                "            console.log('Decreased rooms to ' + (i-1));\n" +
+                "        }\n" +
+                "    }\n" +
+                "    \n" +
+                "    // Then adjust adults\n" +
                 "    if (currentAdults < adults) {\n" +
                 "        for (let i = currentAdults; i < adults; i++) {\n" +
                 "            if (adultPlusBtn) adultPlusBtn.click();\n" +
+                "            console.log('Increased adults to ' + (i+1));\n" +
                 "        }\n" +
                 "    } else if (currentAdults > adults) {\n" +
                 "        for (let i = currentAdults; i > adults; i--) {\n" +
                 "            if (adultMinusBtn) adultMinusBtn.click();\n" +
+                "            console.log('Decreased adults to ' + (i-1));\n" +
                 "        }\n" +
                 "    }\n" +
                 "    \n" +
@@ -165,6 +199,7 @@ public class AgodaHomePage extends BasePage {
                 "    if (children > 0 && childPlusBtn) {\n" +
                 "        for (let i = 0; i < children; i++) {\n" +
                 "            childPlusBtn.click();\n" +
+                "            console.log('Added child #' + (i+1));\n" +
                 "        }\n" +
                 "        \n" +
                 "        // Handle child age selection if needed\n" +
@@ -174,6 +209,7 @@ public class AgodaHomePage extends BasePage {
                 "                Array.from(ageSelects).forEach(select => {\n" +
                 "                    select.value = '7';\n" +
                 "                    select.dispatchEvent(new Event('change'));\n" +
+                "                    console.log('Set child age to 7');\n" +
                 "                });\n" +
                 "            }\n" +
                 "        }, 500);\n" +
@@ -185,11 +221,14 @@ public class AgodaHomePage extends BasePage {
                 "            btn.textContent.includes('Done') || \n" +
                 "            btn.textContent.includes('Apply') || \n" +
                 "            btn.closest('[data-selenium=\"occupancy-apply\"]'));\n" +
-                "        if (doneBtn) doneBtn.click();\n" +
+                "        if (doneBtn) {\n" +
+                "            console.log('Clicking done button');\n" +
+                "            doneBtn.click();\n" +
+                "        }\n" +
                 "    }, 1000);\n" +
                 "}\n" +
                 "\n" +
-                "setOccupancy(" + adults + ", " + children + ");";
+                "setOccupancy(" + adults + ", " + children + ", " + rooms + ");";
             
             // Execute the JavaScript to set occupancy
             executeJavaScript(setOccupancyScript);
