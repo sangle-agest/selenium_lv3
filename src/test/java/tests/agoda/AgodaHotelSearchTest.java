@@ -2,10 +2,14 @@ package tests.agoda;
 
 import framework.pages.agoda.AgodaHomePage;
 import framework.pages.agoda.SearchResultsPage;
+import framework.utils.DateTimeHelper;
 import framework.utils.LogUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.Calendar;
+import java.util.Date;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -37,62 +41,96 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
      * TC 01: Search and Sort Hotel Successfully
      * 
      * Steps:
-     * 1. Go to Agoda home page
-     * 2. Search for a destination
-     * 3. Set check-in and check-out dates
-     * 4. Set occupancy (adults and children)
-     * 5. Click on Search button
-     * 6. Verify search results are displayed
-     * 7. Sort results by price (low to high)
-     * 8. Verify sorting is applied correctly
+     * 1. Navigate to Agoda homepage
+     * 2. Search hotel with:
+     *    - Place: Da Nang
+     *    - Date: 3 days from next Friday
+     *    - Number of people: Family Travelers → 2 rooms, 4 adults
+     * 3. Verify search result is displayed (first 5 hotels listed with Da Nang as destination)
+     * 4. Sort hotels by lowest prices and verify the first 5 hotels are re-ordered by ascending price
      */
     @Test(description = "TC 01: Search and Sort Hotel Successfully", enabled = true)
     public void searchAndSortHotelTest() {
         LogUtils.logAction("AgodaHotelSearchTest", "Starting TC 01: Search and Sort Hotel Successfully");
         
         // Step 1: Already on Agoda home page (handled in setupTest)
+        LogUtils.logAction("AgodaHotelSearchTest", "Step 1: Navigated to Agoda homepage");
         
         // Step 2: Search for a destination
-        String destination = "Bangkok";
-        LogUtils.logAction("AgodaHotelSearchTest", "Searching for destination: " + destination);
+        String destination = "Da Nang";
+        LogUtils.logAction("AgodaHotelSearchTest", "Step 2: Searching for destination: " + destination);
         homePage.searchDestination(destination);
         
-        // Step 3: Set check-in and check-out dates (7 days from now, staying for 3 nights)
-        LogUtils.logAction("AgodaHotelSearchTest", "Setting dates: Check-in 7 days from now, stay for 3 nights");
-        homePage.setDates(7, 10);
+        // Calculate dates - 3 days from next Friday
+        LogUtils.logAction("AgodaHotelSearchTest", "Setting dates: 3 days from next Friday");
         
-        // Step 4: Set occupancy (2 adults, 1 child)
-        LogUtils.logAction("AgodaHotelSearchTest", "Setting occupancy: 2 adults, 1 child");
-        homePage.setOccupancy(2, 1);
+        // Use DateTimeHelper to calculate check-in (next Friday) and check-out (3 days later)
+        Date[] bookingDates = DateTimeHelper.calculateWeekendStay(Calendar.FRIDAY, 3);
+        String checkInDate = DateTimeHelper.formatDate(bookingDates[0]);
+        String checkOutDate = DateTimeHelper.formatDate(bookingDates[1]);
         
-        // Verify occupancy is set correctly
-        Assert.assertEquals(homePage.getAdultCount(), 2, "Adult count should be 2");
-        Assert.assertEquals(homePage.getChildCount(), 1, "Child count should be 1");
+        LogUtils.logAction("AgodaHotelSearchTest", "Setting dates - Check-in: " + checkInDate + ", Check-out: " + checkOutDate);
         
-        // Step 5: Click on Search button
+        // Get days from today for UI interaction
+        int fridayOffset = DateTimeHelper.getDaysUntilNextDayOfWeek(Calendar.FRIDAY);
+        int checkoutOffset = fridayOffset + 3;
+        
+        homePage.setDates(fridayOffset, checkoutOffset);
+        
+        // Set occupancy - 2 rooms, 4 adults
+        LogUtils.logAction("AgodaHotelSearchTest", "Setting occupancy: 2 rooms, 4 adults");
+        homePage.setOccupancy(4, 0, 2); // 4 adults, 0 children, 2 rooms
+        
+        // Click on Search button
         LogUtils.logAction("AgodaHotelSearchTest", "Clicking search button");
         homePage.clickSearch();
         
-        // Step 6: Verify search results are displayed
+        // Step 3: Verify search results are displayed
+        LogUtils.logAction("AgodaHotelSearchTest", "Step 3: Verifying search results");
         int resultCount = searchResultsPage.getNumberOfResults();
         LogUtils.logSuccess("AgodaHotelSearchTest", "Search results displayed: " + resultCount + " hotels found");
         Assert.assertTrue(resultCount > 0, "Search should return at least one hotel");
         
-        // Step 7: Sort results by price (low to high)
-        LogUtils.logAction("AgodaHotelSearchTest", "Sorting results by 'Price (low to high)'");
+        // Verify first 5 hotels are in Da Nang
+        LogUtils.logAction("AgodaHotelSearchTest", "Verifying first 5 hotels are in Da Nang");
+        int hotelsToCheck = Math.min(5, resultCount);
+        for (int i = 0; i < hotelsToCheck; i++) {
+            String hotelName = searchResultsPage.getHotelName(i);
+            String hotelLocation = searchResultsPage.getHotelLocation(i);
+            LogUtils.logAction("AgodaHotelSearchTest", "Hotel " + (i+1) + ": " + hotelName + " in " + hotelLocation);
+            Assert.assertTrue(hotelLocation.contains(destination), 
+                    "Hotel " + (i+1) + " should be in " + destination + " but was in " + hotelLocation);
+        }
+        
+        // Step 4: Sort results by price (low to high)
+        LogUtils.logAction("AgodaHotelSearchTest", "Step 4: Sorting results by 'Price (low to high)'");
         searchResultsPage.sortResultsBy("Price (low to high)");
         
-        // Step 8: Verify sorting is applied correctly
-        LogUtils.logAction("AgodaHotelSearchTest", "Verifying sorting is applied correctly");
+        // Verify sorting is applied correctly to first 5 hotels
+        LogUtils.logAction("AgodaHotelSearchTest", "Verifying first 5 hotels are sorted by ascending price");
         
-        // Get first few hotel prices to verify sorting
-        double firstHotelPrice = searchResultsPage.getHotelPrice(0);
-        double secondHotelPrice = searchResultsPage.getHotelPrice(1);
+        // Store prices before checking to avoid multiple calls to getHotelPrice
+        double[] prices = new double[hotelsToCheck];
+        for (int i = 0; i < hotelsToCheck; i++) {
+            prices[i] = searchResultsPage.getHotelPrice(i);
+            LogUtils.logAction("AgodaHotelSearchTest", "Hotel " + (i+1) + " price: " + prices[i]);
+        }
         
         // Verify prices are in ascending order
-        Assert.assertTrue(firstHotelPrice <= secondHotelPrice, 
-                "Hotels should be sorted by price in ascending order. First price: " + 
-                firstHotelPrice + ", Second price: " + secondHotelPrice);
+        for (int i = 0; i < hotelsToCheck - 1; i++) {
+            Assert.assertTrue(prices[i] <= prices[i+1], 
+                    "Hotels should be sorted by price in ascending order. " +
+                    "Hotel " + (i+1) + " price: " + prices[i] + ", " +
+                    "Hotel " + (i+2) + " price: " + prices[i+1]);
+        }
+        
+        // Verify hotels are still in Da Nang after sorting
+        LogUtils.logAction("AgodaHotelSearchTest", "Verifying hotels are still in Da Nang after sorting");
+        for (int i = 0; i < hotelsToCheck; i++) {
+            String hotelLocation = searchResultsPage.getHotelLocation(i);
+            Assert.assertTrue(hotelLocation.contains(destination), 
+                    "After sorting, hotel " + (i+1) + " should still be in " + destination);
+        }
         
         LogUtils.logSuccess("AgodaHotelSearchTest", "TC 01: Search and Sort Hotel Successfully - PASSED");
     }
