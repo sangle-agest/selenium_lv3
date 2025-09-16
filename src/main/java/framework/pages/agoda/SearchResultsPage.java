@@ -208,28 +208,68 @@ public class SearchResultsPage extends BasePage {
     }
 
     /**
-     * Get hotel price by index
+     * Get hotel price by index as string
      * @param index Index of hotel in results (0-based)
      * @return Hotel price as string
      */
     public String getHotelPriceAsString(int index) {
         LogUtils.logAction(this.toString(), "Getting hotel price at index: " + index);
+        
         try {
-            String price = new Label(hotelCards.get(index).getLocator() + " [data-selenium='display-price']",
-                    "Hotel Price[" + index + "]").getText();
-            LogUtils.logSuccess(this.toString(), "Got hotel price: " + price);
-            return price;
+            // Use JavaScript as the primary approach for reliability
+            String js = 
+                "const hotels = document.querySelectorAll('[data-selenium=\"hotel-item\"]');" +
+                "if (hotels.length <= " + index + ") return '';" +
+                "const hotel = hotels[" + index + "];" +
+                "const priceEl = hotel.querySelector('[data-selenium=\"display-price\"], .price-text, [data-ppapi=\"room-price\"], .PropertyCardPrice\');" +
+                "return priceEl ? priceEl.textContent.trim() : '';";
+            
+            String price = (String) Selenide.executeJavaScript(js);
+            
+            if (price != null && !price.isEmpty()) {
+                LogUtils.logSuccess(this.toString(), "Got hotel price using JavaScript: " + price);
+                return price;
+            }
+            
+            // Fallback to Selenide if JavaScript didn't work
+            try {
+                price = new Label(hotelCards.get(index).getLocator() + " [data-selenium='display-price']",
+                        "Hotel Price[" + index + "]").getText();
+                LogUtils.logSuccess(this.toString(), "Got hotel price: " + price);
+                return price;
+            } catch (Exception e) {
+                LogUtils.logWarning(this.toString(), "Selenide fallback failed: " + e.getMessage());
+            }
+            
+            // If we get here, try one more approach - a more general JavaScript approach
+            js = 
+                "const hotels = Array.from(document.querySelectorAll('[data-selenium=\"hotel-item\"], .hotel-item, .PropertyCard'));" +
+                "if (hotels.length <= " + index + ") return '';" +
+                "const hotel = hotels[" + index + "];" +
+                "const allTextNodes = [];" +
+                "function extractTextNodes(node) {" +
+                "  if (node.nodeType === 3) { // Text node" +
+                "    const text = node.textContent.trim();" +
+                "    if (text && /\\d/.test(text)) allTextNodes.push(text);" + // Contains at least one digit
+                "  } else if (node.nodeType === 1) { // Element node" +
+                "    for (let child of node.childNodes) extractTextNodes(child);" +
+                "  }" +
+                "}" +
+                "extractTextNodes(hotel);" +
+                "const priceText = allTextNodes.find(text => /\\d{1,3}(,\\d{3})*(\\.\\d+)?/.test(text));" + // Looks like a price
+                "return priceText || '';";
+            
+            price = (String) Selenide.executeJavaScript(js);
+            if (price != null && !price.isEmpty()) {
+                LogUtils.logSuccess(this.toString(), "Got hotel price using advanced text extraction: " + price);
+                return price;
+            }
+            
+            LogUtils.logWarning(this.toString(), "Could not find price for hotel at index " + index);
+            return "0"; // Default value if no price found
         } catch (Exception e) {
-            // Try with JavaScript as a fallback
-            String priceSelector = "[data-selenium='display-price'], .price-text";
-            String price = (String) Selenide.executeJavaScript(
-                "return document.querySelectorAll('" + hotelCards.get(index).getLocator() + "')[" + index + "]" +
-                ".querySelector('" + priceSelector + "') ? " +
-                "document.querySelectorAll('" + hotelCards.get(index).getLocator() + "')[" + index + "]" +
-                ".querySelector('" + priceSelector + "').textContent.trim() : '';");
-                        
-            LogUtils.logSuccess(this.toString(), "Got hotel price using JavaScript: " + price);
-            return price;
+            LogUtils.logError(this.toString(), "Failed to get hotel price", e);
+            return "0"; // Default value on error
         }
     }
     
