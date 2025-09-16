@@ -2,6 +2,7 @@ package tests.agoda;
 
 import framework.pages.agoda.AgodaHomePage;
 import framework.pages.agoda.SearchResultsPage;
+import framework.utils.BrowserUtils;
 import framework.utils.DateTimeHelper;
 import framework.utils.LogUtils;
 import org.testng.Assert;
@@ -85,6 +86,23 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
         LogUtils.logAction("AgodaHotelSearchTest", "Clicking search button");
         homePage.clickSearch();
         
+        // Wait for the new tab to open (up to 10 seconds)
+        LogUtils.logAction("AgodaHotelSearchTest", "Waiting for search results tab to open");
+        boolean newTabOpened = BrowserUtils.waitForWindowCount(2, 10);
+        
+        if (newTabOpened) {
+            // Switch to the new tab (index 1)
+            LogUtils.logAction("AgodaHotelSearchTest", "Switching to search results tab");
+            BrowserUtils.switchToWindow(1);
+            LogUtils.logSuccess("AgodaHotelSearchTest", "Switched to search results tab");
+        } else {
+            // If no new tab opened, try to find the search results on the current page
+            LogUtils.logWarning("AgodaHotelSearchTest", "No new tab opened, continuing on current page");
+        }
+        
+        // Wait for search results page to load
+        searchResultsPage.waitForPageToLoad();
+        
         // Step 3: Verify search results are displayed
         LogUtils.logAction("AgodaHotelSearchTest", "Step 3: Verifying search results");
         int resultCount = searchResultsPage.getNumberOfResults();
@@ -133,5 +151,21 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
         }
         
         LogUtils.logSuccess("AgodaHotelSearchTest", "TC 01: Search and Sort Hotel Successfully - PASSED");
+        
+        // Clean up - close any additional tabs/windows
+        cleanupTabs();
+    }
+    
+    /**
+     * Helper method to close additional tabs/windows and switch back to the first tab
+     */
+    private void cleanupTabs() {
+        LogUtils.logAction("AgodaHotelSearchTest", "Cleaning up tabs/windows");
+        try {
+            // Use the new utility method to close all windows except the first one
+            BrowserUtils.closeAllWindowsExceptFirst();
+        } catch (Exception e) {
+            LogUtils.logWarning("AgodaHotelSearchTest", "Error during tab cleanup: " + e.getMessage());
+        }
     }
 }
