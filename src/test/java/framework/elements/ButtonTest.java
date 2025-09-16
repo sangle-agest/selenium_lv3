@@ -3,122 +3,146 @@ package framework.elements;
 import framework.elements.core.Button;
 import org.testng.annotations.*;
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.WebDriverRunner;
+import com.codeborne.selenide.ex.ElementNotFound;
 import static org.testng.Assert.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Condition.disappear;
 
 /**
- * Unit tests for Button element
+ * Unit tests for Button element using The Internet Herokuapp site
  */
-public class ButtonTest {
-    
-    private static final String TEST_PAGE_URL = "about:blank";
-    private static final String TEST_BUTTON_HTML = 
-        "<button id='test-button' class='test-class'>Test Button</button>";
-    private static final String DISABLED_BUTTON_HTML = 
-        "<button id='disabled-button' disabled>Disabled Button</button>";
-    
-    @BeforeClass
-    public void setUp() {
-        // Set up the Selenide configuration for testing
-        System.setProperty("selenide.timeout", "2000");
-        System.setProperty("selenide.browser", "chrome");
-        System.setProperty("selenide.headless", "true");
-    }
-    
-    @BeforeMethod
-    public void setUpTest() {
-        // Open a blank page and inject our test HTML
-        Selenide.open(TEST_PAGE_URL);
-        Selenide.executeJavaScript(
-            "document.body.innerHTML = arguments[0]", 
-            "<div>" + TEST_BUTTON_HTML + DISABLED_BUTTON_HTML + "</div>"
-        );
-    }
+public class ButtonTest extends ElementsTestBase {
     
     @Test
     public void testButtonClick() {
-        // Arrange
-        Button button = new Button("#test-button", "Test Button");
-        Selenide.executeJavaScript(
-            "document.getElementById('test-button').addEventListener('click', function() { " +
-            "  this.setAttribute('data-clicked', 'true'); " +
-            "});"
-        );
+        // Navigate to the Add/Remove Elements page
+        navigateToExample("/add_remove_elements/");
+        
+        // Arrange - the "Add Element" button
+        Button addButton = new Button("button[onclick='addElement()']", "Add Element Button");
         
         // Act
-        button.click();
+        addButton.click();
         
-        // Assert
-        String clickAttribute = Selenide.executeJavaScript(
-            "return document.getElementById('test-button').getAttribute('data-clicked');"
-        );
-        assertEquals(clickAttribute, "true", "Button click was not registered");
+        // Assert - verify a new delete button was added
+        assertTrue($(".added-manually").isDisplayed(), "Add button click did not create a new element");
+        
+        // Click a second time and verify we have two buttons
+        addButton.click();
+        assertEquals($$(".added-manually").size(), 2, "Second add button click should create another element");
     }
     
     @Test
-    public void testButtonIsEnabled() {
-        // Arrange
-        Button enabledButton = new Button("#test-button", "Test Button");
-        Button disabledButton = new Button("#disabled-button", "Disabled Button");
+    public void testButtonDynamicControl() {
+        // Navigate to Dynamic Controls page
+        navigateToExample("/dynamic_controls");
         
-        // Act & Assert
-        assertTrue(enabledButton.isEnabled(), "Button should be enabled");
-        assertFalse(disabledButton.isEnabled(), "Button should be disabled");
+        // Arrange - the "Remove" button for the checkbox
+        Button removeButton = new Button("#btn", "Remove Button");
+        
+        // Verify checkbox is visible initially
+        assertTrue($("#checkbox").isDisplayed(), "Checkbox should be visible initially");
+        
+        // Act - click remove
+        removeButton.click();
+        
+        // Wait for the loading animation to complete
+        $("#loading").should(disappear);
+        
+        // Assert - verify checkbox is gone
+        $("#checkbox").shouldNot(exist);
+        
+        // Now the button should say "Add"
+        assertEquals($("#btn").getText(), "Add", "Button text should change to 'Add'");
     }
     
     @Test
     public void testButtonSubmit() {
-        // Arrange
-        Selenide.executeJavaScript(
-            "document.body.innerHTML = '<form id=\"test-form\" onsubmit=\"event.preventDefault(); " + 
-            "this.setAttribute(\'data-submitted\', \'true\');\">" +
-            "<button id=\"submit-button\" type=\"submit\">Submit</button></form>';"
-        );
-        Button submitButton = new Button("#submit-button", "Submit Button");
+        // Navigate to the Login page
+        navigateToExample("/login");
+        
+        // Fill in login form
+        $("#username").setValue("tomsmith");
+        $("#password").setValue("SuperSecretPassword!");
+        
+        // Arrange - the login button (which is a submit button)
+        Button loginButton = new Button("button[type='submit']", "Login Button");
         
         // Act
-        submitButton.submit();
+        loginButton.submit();
         
-        // Assert
-        String submittedAttribute = Selenide.executeJavaScript(
-            "return document.getElementById('test-form').getAttribute('data-submitted');"
-        );
-        assertEquals(submittedAttribute, "true", "Form was not submitted");
+        // Assert - verify successful login
+        assertTrue($(".flash.success").isDisplayed(), "Login form was not submitted successfully");
+        assertTrue($("a.button.secondary").isDisplayed(), "Logout button should be visible after login");
     }
     
     @Test
     public void testButtonFocus() {
-        // Arrange
-        Button button = new Button("#test-button", "Test Button");
+        // Navigate to the key presses page to test focus
+        navigateToExample("/key_presses");
         
-        // Act
+        // Create a button element (using the submit button on this page)
+        Button button = new Button("button", "Button");
+        
+        // Focus the button
         button.focus();
         
-        // Assert
-        Boolean isFocused = Selenide.executeJavaScript(
-            "return document.getElementById('test-button') === document.activeElement;"
-        );
-        assertTrue(isFocused, "Button should be focused");
+        // Verify that the button is now the active element
+        // Send a key press to verify that the element has focus
+        $("#target").sendKeys(" "); // Send a space character
+        
+        // Verify the result shows SPACE was pressed
+        assertTrue($("#result").getText().contains("SPACE"), "Button focus didn't work correctly");
     }
     
-    @Test(expectedExceptions = RuntimeException.class)
+    @Test
+    public void testButtonMethodChaining() {
+        // Navigate to the Add/Remove Elements page
+        navigateToExample("/add_remove_elements/");
+        
+        // Arrange - the "Add Element" button
+        Button addButton = new Button("button[onclick='addElement()']", "Add Element Button");
+        
+        // Act - use method chaining
+        addButton.clickAndChain().clickAndChain();
+        
+        // Assert - verify we have two delete buttons
+        assertEquals($$(".added-manually").size(), 2, "Method chaining should add two elements");
+    }
+    
+    @Test
+    public void testButtonIsEnabled() {
+        // Navigate to the Dynamic Controls page
+        navigateToExample("/dynamic_controls");
+        
+        // The "Enable" button should be enabled
+        Button enableButton = new Button("button:contains('Enable')", "Enable Button");
+        assertTrue(enableButton.isEnabled(), "Enable button should be enabled");
+        
+        // The input field should be disabled initially
+        assertFalse($("#input-example input").isEnabled(), "Input field should be disabled initially");
+        
+        // Click the enable button
+        enableButton.click();
+        
+        // Wait for the loading animation to complete
+        $("#loading").should(disappear);
+        
+        // Verify the input is now enabled
+        assertTrue($("#input-example input").isEnabled(), "Input field should be enabled after clicking button");
+    }
+    
+    @Test(expectedExceptions = ElementNotFound.class)
     public void testClickNonExistentButton() {
-        // Arrange
+        // Navigate to any page
+        navigateToExample("/");
+        
+        // Arrange - a button that doesn't exist
         Button nonExistentButton = new Button("#non-existent-button", "Non-existent Button");
         
         // Act - should throw exception
         nonExistentButton.click();
-    }
-    
-    @AfterMethod
-    public void tearDownTest() {
-        Selenide.executeJavaScript("document.body.innerHTML = '';");
-    }
-    
-    @AfterClass
-    public void tearDown() {
-        if (WebDriverRunner.hasWebDriverStarted()) {
-            Selenide.closeWebDriver();
-        }
     }
 }

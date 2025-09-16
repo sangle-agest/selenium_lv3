@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ElementsUnitTestSuite">
+  <!-- Running individual test classes explicitly -->
+  <test name="Button Tests">
+    <classes>
+      <class name="framework.elements.ButtonTest"/>
+    </classes>
+  </test>
+  <test name="Checkbox Tests">
+    <classes>
+      <class name="framework.elements.CheckBoxTest"/>
+    </classes>
+  </test>
+  <test name="Dropdown Tests">
+    <classes>
+      <class name="framework.elements.DropdownTest"/>
+    </classes>
+  </test>
+  <test name="TextBox Tests">
+    <classes>
+      <class name="framework.elements.TextBoxTest"/>
+    </classes>
+  </test>
+  <test name="File Upload Tests">
+    <classes>
+      <class name="framework.elements.FileUploadTest"/>
+    </classes>
+  </test>
+  <test name="Slider Tests">
+    <classes>
+      <class name="framework.elements.SliderTest"/>
+    </classes>
+  </test>
+</suite>

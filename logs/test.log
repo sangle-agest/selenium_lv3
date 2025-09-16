@@ -285,3 +285,1195 @@
   Command line suite
 
 10:42:03.762 [main] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:44:22.846 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.127 linux
+10:44:22.997 [main] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Clicking
+10:44:22.997 [main] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Waiting to be clickable
+10:44:23.026 [main] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+10:44:23.027 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:44:23.027 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:44:23.027 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:44:23.028 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:44:23.087 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:44:23.087 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:44:23.088 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:44:23.088 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:44:23.117 [main] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Element became clickable
+10:44:23.207 [main] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Clicked successfully
+10:44:23.273 [main] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Focusing button
+10:44:23.299 [main] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Button focused successfully
+10:44:23.384 [main] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Is enabled
+10:44:23.401 [main] INFO  ElementActions - 🔹 Button 'Disabled Button' [#disabled-button] - Is disabled
+10:44:23.498 [main] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Clicking
+10:44:23.499 [main] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Waiting to be clickable
+10:44:23.499 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:44:23.499 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:44:23.499 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:44:23.499 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:44:33.568 [main] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757994273551.0.html]]
+10:44:33.619 [main] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757994273551.0.png]]
+10:48:28.783 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 24 - let's create a new webdriver
+10:48:28.783 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 25 - let's create a new webdriver
+10:48:28.783 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 26 - let's create a new webdriver
+10:49:08.980 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:49:09.068 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Focusing button
+10:49:09.134 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Button focused successfully
+10:49:09.252 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Clicking
+10:49:09.253 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Waiting to be clickable
+10:49:09.262 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+10:49:09.263 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:49:09.263 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:49:09.263 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:49:09.264 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:49:10.900 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:49:10.923 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Clicking
+10:49:10.923 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Waiting to be clickable
+10:49:10.923 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:49:10.924 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:49:10.924 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:49:10.924 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:49:10.959 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:49:10.959 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:49:10.960 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:49:10.960 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:49:10.982 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Element became clickable
+10:49:11.049 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Clicked successfully
+10:49:11.669 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:49:11.713 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Is enabled
+10:49:11.732 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Disabled Button' [#disabled-button] - Is disabled
+10:49:19.277 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757994559269.0.html]]
+10:49:19.319 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757994559269.0.png]]
+10:49:19.462 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - No webdriver found for thread: 25 - nothing to close
+10:49:19.463 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - Thread 24 is dead. Let's close its webdriver ChromeDriver: chrome on linux (d0576c02dcc04dfabd3c06d4bb56378d).
+10:49:19.533 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - Thread 26 is dead. Let's close its webdriver ChromeDriver: chrome on linux (0f7e6f13a53806d80759cce73aca45c9).
+10:50:49.457 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 25 - let's create a new webdriver
+10:50:49.457 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 26 - let's create a new webdriver
+10:50:49.457 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 24 - let's create a new webdriver
+10:50:50.669 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:50:50.669 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:50:50.669 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:50:50.786 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Focusing button
+10:50:50.799 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Clicking
+10:50:50.799 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Waiting to be clickable
+10:50:50.848 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+10:50:50.849 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:50:50.849 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:50:50.849 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:50:50.849 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:50:50.883 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Button focused successfully
+10:50:50.892 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Is enabled
+10:50:50.911 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:50:50.913 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:50:50.914 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:50:50.914 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:50:50.949 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Element became clickable
+10:50:50.950 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Disabled Button' [#disabled-button] - Is disabled
+10:50:51.092 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Submit Button' [#submit-button] - Submitting form
+10:50:51.103 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Clicking
+10:50:51.111 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Waiting to be clickable
+10:50:51.113 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:50:51.114 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:50:51.115 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:50:51.116 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:50:51.167 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Submit Button' [#submit-button] - Result: Form submitted successfully
+10:50:51.169 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Clicked successfully
+10:51:01.260 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757994661251.0.html]]
+10:51:01.299 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757994661251.0.png]]
+10:51:01.413 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - Thread 25 is dead. Let's close its webdriver ChromeDriver: chrome on linux (2f0ec7f02ae029894cfe5b04633aa78b).
+10:51:01.483 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - No webdriver found for thread: 26 - nothing to close
+10:51:01.483 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - Thread 24 is dead. Let's close its webdriver ChromeDriver: chrome on linux (485e942dd9b52986d016a767cd08bf18).
+10:53:32.159 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 25 - let's create a new webdriver
+10:53:32.159 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 24 - let's create a new webdriver
+10:53:32.159 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 26 - let's create a new webdriver
+10:53:33.008 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:53:33.008 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:53:33.008 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:53:33.126 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Focusing button
+10:53:33.138 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Clicking
+10:53:33.139 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Waiting to be clickable
+10:53:33.175 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+10:53:33.175 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:53:33.176 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:53:33.176 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:53:33.176 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:53:33.197 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Button focused successfully
+10:53:33.204 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Is enabled
+10:53:33.211 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:53:33.211 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:53:33.211 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:53:33.211 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:53:33.231 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Disabled Button' [#disabled-button] - Is disabled
+10:53:33.235 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Element became clickable
+10:53:33.280 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Submit Button' [#submit-button] - Submitting form
+10:53:33.282 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Clicking
+10:53:33.283 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Waiting to be clickable
+10:53:33.285 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:53:33.286 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:53:33.287 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:53:33.288 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:53:33.313 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Submit Button' [#submit-button] - Result: Form submitted successfully
+10:53:33.340 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Clicked successfully
+10:53:43.342 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757994823313.0.html]]
+10:53:43.391 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757994823313.0.png]]
+10:53:43.542 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - Thread 24 is dead. Let's close its webdriver ChromeDriver: chrome on linux (c5b406654098c8eb1cbe119fd09d7dea).
+10:53:43.620 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - Thread 25 is dead. Let's close its webdriver ChromeDriver: chrome on linux (655829a4e9ba003066467b9d88877def).
+10:53:57.353 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 24 - let's create a new webdriver
+10:53:57.353 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 25 - let's create a new webdriver
+10:53:57.353 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 26 - let's create a new webdriver
+10:53:58.192 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:53:58.192 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:53:58.192 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+10:53:58.302 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Focusing button
+10:53:58.310 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Clicking
+10:53:58.310 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Waiting to be clickable
+10:53:58.345 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+10:53:58.346 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:53:58.346 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:53:58.346 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:53:58.347 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:53:58.371 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Button focused successfully
+10:53:58.375 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Test Button' [#test-button] - Is enabled
+10:53:58.386 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:53:58.387 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:53:58.387 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:53:58.387 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:53:58.405 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Disabled Button' [#disabled-button] - Is disabled
+10:53:58.414 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Element became clickable
+10:53:58.460 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Clicking
+10:53:58.460 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Waiting to be clickable
+10:53:58.461 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+10:53:58.461 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+10:53:58.461 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+10:53:58.461 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+10:53:58.462 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Submit Button' [#submit-button] - Submitting form
+10:53:58.493 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Submit Button' [#submit-button] - Result: Form submitted successfully
+10:53:58.531 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ Button 'Test Button' [#test-button] - Result: Clicked successfully
+10:54:08.556 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757994848546.0.html]]
+10:54:08.593 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757994848546.0.png]]
+10:54:08.726 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - Thread 24 is dead. Let's close its webdriver ChromeDriver: chrome on linux (e6fb4cd36f6c0303e11b356d28c332aa).
+10:54:08.803 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - Thread 25 is dead. Let's close its webdriver ChromeDriver: chrome on linux (0ab0f781e0c02573fe3b077f68f0c565).
+11:05:58.356 [main] INFO  framework.config.LoggingConfig - Selenium logging configured to suppress warnings
+11:05:58.391 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+11:05:58.393 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:05:58.394 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:05:58.394 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:05:58.395 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:05:58.402 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:05:58.403 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:05:58.403 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:05:58.403 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:05:58.403 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:05:58.403 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:05:58.404 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:05:58.404 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:05:58.404 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:05:58.404 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:05:58.404 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:05:58.405 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:05:58.405 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:05:58.405 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:05:58.405 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:05:58.405 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:05:58.453 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 31 - let's create a new webdriver
+11:05:58.453 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 32 - let's create a new webdriver
+11:05:58.453 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 30 - let's create a new webdriver
+11:05:59.897 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:05:59.897 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:05:59.897 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:06:03.931 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Setting text: 10
+11:06:03.966 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Waiting to be visible
+11:06:03.987 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:03.987 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:03.987 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:03.988 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:04.083 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Element became visible
+11:06:04.322 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '10'} - Result: Text set successfully
+11:06:04.353 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '10'} - Clearing and typing text: 99
+11:06:04.379 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '10'} - Waiting to be visible
+11:06:04.380 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:04.380 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:04.380 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:04.381 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:04.434 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '10'} - Result: Element became visible
+11:06:04.641 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Setting text: 10
+11:06:04.702 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Waiting to be visible
+11:06:04.703 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:04.704 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:04.704 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:04.705 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:04.792 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Element became visible
+11:06:04.874 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '99'} - Result: Text cleared and typed successfully
+11:06:04.904 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '99'} - Getting value
+11:06:04.968 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '99'} - Result: Got value: 99
+11:06:05.078 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '10'} - Result: Text set successfully
+11:06:05.133 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '10'} - Appending text: 20
+11:06:05.139 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Setting text: 123
+11:06:05.175 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '10'} - Waiting to be visible
+11:06:05.175 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Waiting to be visible
+11:06:05.176 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:05.176 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:05.177 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:05.177 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:05.177 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:05.178 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:05.177 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:05.180 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:05.246 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '10'} - Result: Element became visible
+11:06:05.248 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Element became visible
+11:06:05.415 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '1020'} - Result: Text appended successfully
+11:06:05.458 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '1020'} - Getting value
+11:06:05.534 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '1020'} - Result: Got value: 1020
+11:06:05.566 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '123'} - Result: Text set successfully
+11:06:05.594 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '123'} - Clearing text field
+11:06:05.620 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '123'} - Waiting to be visible
+11:06:05.621 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:05.621 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:05.621 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:05.621 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:05.673 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '123'} - Result: Element became visible
+11:06:05.803 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Text field cleared successfully
+11:06:05.830 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Getting value
+11:06:05.883 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Setting text: 50
+11:06:05.910 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Got value: 
+11:06:05.919 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Waiting to be visible
+11:06:05.920 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:05.921 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:05.921 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:05.922 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:06.003 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Element became visible
+11:06:06.173 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '50'} - Result: Text set successfully
+11:06:06.197 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '50'} - Appending text: 0
+11:06:06.222 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '50'} - Waiting to be visible
+11:06:06.222 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:06.222 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:06.222 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:06.223 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:06.300 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '50'} - Result: Element became visible
+11:06:06.335 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Key Input' [#target] {value: ''} - Setting text: Test
+11:06:06.369 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Key Input' [#target] {value: ''} - Waiting to be visible
+11:06:06.369 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:06.370 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:06.370 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:06.370 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:06.407 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '500'} - Result: Text appended successfully
+11:06:06.418 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Key Input' [#target] {value: ''} - Result: Element became visible
+11:06:06.428 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '500'} - Getting value
+11:06:06.479 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '500'} - Result: Got value: 500
+11:06:06.598 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Key Input' [#target] {value: 'Test'} - Result: Text set successfully
+11:06:06.616 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Key Input' [#target] {value: 'Test'} - Pressing Enter key
+11:06:07.232 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Key Input' [#target] {value: ''} - Result: Enter key pressed successfully
+11:06:07.383 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:06:07.384 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:06:07.385 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:06:07.385 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:06:07.385 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:06:07.385 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:06:07.386 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:06:07.386 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:06:07.386 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:06:07.386 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:06:07.386 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:06:07.386 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:06:07.386 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:07.387 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:07.387 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:07.387 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:07.387 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:06:07.387 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:06:07.387 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:06:07.388 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:06:07.404 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Setting text: 42
+11:06:07.431 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Waiting to be visible
+11:06:07.432 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:07.432 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:07.432 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:07.433 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:07.485 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Element became visible
+11:06:07.641 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '42'} - Result: Text set successfully
+11:06:07.664 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '42'} - Getting value
+11:06:07.724 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '42'} - Result: Got value: 42
+11:06:09.207 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:06:09.207 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:06:09.208 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:06:09.208 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:06:09.208 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:06:09.208 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:06:09.208 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:06:09.208 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:06:09.208 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:06:09.208 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:06:09.208 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:06:09.209 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:06:09.209 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:09.209 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:09.209 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:09.209 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:09.210 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:06:09.210 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:06:09.210 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:06:09.210 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:06:09.637 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 30 - let's create a new webdriver
+11:06:09.894 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Clicking
+11:06:09.895 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Waiting to be clickable
+11:06:09.895 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:09.895 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:09.895 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:09.895 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:09.934 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:09.935 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:09.935 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:09.935 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:09.957 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Element became clickable
+11:06:10.074 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Clicked successfully
+11:06:10.139 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Clicking
+11:06:10.139 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Waiting to be clickable
+11:06:10.139 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:10.139 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:10.139 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:10.139 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:10.235 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:10.235 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:10.235 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:10.235 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:10.286 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Element became clickable
+11:06:10.392 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Clicked successfully
+11:06:10.817 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:06:11.103 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Clicking
+11:06:11.104 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Waiting to be clickable
+11:06:11.104 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:11.104 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:11.104 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:11.105 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:11.124 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:11.124 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:11.125 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:11.125 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:11.141 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Element became clickable
+11:06:11.239 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Clicked successfully
+11:06:11.239 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Clicking
+11:06:11.239 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Waiting to be clickable
+11:06:11.239 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:11.239 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:11.239 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:11.239 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:11.258 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:11.258 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:11.258 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:11.259 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:11.278 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Element became clickable
+11:06:11.373 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Clicked successfully
+11:06:16.299 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Login Button' [button[type='submit']] - Submitting form
+11:06:16.831 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Login Button' [button[type='submit']] - Result: Form submitted successfully
+11:06:17.407 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995577399.0.html]]
+11:06:17.563 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995577399.0.png]]
+11:06:17.681 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 32 - let's create a new webdriver
+11:06:18.067 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Clicking
+11:06:18.067 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Waiting to be clickable
+11:06:18.068 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:18.068 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:18.068 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:18.068 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:18.608 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:06:18.691 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹  'Test Button' [#test-button] - Waiting to be clickable
+11:06:18.691 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:18.691 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:18.691 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:18.691 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:18.730 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:18.731 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:18.731 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:18.731 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:19.636 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅  'Test Button' [#test-button] - Result: Element became clickable
+11:06:19.705 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹  'Dynamic Element' [#dynamic-element] - Waiting to exist
+11:06:19.705 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:19.705 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:19.705 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:19.705 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:20.459 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅  'Dynamic Element' [#dynamic-element] - Result: Element exists
+11:06:20.536 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹  'Test Element' [#test-element] - Waiting to be visible
+11:06:20.536 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:20.536 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:20.536 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:20.537 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:24.406 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Remove Button' [#btn] - Clicking
+11:06:24.406 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Remove Button' [#btn] - Waiting to be clickable
+11:06:24.406 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:24.406 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:24.406 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:24.407 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:28.096 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995588074.1.html]]
+11:06:28.228 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995588074.1.png]]
+11:06:28.335 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:06:28.336 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:06:28.336 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:06:28.336 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:06:28.336 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:06:28.336 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:06:28.337 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:06:28.337 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:06:28.337 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:06:28.337 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:06:28.337 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:06:28.337 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:06:28.337 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:28.337 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:28.337 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:28.337 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:28.338 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:06:28.338 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:06:28.338 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:06:28.338 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:06:30.655 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995590647.2.html]]
+11:06:30.802 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995590647.2.png]]
+11:06:30.911 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:06:30.911 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:06:30.912 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:06:30.912 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:06:30.912 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:06:30.912 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:06:30.912 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:06:30.912 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:06:30.912 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:06:30.913 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:06:30.913 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:06:30.913 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:06:30.913 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:30.913 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:30.913 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:30.914 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:30.914 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:06:30.914 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:06:30.914 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:06:30.914 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:06:30.918 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 32 - let's create a new webdriver
+11:06:31.209 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 31 - let's create a new webdriver
+11:06:31.869 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:06:32.042 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:06:34.433 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995594424.3.html]]
+11:06:34.545 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995594424.3.png]]
+11:06:35.001 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:06:35.002 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:06:35.002 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:06:35.002 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:06:35.002 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:06:35.002 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:06:35.002 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:06:35.002 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:06:35.002 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:06:35.003 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:06:35.003 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:06:35.003 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:06:35.003 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:06:35.003 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:06:35.003 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:06:35.003 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:06:35.003 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:06:35.003 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:06:35.003 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:06:35.003 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:06:35.005 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 30 - let's create a new webdriver
+11:06:36.669 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:06:41.985 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 32 - let's create a new webdriver
+11:06:42.852 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:07:18.791 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:07:18.792 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:07:18.792 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:07:18.792 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:07:18.792 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:07:18.792 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:07:18.792 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:07:18.792 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:07:19.635 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:07:19.636 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:07:19.636 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:07:19.636 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:07:19.636 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:07:19.636 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:07:19.636 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:07:19.636 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:07:19.636 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:07:19.636 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:07:19.636 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:07:19.636 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:07:19.637 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:07:19.637 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:07:19.637 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:07:19.637 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:07:19.637 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:07:19.637 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:07:19.637 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:07:19.637 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:07:22.519 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/search-results.html]]
+11:07:22.764 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/search-results.png]]
+11:07:22.955 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:07:22.955 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:07:22.955 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:07:22.955 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:07:22.956 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:07:22.957 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:07:22.957 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:07:22.957 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting remote grid URL
+11:07:22.957 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: remoteGridUrl
+11:07:22.957 [TestNG-test-Surefire test-2] WARN  ElementActions - ⚠️ ConfigManager - Warning: Property not found: remoteGridUrl
+11:07:22.957 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Using default value for remoteGridUrl: 
+11:07:22.958 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Remote grid URL not configured
+11:07:22.960 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting Agoda URL
+11:07:22.961 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: agoda.url
+11:07:22.962 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property agoda.url = https://www.agoda.com/
+11:07:22.962 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Agoda URL: https://www.agoda.com/
+11:07:22.967 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting up test
+11:07:22.968 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 31 - let's create a new webdriver
+11:07:24.188 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:07:31.091 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995651013.4.html]]
+11:07:31.268 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995651013.4.png]]
+11:07:33.048 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ AgodaHotelSearchTest - Result: Test setup completed successfully
+11:07:33.051 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Starting TC 01: Search and Sort Hotel Successfully
+11:07:33.052 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Searching for destination: Bangkok
+11:07:33.052 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 AgodaHomePage - Searching for destination: Bangkok
+11:07:33.074 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Clearing and typing text: Bangkok
+11:07:33.092 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Waiting to be visible
+11:07:33.093 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:07:33.094 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:07:33.094 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:07:33.094 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:07:33.138 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Result: Element became visible
+11:07:33.479 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: 'Bangkok'} - Result: Text cleared and typed successfully
+11:07:34.718 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ AgodaHomePage - Result: Selected destination: Bangkok
+11:07:34.718 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting dates: Check-in 7 days from now, stay for 3 nights
+11:07:34.719 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 AgodaHomePage - Setting dates with check-in offset: 7, check-out offset: 10
+11:07:34.719 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Clicking
+11:07:34.720 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Waiting to be clickable
+11:07:34.720 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:07:34.720 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:07:34.720 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:07:34.720 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:07:34.754 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:07:34.754 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:07:34.754 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:07:34.754 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:07:34.816 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Element became clickable
+11:07:34.923 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Clicked successfully
+11:07:35.949 [TestNG-test-Surefire test-2] WARN  ElementActions - ⚠️ AgodaHomePage - Warning: No available days found using common selectors, trying generic approach
+11:07:36.458 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ AgodaHomePage - Result: Dates set successfully
+11:07:36.458 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting occupancy: 2 adults, 1 child
+11:07:36.458 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 AgodaHomePage - Setting occupancy: 2 adults, 1 children
+11:07:36.458 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Clicking
+11:07:36.458 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Waiting to be clickable
+11:07:36.458 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:07:36.458 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:07:36.458 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:07:36.458 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:07:36.477 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:07:36.478 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:07:36.478 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:07:36.478 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:07:36.488 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Element became clickable
+11:07:36.584 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Clicked successfully
+11:07:39.590 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ AgodaHomePage - Result: Occupancy set successfully using JavaScript
+11:07:49.690 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995669651.5.html]]
+11:07:50.137 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757995669651.5.png]]
+11:18:13.948 [main] INFO  framework.config.LoggingConfig - Selenium logging configured to suppress warnings
+11:18:13.995 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+11:18:13.998 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:18:14.000 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:18:14.001 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:18:14.001 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:18:14.009 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:18:14.009 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:18:14.009 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:18:14.010 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:18:14.010 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:18:14.010 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:18:14.010 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:18:14.010 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:18:14.011 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:14.011 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:14.011 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:14.011 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:14.011 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:18:14.011 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:18:14.012 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:18:14.012 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:18:14.074 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 30 - let's create a new webdriver
+11:18:14.074 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 31 - let's create a new webdriver
+11:18:14.074 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 32 - let's create a new webdriver
+11:18:15.811 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:18:15.811 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:18:15.811 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:18:21.070 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Setting text: 10
+11:18:21.111 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Waiting to be visible
+11:18:21.125 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:21.125 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:21.126 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:21.126 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:21.212 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Element became visible
+11:18:21.428 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '10'} - Result: Text set successfully
+11:18:21.458 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '10'} - Appending text: 20
+11:18:21.488 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '10'} - Waiting to be visible
+11:18:21.489 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:21.489 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:21.489 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:21.489 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:21.545 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '10'} - Result: Element became visible
+11:18:21.652 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '1020'} - Result: Text appended successfully
+11:18:21.701 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '1020'} - Getting value
+11:18:21.789 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '1020'} - Result: Got value: 1020
+11:18:22.537 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Setting text: 50
+11:18:22.570 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Waiting to be visible
+11:18:22.571 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:22.572 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:22.572 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:22.572 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:22.644 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Element became visible
+11:18:22.831 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '50'} - Result: Text set successfully
+11:18:22.857 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '50'} - Appending text: 0
+11:18:22.891 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '50'} - Waiting to be visible
+11:18:22.892 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:22.892 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:22.892 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:22.892 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:22.953 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '50'} - Result: Element became visible
+11:18:23.076 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '500'} - Result: Text appended successfully
+11:18:23.078 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Setting text: 123
+11:18:23.120 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '500'} - Getting value
+11:18:23.123 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Waiting to be visible
+11:18:23.123 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:23.123 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:23.124 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:23.124 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:23.175 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '500'} - Result: Got value: 500
+11:18:23.197 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Element became visible
+11:18:23.437 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '123'} - Result: Text set successfully
+11:18:23.471 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '123'} - Clearing text field
+11:18:23.505 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '123'} - Waiting to be visible
+11:18:23.506 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:23.506 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Setting text: 10
+11:18:23.506 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:23.506 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:23.506 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:23.559 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Waiting to be visible
+11:18:23.560 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:23.561 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:23.561 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:23.562 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:23.601 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '123'} - Result: Element became visible
+11:18:23.658 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Element became visible
+11:18:23.765 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Text field cleared successfully
+11:18:23.789 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Getting value
+11:18:23.839 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Got value: 
+11:18:23.890 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '10'} - Result: Text set successfully
+11:18:23.926 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '10'} - Clearing and typing text: 99
+11:18:23.958 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '10'} - Waiting to be visible
+11:18:23.959 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:23.959 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:23.959 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:23.959 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:23.987 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Key Input' [#target] {value: ''} - Setting text: Test
+11:18:24.012 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Key Input' [#target] {value: ''} - Waiting to be visible
+11:18:24.012 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '10'} - Result: Element became visible
+11:18:24.013 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:24.013 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:24.014 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:24.014 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:24.067 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Key Input' [#target] {value: ''} - Result: Element became visible
+11:18:24.318 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Key Input' [#target] {value: 'Test'} - Result: Text set successfully
+11:18:24.350 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 TextBox 'Key Input' [#target] {value: 'Test'} - Pressing Enter key
+11:18:24.356 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '99'} - Result: Text cleared and typed successfully
+11:18:24.383 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '99'} - Getting value
+11:18:24.437 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '99'} - Result: Got value: 99
+11:18:24.624 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Setting text: 42
+11:18:24.651 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: ''} - Waiting to be visible
+11:18:24.652 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:24.652 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:24.652 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:24.652 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:24.718 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: ''} - Result: Element became visible
+11:18:24.770 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ TextBox 'Key Input' [#target] {value: ''} - Result: Enter key pressed successfully
+11:18:24.927 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:18:24.927 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:18:24.927 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:18:24.928 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:18:24.928 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:18:24.928 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:18:24.928 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:18:24.928 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:18:24.928 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:18:24.929 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:18:24.929 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:18:24.929 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:18:24.929 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:24.930 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:24.930 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:24.930 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:24.930 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:18:24.930 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:18:24.930 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:18:24.931 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:18:24.944 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '42'} - Result: Text set successfully
+11:18:24.976 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 TextBox 'Number Input' [input[type='number']] {value: '42'} - Getting value
+11:18:25.038 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ TextBox 'Number Input' [input[type='number']] {value: '42'} - Result: Got value: 42
+11:18:26.509 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:18:26.510 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:18:26.510 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:18:26.510 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:18:26.510 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:18:26.510 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:18:26.510 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:18:26.510 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:18:26.510 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:18:26.510 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:18:26.510 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:18:26.511 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:18:26.511 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:26.511 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:26.511 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:26.511 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:26.511 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:18:26.511 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:18:26.511 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:18:26.511 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:18:27.176 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Clicking
+11:18:27.177 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Waiting to be clickable
+11:18:27.177 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:27.178 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:27.178 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:27.178 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:27.220 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 30 - let's create a new webdriver
+11:18:27.238 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:27.238 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:27.239 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:27.239 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:27.272 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Element became clickable
+11:18:27.450 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Clicked successfully
+11:18:27.499 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Clicking
+11:18:27.500 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Waiting to be clickable
+11:18:27.501 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:27.501 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:27.502 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:27.502 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:27.549 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:27.551 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:27.551 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:27.551 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:27.581 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Element became clickable
+11:18:27.698 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Clicked successfully
+11:18:28.368 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:18:28.453 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Button' [button] - Focusing button
+11:18:35.394 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996315388.0.html]]
+11:18:35.541 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996315388.0.png]]
+11:18:35.680 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 32 - let's create a new webdriver
+11:18:36.745 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:18:38.644 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996318637.1.html]]
+11:18:38.775 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996318637.1.png]]
+11:18:39.488 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Clicking
+11:18:39.489 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Waiting to be clickable
+11:18:39.490 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:39.490 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:39.490 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:39.490 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:39.524 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:39.525 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:39.525 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:39.526 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:39.561 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Element became clickable
+11:18:39.780 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Clicked successfully
+11:18:39.781 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Clicking
+11:18:39.781 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Add Element Button' [button[onclick='addElement()']] - Waiting to be clickable
+11:18:39.782 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:39.782 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:39.782 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:39.782 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:39.822 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:39.822 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:39.823 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:39.823 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:39.866 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Element became clickable
+11:18:39.992 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Add Element Button' [button[onclick='addElement()']] - Result: Clicked successfully
+11:18:41.758 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Login Button' [button[type='submit']] - Submitting form
+11:18:42.442 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ Button 'Login Button' [button[type='submit']] - Result: Form submitted successfully
+11:18:43.216 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Clicking
+11:18:43.216 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 Button 'Non-existent Button' [#non-existent-button] - Waiting to be clickable
+11:18:43.217 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:43.217 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:43.217 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:43.217 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:43.622 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Remove Button' [#btn] - Clicking
+11:18:43.623 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 Button 'Remove Button' [#btn] - Waiting to be clickable
+11:18:43.623 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:43.623 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:43.623 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:43.624 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:46.502 [TestNG-test-Surefire test-3] WARN  ElementActions - ⚠️ Button 'Enable Button' [button:contains('Enable')] - Warning: Failed to check if enabled: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=140.0.7339.127)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.14.0-29-generic', java.version: '17.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8bbe21b36cf7b697059803936f74165b, findElement {using=css selector, value=button:contains('Enable')}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 140.0.7339.127, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42695}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:42695/devtoo..., se:cdpVersion: 140.0.7339.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8bbe21b36cf7b697059803936f74165b
+11:18:46.667 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹  'Test Button' [#test-button] - Waiting to be clickable
+11:18:46.668 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:46.668 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:46.669 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:46.669 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:46.712 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:46.712 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:46.712 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:46.712 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:47.554 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅  'Test Button' [#test-button] - Result: Element became clickable
+11:18:47.608 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹  'Dynamic Element' [#dynamic-element] - Waiting to exist
+11:18:47.608 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:47.609 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:47.609 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:47.609 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:48.260 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅  'Dynamic Element' [#dynamic-element] - Result: Element exists
+11:18:48.314 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹  'Test Element' [#test-element] - Waiting to be visible
+11:18:48.315 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:48.316 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:48.316 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:48.316 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:53.354 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996333345.2.html]]
+11:18:53.448 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996333345.2.png]]
+11:18:53.551 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:18:53.552 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:18:53.552 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:18:53.552 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:18:53.552 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:18:53.552 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:18:53.552 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:18:53.552 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:18:53.552 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:18:53.552 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:18:53.552 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:18:53.553 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:18:53.553 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:53.553 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:53.553 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:53.553 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:53.553 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:18:53.553 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:18:53.553 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:18:53.553 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:18:53.775 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996333768.3.html]]
+11:18:53.917 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996333768.3.png]]
+11:18:54.062 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 30 - let's create a new webdriver
+11:18:55.071 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:18:55.658 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:18:55.658 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:18:55.659 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:18:55.659 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:18:55.659 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:18:55.659 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:18:55.659 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:18:55.659 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:18:55.659 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:18:55.659 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:18:55.660 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:18:55.660 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:18:55.660 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:55.660 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:55.660 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:55.660 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:55.661 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:18:55.661 [TestNG-test-Surefire test-2] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:18:55.661 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:18:55.661 [TestNG-test-Surefire test-2] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:18:58.513 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996338507.4.html]]
+11:18:58.690 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996338507.4.png]]
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:18:58.825 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:18:58.826 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:18:58.826 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:18:58.826 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:18:58.826 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:18:58.826 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:18:58.826 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:18:58.829 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 32 - let's create a new webdriver
+11:18:58.829 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 31 - let's create a new webdriver
+11:18:59.173 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 30 - let's create a new webdriver
+11:19:00.102 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:19:00.210 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:19:00.346 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:20:11.193 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:20:11.194 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:20:11.194 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:20:11.194 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:20:11.194 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:20:11.194 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:20:11.194 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:20:11.194 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:20:11.194 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:20:13.677 [TestNG-test-Surefire test-1] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:20:13.678 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:20:13.678 [TestNG-test-Surefire test-1] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:20:15.205 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/search-results.html]]
+11:20:15.516 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/search-results.png]]
+11:20:15.742 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:20:15.743 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:20:15.744 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:20:15.744 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:20:15.744 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:20:15.744 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:20:15.744 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:20:15.744 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:20:15.744 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:20:15.745 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting remote grid URL
+11:20:15.745 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: remoteGridUrl
+11:20:15.745 [TestNG-test-Surefire test-3] WARN  ElementActions - ⚠️ ConfigManager - Warning: Property not found: remoteGridUrl
+11:20:15.746 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Using default value for remoteGridUrl: 
+11:20:15.746 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Remote grid URL not configured
+11:20:15.749 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting Agoda URL
+11:20:15.750 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: agoda.url
+11:20:15.750 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property agoda.url = https://www.agoda.com/
+11:20:15.751 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Agoda URL: https://www.agoda.com/
+11:20:15.756 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting up test
+11:20:15.758 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 32 - let's create a new webdriver
+11:20:17.422 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:20:27.741 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996427649.5.html]]
+11:20:27.934 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996427649.5.png]]
+11:20:29.767 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ AgodaHotelSearchTest - Result: Test setup completed successfully
+11:20:29.771 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Starting TC 01: Search and Sort Hotel Successfully
+11:20:29.772 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Searching for destination: Bangkok
+11:20:29.773 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 AgodaHomePage - Searching for destination: Bangkok
+11:20:29.834 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Clearing and typing text: Bangkok
+11:20:29.856 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Waiting to be visible
+11:20:29.856 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:20:29.856 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:20:29.856 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:20:29.856 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:20:29.879 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Result: Element became visible
+11:20:30.161 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: 'Bangkok'} - Result: Text cleared and typed successfully
+11:20:31.404 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ AgodaHomePage - Result: Selected destination: Bangkok
+11:20:31.404 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting dates: Check-in 7 days from now, stay for 3 nights
+11:20:31.405 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 AgodaHomePage - Setting dates with check-in offset: 7, check-out offset: 10
+11:20:31.405 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Clicking
+11:20:31.405 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Waiting to be clickable
+11:20:31.405 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:20:31.405 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:20:31.405 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:20:31.405 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:20:31.495 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:20:31.496 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:20:31.496 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:20:31.496 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:20:31.514 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Element became clickable
+11:20:31.610 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Clicked successfully
+11:20:32.625 [TestNG-test-Surefire test-3] WARN  ElementActions - ⚠️ AgodaHomePage - Warning: No available days found using common selectors, trying generic approach
+11:20:33.133 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ AgodaHomePage - Result: Dates set successfully
+11:20:33.133 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting occupancy: 2 adults, 1 child
+11:20:33.133 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 AgodaHomePage - Setting occupancy: 2 adults, 1 children
+11:20:33.133 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Clicking
+11:20:33.133 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Waiting to be clickable
+11:20:33.133 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:20:33.133 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:20:33.134 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:20:33.134 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:20:33.145 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:20:33.145 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:20:33.145 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:20:33.146 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:20:33.154 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Element became clickable
+11:20:33.222 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Clicked successfully
+11:20:36.226 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ AgodaHomePage - Result: Occupancy set successfully using JavaScript
+11:20:46.327 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996446277.6.html]]
+11:20:46.688 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|/home/sangle/Documents/selenium_lv3/build/reports/tests/1757996446277.6.png]]
+11:21:57.756 [main] INFO  framework.config.LoggingConfig - Selenium logging configured to suppress warnings
+11:21:57.814 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+11:21:57.816 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:21:57.818 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:21:57.819 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:21:57.819 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:21:57.825 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:21:57.825 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:21:57.826 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:21:57.826 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:21:57.826 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:21:57.826 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:21:57.826 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:21:57.827 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:21:57.827 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:21:57.827 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:21:57.827 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:21:57.828 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:21:57.828 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:21:57.828 [TestNG-test-Surefire test-3] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:21:57.828 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:21:57.828 [TestNG-test-Surefire test-3] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:21:57.891 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 25 - let's create a new webdriver
+11:21:57.891 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 24 - let's create a new webdriver
+11:21:57.891 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 23 - let's create a new webdriver
+11:21:59.563 [TestNG-test-Surefire test-2] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:21:59.563 [TestNG-test-Surefire test-3] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:21:59.563 [TestNG-test-Surefire test-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:31:57.514 [main] INFO  framework.config.LoggingConfig - Selenium logging configured to suppress warnings
+11:31:57.571 [main] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+11:31:57.573 [main] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:31:57.574 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:31:57.575 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:31:57.575 [main] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:31:57.580 [main] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:31:57.580 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:31:57.580 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:31:57.580 [main] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:31:57.580 [main] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:31:57.580 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:31:57.581 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:31:57.581 [main] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:31:57.581 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:31:57.581 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:31:57.582 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:31:57.583 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:31:57.583 [main] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:31:57.584 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:31:57.584 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:31:57.584 [main] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:31:57.654 [main] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+11:31:58.763 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:32:57.811 [main] INFO  framework.config.LoggingConfig - Selenium logging configured to suppress warnings
+11:32:57.856 [main] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+11:32:57.857 [main] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:32:57.858 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:32:57.858 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:32:57.859 [main] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:32:57.864 [main] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:32:57.864 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:32:57.865 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:32:57.865 [main] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:32:57.866 [main] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:32:57.866 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:32:57.866 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:32:57.867 [main] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:32:57.867 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:32:57.868 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:32:57.868 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:32:57.869 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:32:57.869 [main] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:32:57.869 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:32:57.870 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:32:57.870 [main] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:32:57.935 [main] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+11:32:58.960 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:36:38.315 [main] INFO  framework.config.LoggingConfig - Selenium logging configured to suppress warnings
+11:36:38.352 [main] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+11:36:38.354 [main] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:36:38.355 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:36:38.355 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:36:38.356 [main] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:36:38.361 [main] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:36:38.362 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:36:38.362 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:36:38.362 [main] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:36:38.362 [main] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:36:38.362 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:36:38.362 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:36:38.363 [main] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:36:38.363 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:36:38.363 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:36:38.363 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:36:38.363 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:36:38.364 [main] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:36:38.364 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:36:38.364 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:36:38.364 [main] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:36:38.410 [main] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+11:36:39.422 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+11:37:11.277 [main] INFO  framework.config.LoggingConfig - Selenium logging configured to suppress warnings
+11:37:11.312 [main] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+11:37:11.313 [main] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+11:37:11.313 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+11:37:11.314 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+11:37:11.314 [main] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+11:37:11.320 [main] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+11:37:11.320 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+11:37:11.321 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+11:37:11.321 [main] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+11:37:11.321 [main] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+11:37:11.321 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+11:37:11.322 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+11:37:11.322 [main] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+11:37:11.322 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+11:37:11.323 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+11:37:11.323 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+11:37:11.323 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+11:37:11.324 [main] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+11:37:11.324 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+11:37:11.324 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+11:37:11.324 [main] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+11:37:11.364 [main] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+11:37:12.360 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux

@@ -3,144 +3,133 @@ package framework.elements;
 import framework.elements.core.TextBox;
 import org.testng.annotations.*;
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.WebDriverRunner;
+import com.codeborne.selenide.ex.ElementNotFound;
 import static org.testng.Assert.*;
+import static com.codeborne.selenide.Selenide.$;
 
 /**
- * Unit tests for TextBox element
+ * Unit tests for TextBox element using The Internet Herokuapp site
  */
-public class TextBoxTest {
-    
-    private static final String TEST_PAGE_URL = "about:blank";
-    private static final String TEST_TEXTBOX_HTML = 
-        "<input id='test-input' type='text' class='test-class' value='Initial value'>";
-    private static final String READ_ONLY_TEXTBOX_HTML = 
-        "<input id='readonly-input' type='text' readonly value='Read only value'>";
-    
-    @BeforeClass
-    public void setUp() {
-        // Set up the Selenide configuration for testing
-        System.setProperty("selenide.timeout", "2000");
-        System.setProperty("selenide.browser", "chrome");
-        System.setProperty("selenide.headless", "true");
-    }
-    
-    @BeforeMethod
-    public void setUpTest() {
-        // Open a blank page and inject our test HTML
-        Selenide.open(TEST_PAGE_URL);
-        Selenide.executeJavaScript(
-            "document.body.innerHTML = arguments[0]", 
-            "<div>" + TEST_TEXTBOX_HTML + READ_ONLY_TEXTBOX_HTML + "</div>"
-        );
-    }
+public class TextBoxTest extends ElementsTestBase {
     
     @Test
     public void testSetText() {
+        // Navigate to the inputs page
+        navigateToExample("/inputs");
+        
         // Arrange
-        TextBox textBox = new TextBox("#test-input", "Test Input");
-        String newText = "New text value";
+        TextBox textBox = new TextBox("input[type='number']", "Number Input");
+        String newText = "42";
         
         // Act
         textBox.setText(newText);
         
         // Assert
-        String actualValue = Selenide.executeJavaScript(
-            "return document.getElementById('test-input').value;"
-        );
+        String actualValue = textBox.getValue();
         assertEquals(actualValue, newText, "TextBox text was not set correctly");
     }
     
     @Test
     public void testClearAndType() {
-        // Arrange
-        TextBox textBox = new TextBox("#test-input", "Test Input");
-        String newText = "Typed text";
+        // Navigate to the inputs page
+        navigateToExample("/inputs");
         
-        // Act
+        // Arrange
+        TextBox textBox = new TextBox("input[type='number']", "Number Input");
+        String initialText = "10";
+        String newText = "99";
+        
+        // First set some initial text
+        textBox.setText(initialText);
+        
+        // Act - clear and type new text
         textBox.clearAndType(newText);
         
         // Assert
-        String actualValue = Selenide.executeJavaScript(
-            "return document.getElementById('test-input').value;"
-        );
+        String actualValue = textBox.getValue();
         assertEquals(actualValue, newText, "TextBox was not cleared and typed correctly");
     }
     
     @Test
     public void testAppendText() {
-        // Arrange
-        TextBox textBox = new TextBox("#test-input", "Test Input");
-        String initialValue = "Initial value";
-        String appendedText = " appended";
+        // Navigate to the inputs page
+        navigateToExample("/inputs");
         
-        // Act
-        textBox.appendText(appendedText);
+        // Arrange
+        TextBox textBox = new TextBox("input[type='number']", "Number Input");
+        
+        // First set some text
+        textBox.setText("10");
+        
+        // Act - append more text
+        textBox.appendText("20");
         
         // Assert
-        String actualValue = Selenide.executeJavaScript(
-            "return document.getElementById('test-input').value;"
-        );
-        assertEquals(actualValue, initialValue + appendedText, "Text was not appended correctly");
+        String actualValue = textBox.getValue();
+        assertEquals(actualValue, "1020", "Text was not appended correctly");
     }
     
     @Test
     public void testClear() {
+        // Navigate to the inputs page
+        navigateToExample("/inputs");
+        
         // Arrange
-        TextBox textBox = new TextBox("#test-input", "Test Input");
+        TextBox textBox = new TextBox("input[type='number']", "Number Input");
+        
+        // First set some text so we can clear it
+        textBox.setText("123");
         
         // Act
         textBox.clear();
         
         // Assert
-        String actualValue = Selenide.executeJavaScript(
-            "return document.getElementById('test-input').value;"
-        );
+        String actualValue = textBox.getValue();
         assertEquals(actualValue, "", "TextBox was not cleared");
     }
     
     @Test
-    public void testGetValue() {
+    public void testPressEnter() {
+        // Navigate to the key presses example
+        navigateToExample("/key_presses");
+        
         // Arrange
-        TextBox textBox = new TextBox("#test-input", "Test Input");
-        String expectedValue = "Initial value";
+        TextBox inputBox = new TextBox("#target", "Key Input");
         
-        // Act
-        String actualValue = textBox.getValue();
+        // Act - set text and press Enter
+        inputBox.setText("Test");
+        inputBox.pressEnter();
         
-        // Assert
-        assertEquals(actualValue, expectedValue, "Incorrect value returned");
+        // Assert - check the result shows Enter was pressed
+        String resultText = $("#result").getText();
+        assertEquals(resultText, "You entered: ENTER", "Enter key was not registered correctly");
     }
     
     @Test
-    public void testIsReadOnly() {
-        // Arrange
-        TextBox normalTextBox = new TextBox("#test-input", "Test Input");
-        TextBox readOnlyTextBox = new TextBox("#readonly-input", "Read Only Input");
+    public void testMethodChaining() {
+        // Navigate to the inputs page
+        navigateToExample("/inputs");
         
-        // Act & Assert
-        assertFalse(normalTextBox.isReadOnly(), "Normal input should not be read-only");
-        assertTrue(readOnlyTextBox.isReadOnly(), "Read-only input should be read-only");
+        // Arrange
+        TextBox textBox = new TextBox("input[type='number']", "Number Input");
+        
+        // Act - use method chaining
+        textBox.setTextAndChain("50").appendText("0");
+        String value = textBox.getValue();
+        
+        // Assert
+        assertEquals(value, "500", "Method chaining did not work correctly");
     }
     
-    @Test(expectedExceptions = RuntimeException.class)
+    @Test(expectedExceptions = ElementNotFound.class)
     public void testSetTextOnNonExistentElement() {
+        // Navigate to the inputs page
+        navigateToExample("/inputs");
+        
         // Arrange
         TextBox nonExistentTextBox = new TextBox("#non-existent-input", "Non-existent Input");
         
         // Act - should throw exception
         nonExistentTextBox.setText("Some text");
-    }
-    
-    @AfterMethod
-    public void tearDownTest() {
-        Selenide.executeJavaScript("document.body.innerHTML = '';");
-    }
-    
-    @AfterClass
-    public void tearDown() {
-        if (WebDriverRunner.hasWebDriverStarted()) {
-            Selenide.closeWebDriver();
-        }
     }
 }
