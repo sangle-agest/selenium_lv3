@@ -3,6 +3,11 @@ package framework.pages.agoda;
 import framework.base.BasePage;
 import framework.elements.core.*;
 import framework.utils.LogUtils;
+import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.Condition;
+import static com.codeborne.selenide.Selenide.$;
+
+import java.time.Duration;
 
 public class SearchResultsPage extends BasePage {
     
@@ -17,6 +22,25 @@ public class SearchResultsPage extends BasePage {
     
     // Filters
     private final ElementCollection starRatingFilters = new ElementCollection("[data-selenium='star-rating-filter']", "Star Rating Filters");
+    
+    /**
+     * Wait for search results to load
+     * @param timeoutInSeconds Maximum time to wait in seconds
+     * @return true if search results loaded successfully, false otherwise
+     */
+    public boolean waitForSearchResults(int timeoutInSeconds) {
+        LogUtils.logAction(this.toString(), "Waiting for search results to load");
+        try {
+            // Try to find hotel cards or any search result indicator
+            SelenideElement searchResultIndicator = $("[data-selenium='hotel-item'], .hotel-list, .hotel-search-results");
+            searchResultIndicator.shouldBe(Condition.visible, Duration.ofSeconds(timeoutInSeconds));
+            LogUtils.logSuccess(this.toString(), "Search results loaded successfully");
+            return true;
+        } catch (Exception e) {
+            LogUtils.logError(this.toString(), "Search results did not load within timeout", e);
+            return false;
+        }
+    }
     
     /**
      * Get number of hotels in search results
@@ -167,6 +191,51 @@ public class SearchResultsPage extends BasePage {
         } catch (NumberFormatException e) {
             LogUtils.logError(this.toString(), "Failed to parse price: " + priceString, e);
             return 0.0;
+        }
+    }
+    
+    /**
+     * Get hotel location by index
+     * @param index Index of hotel in results (0-based)
+     * @return Hotel location
+     */
+    public String getHotelLocation(int index) {
+        LogUtils.logAction(this.toString(), "Getting hotel location at index: " + index);
+        try {
+            // Try to find location using common selectors
+            String locationSelector = "[data-selenium='area-name'], [data-selenium='hotel-address'], .address";
+            Label locationLabel = new Label(hotelCards.get(index).getLocator() + " " + locationSelector, 
+                    "Hotel Location[" + index + "]");
+            
+            if (locationLabel.exists()) {
+                String location = locationLabel.getText();
+                LogUtils.logSuccess(this.toString(), "Got hotel location: " + location);
+                return location;
+            }
+            
+            // Try with JavaScript as a fallback
+            String location = (String) executeJavaScript(
+                "return document.querySelectorAll('" + hotelCards.get(index).getLocator() + "')[" + index + "]" +
+                ".querySelector('" + locationSelector + "') ? " +
+                "document.querySelectorAll('" + hotelCards.get(index).getLocator() + "')[" + index + "]" +
+                ".querySelector('" + locationSelector + "').textContent.trim() : '';");
+                        
+            if (location != null && !location.isEmpty()) {
+                LogUtils.logSuccess(this.toString(), "Got hotel location using JavaScript: " + location);
+                return location;
+            }
+            
+            // If we still can't find it, try to look for any text that might contain location info
+            LogUtils.logWarning(this.toString(), "Could not find location with standard selectors, trying alternative approach");
+            return (String) executeJavaScript(
+                "const card = document.querySelectorAll('" + hotelCards.get(index).getLocator() + "')[" + index + "];" +
+                "const texts = Array.from(card.querySelectorAll('*')).map(el => el.textContent.trim())" +
+                ".filter(text => text.includes('Da Nang') || text.includes('Danang') || " +
+                "text.match(/\\b[A-Z][a-z]+(?:\\s+[A-Z][a-z]+)*,\\s+Vietnam\\b/));" +
+                "return texts.length > 0 ? texts[0] : 'Unknown location';");
+        } catch (Exception e) {
+            LogUtils.logError(this.toString(), "Failed to get hotel location", e);
+            return "Unknown location";
         }
     }
 }

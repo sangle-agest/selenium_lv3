@@ -100,8 +100,9 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
             LogUtils.logWarning("AgodaHotelSearchTest", "No new tab opened, continuing on current page");
         }
         
-        // Wait for search results page to load
-        searchResultsPage.waitForPageToLoad();
+        // Wait for search results to appear with a longer timeout (20 seconds)
+        boolean searchResultsLoaded = searchResultsPage.waitForSearchResults(20);
+        Assert.assertTrue(searchResultsLoaded, "Search results should load within the timeout period");
         
         // Step 3: Verify search results are displayed
         LogUtils.logAction("AgodaHotelSearchTest", "Step 3: Verifying search results");
