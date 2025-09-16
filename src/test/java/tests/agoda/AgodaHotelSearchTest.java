@@ -86,34 +86,14 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
         LogUtils.logAction("AgodaHotelSearchTest", "Verifying sorting is applied correctly");
         
         // Get first few hotel prices to verify sorting
-        String firstHotelPrice = searchResultsPage.getHotelPrice(0);
-        String secondHotelPrice = searchResultsPage.getHotelPrice(1);
-        
-        // Extract numeric values from price strings
-        double firstPrice = extractPriceValue(firstHotelPrice);
-        double secondPrice = extractPriceValue(secondHotelPrice);
+        double firstHotelPrice = searchResultsPage.getHotelPrice(0);
+        double secondHotelPrice = searchResultsPage.getHotelPrice(1);
         
         // Verify prices are in ascending order
-        Assert.assertTrue(firstPrice <= secondPrice, 
+        Assert.assertTrue(firstHotelPrice <= secondHotelPrice, 
                 "Hotels should be sorted by price in ascending order. First price: " + 
-                firstPrice + ", Second price: " + secondPrice);
+                firstHotelPrice + ", Second price: " + secondHotelPrice);
         
         LogUtils.logSuccess("AgodaHotelSearchTest", "TC 01: Search and Sort Hotel Successfully - PASSED");
-    }
-    
-    /**
-     * Helper method to extract numeric price value from price string
-     * @param priceString Price as string (e.g., "$100", "THB 3,500")
-     * @return Numeric price value
-     */
-    private double extractPriceValue(String priceString) {
-        // Remove currency symbol, commas, and other non-numeric characters
-        String numericString = priceString.replaceAll("[^0-9.]", "");
-        try {
-            return Double.parseDouble(numericString);
-        } catch (NumberFormatException e) {
-            LogUtils.logError("AgodaHotelSearchTest", "Failed to parse price: " + priceString, e);
-            return 0.0;
-        }
     }
 }

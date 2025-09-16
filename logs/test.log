@@ -1477,3 +1477,158 @@ Session ID: 8bbe21b36cf7b697059803936f74165b
 11:37:11.324 [main] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
 11:37:11.364 [main] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
 11:37:12.360 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+14:20:48.631 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  Command line suite
+
+14:20:48.671 [main] INFO  ElementActions - ✅ ConfigManager - Result: Successfully loaded config.properties
+14:20:48.672 [main] INFO  ElementActions - 🔹 ConfigManager - Getting browser configuration
+14:20:48.673 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: browser
+14:20:48.673 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property browser = chrome
+14:20:48.673 [main] INFO  ElementActions - ✅ ConfigManager - Result: Browser: chrome
+14:20:48.679 [main] INFO  ElementActions - 🔹 ConfigManager - Getting browser size configuration
+14:20:48.679 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: browserSize
+14:20:48.680 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property browserSize = 1920x1080
+14:20:48.680 [main] INFO  ElementActions - ✅ ConfigManager - Result: Browser size: 1920x1080
+14:20:48.680 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+14:20:48.680 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+14:20:48.680 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+14:20:48.681 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+14:20:48.681 [main] INFO  ElementActions - 🔹 ConfigManager - Getting page load timeout
+14:20:48.681 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: pageLoadTimeout
+14:20:48.681 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property pageLoadTimeout = 20000
+14:20:48.681 [main] INFO  ElementActions - ✅ ConfigManager - Result: Page load timeout: 20000ms
+14:20:48.681 [main] INFO  ElementActions - 🔹 ConfigManager - Checking if headless mode is enabled
+14:20:48.682 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: headless
+14:20:48.682 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property headless = false
+14:20:48.682 [main] INFO  ElementActions - ✅ ConfigManager - Result: Headless mode: disabled
+14:20:48.682 [main] INFO  ElementActions - 🔹 ConfigManager - Getting remote grid URL
+14:20:48.682 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: remoteGridUrl
+14:20:48.682 [main] WARN  ElementActions - ⚠️ ConfigManager - Warning: Property not found: remoteGridUrl
+14:20:48.682 [main] INFO  ElementActions - 🔹 ConfigManager - Using default value for remoteGridUrl: 
+14:20:48.683 [main] INFO  ElementActions - ✅ ConfigManager - Result: Remote grid URL not configured
+14:20:48.693 [main] INFO  ElementActions - 🔹 ConfigManager - Getting Agoda URL
+14:20:48.694 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: agoda.url
+14:20:48.694 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property agoda.url = https://www.agoda.com/
+14:20:48.694 [main] INFO  ElementActions - ✅ ConfigManager - Result: Agoda URL: https://www.agoda.com/
+14:20:48.734 [main] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting up test
+14:20:48.767 [main] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+14:20:51.218 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.9.3 / Selenium 4.33.0 / chrome 140.0.7339.127 linux
+14:20:57.966 [main] INFO  ElementActions - 🔹 Page[Agoda Home Page] - Initializing page object
+14:20:57.968 [main] INFO  ElementActions - 🔹 Page[Agoda Search Results Page] - Initializing page object
+14:20:57.978 [main] INFO  ElementActions - ✅ AgodaHotelSearchTest - Result: Test setup completed successfully
+14:20:58.150 [main] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Starting TC 01: Search and Sort Hotel Successfully
+14:20:58.151 [main] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Searching for destination: Bangkok
+14:20:58.151 [main] INFO  ElementActions - 🔹 Page[Agoda Home Page] - Searching for destination: Bangkok
+14:20:58.293 [main] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Clearing and typing text: Bangkok
+14:20:58.319 [main] INFO  ElementActions - 🔹 TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Waiting to be visible
+14:20:58.331 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+14:20:58.331 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+14:20:58.332 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+14:20:58.332 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+14:20:58.386 [main] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: ''} - Result: Element became visible
+14:20:58.699 [main] INFO  ElementActions - ✅ TextBox 'Search Box' [[data-selenium='textInput']] {value: 'Bangkok'} - Result: Text cleared and typed successfully
+14:20:59.872 [main] INFO  ElementActions - ✅ Page[Agoda Home Page] - Result: Selected destination: Bangkok
+14:20:59.873 [main] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting dates: Check-in 7 days from now, stay for 3 nights
+14:20:59.878 [main] INFO  ElementActions - 🔹 Page[Agoda Home Page] - Setting dates with check-in offset: 7, check-out offset: 10
+14:20:59.879 [main] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Clicking
+14:20:59.879 [main] INFO  ElementActions - 🔹 Button 'Check-in Button' [[data-element-name='check-in-box']] - Waiting to be clickable
+14:20:59.880 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+14:20:59.880 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+14:20:59.880 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+14:20:59.880 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+14:20:59.965 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+14:20:59.965 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+14:20:59.966 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+14:20:59.966 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+14:20:59.988 [main] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Element became clickable
+14:21:00.079 [main] INFO  ElementActions - ✅ Button 'Check-in Button' [[data-element-name='check-in-box']] - Result: Clicked successfully
+14:21:01.146 [main] WARN  ElementActions - ⚠️ Page[Agoda Home Page] - Warning: No available days found using common selectors, trying generic approach
+14:21:01.146 [main] INFO  ElementActions - 🔹 Page[Agoda Home Page] - Executing JavaScript
+14:21:01.146 [main] INFO  ElementActions - 🔹 JavaScript - Executing script: document.querySelectorAll('[data-date]:not([disabled])').length > 8 ? document.querySelectorAll('[data-date]:not([disabled])')[7].click() : null
+14:21:01.152 [main] INFO  ElementActions - ✅ JavaScript - Result: Script executed successfully
+14:21:01.652 [main] INFO  ElementActions - 🔹 Page[Agoda Home Page] - Executing JavaScript
+14:21:01.653 [main] INFO  ElementActions - 🔹 JavaScript - Executing script: document.querySelectorAll('[data-date]:not([disabled])').length > 11 ? document.querySelectorAll('[data-date]:not([disabled])')[10].click() : null
+14:21:01.679 [main] INFO  ElementActions - ✅ JavaScript - Result: Script executed successfully
+14:21:01.679 [main] INFO  ElementActions - ✅ Page[Agoda Home Page] - Result: Dates set successfully
+14:21:01.680 [main] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Setting occupancy: 2 adults, 1 child
+14:21:01.681 [main] INFO  ElementActions - 🔹 Page[Agoda Home Page] - Setting occupancy: 2 adults, 1 children
+14:21:01.682 [main] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Clicking
+14:21:01.682 [main] INFO  ElementActions - 🔹 Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Waiting to be clickable
+14:21:01.683 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+14:21:01.684 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+14:21:01.684 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+14:21:01.685 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+14:21:01.722 [main] INFO  ElementActions - 🔹 ConfigManager - Getting element timeout
+14:21:01.723 [main] INFO  ElementActions - 🔹 ConfigManager - Getting property: elementTimeout
+14:21:01.723 [main] INFO  ElementActions - ✅ ConfigManager - Result: Got property elementTimeout = 10000
+14:21:01.723 [main] INFO  ElementActions - ✅ ConfigManager - Result: Element timeout: 10000ms
+14:21:01.737 [main] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Element became clickable
+14:21:01.815 [main] INFO  ElementActions - ✅ Button 'Occupancy Button' [[data-element-name='occupancy-box']] - Result: Clicked successfully
+14:21:02.816 [main] INFO  ElementActions - 🔹 Page[Agoda Home Page] - Executing JavaScript
+14:21:02.817 [main] INFO  ElementActions - 🔹 JavaScript - Executing script: function setOccupancy(adults, children) {
+    // First find all buttons in the occupancy popup
+    const adultPlusBtn = Array.from(document.querySelectorAll('button')).find(btn => 
+        btn.textContent.includes('+') && 
+        (btn.closest('[aria-label*="adult"]') || btn.closest('[data-selenium*="adult"]')));
+    const adultMinusBtn = Array.from(document.querySelectorAll('button')).find(btn => 
+        btn.textContent.includes('-') && 
+        (btn.closest('[aria-label*="adult"]') || btn.closest('[data-selenium*="adult"]')));
+    const childPlusBtn = Array.from(document.querySelectorAll('button')).find(btn => 
+        btn.textContent.includes('+') && 
+        (btn.closest('[aria-label*="child"]') || btn.closest('[data-selenium*="child"]')));
+    
+    // Get current adults value
+    let currentAdults = 2; // Default
+    const adultValueEl = document.querySelector('[data-selenium="adultValue"]');
+    if (adultValueEl && adultValueEl.getAttribute('data-value')) {
+        currentAdults = parseInt(adultValueEl.getAttribute('data-value'));
+    }
+    
+    // Adjust adults
+    if (currentAdults < adults) {
+        for (let i = currentAdults; i < adults; i++) {
+            if (adultPlusBtn) adultPlusBtn.click();
+        }
+    } else if (currentAdults > adults) {
+        for (let i = currentAdults; i > adults; i--) {
+            if (adultMinusBtn) adultMinusBtn.click();
+        }
+    }
+    
+    // Add children
+    if (children > 0 && childPlusBtn) {
+        for (let i = 0; i < children; i++) {
+            childPlusBtn.click();
+        }
+        
+        // Handle child age selection if needed
+        setTimeout(() => {
+            const ageSelects = document.querySelectorAll('select[aria-label*="child"], select[data-selenium*="child"]');
+            if (ageSelects.length > 0) {
+                Array.from(ageSelects).forEach(select => {
+                    select.value = '7';
+                    select.dispatchEvent(new Event('change'));
+                });
+            }
+        }, 500);
+    }
+    
+    // Click Done/Apply button
+    setTimeout(() => {
+        const doneBtn = Array.from(document.querySelectorAll('button')).find(btn => 
+            btn.textContent.includes('Done') || 
+            btn.textContent.includes('Apply') || 
+            btn.closest('[data-selenium="occupancy-apply"]'));
+        if (doneBtn) doneBtn.click();
+    }, 1000);
+}
+
+setOccupancy(2, 1);
+14:21:02.844 [main] INFO  ElementActions - ✅ JavaScript - Result: Script executed successfully
+14:21:04.845 [main] INFO  ElementActions - ✅ Page[Agoda Home Page] - Result: Occupancy set successfully using JavaScript
+14:21:11.332 [main] INFO  ElementActions - 🔹 AgodaHotelSearchTest - Clicking search button
+14:21:11.333 [main] INFO  ElementActions - 🔹 Page[Agoda Home Page] - Clicking search button
+14:21:14.690 [main] INFO  ElementActions - ✅ Page[Agoda Home Page] - Result: Search button clicked successfully
+14:21:14.691 [main] INFO  ElementActions - 🔹 Page[Agoda Search Results Page] - Getting number of search results
+14:21:14.732 [main] INFO  ElementActions - ✅ Page[Agoda Search Results Page] - Result: Found 0 hotel results
+14:21:14.732 [main] INFO  ElementActions - ✅ AgodaHotelSearchTest - Result: Search results displayed: 0 hotels found

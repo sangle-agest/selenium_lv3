@@ -7,8 +7,17 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Agoda Home Page Object
+ * Contains all the elements and methods specific to the Agoda home page
+ */
 public class AgodaHomePage extends BasePage {
-    // Search components
+    // Constructor with page name
+    public AgodaHomePage() {
+        super("Agoda Home Page");
+    }
+    
+    // Page elements using improved element wrapper classes
     private final TextBox searchBox = new TextBox("[data-selenium='textInput']", "Search Box");
     
     // Date picker components
@@ -16,13 +25,16 @@ public class AgodaHomePage extends BasePage {
     
     // Room occupancy components
     private final Button occupancyButton = new Button("[data-element-name='occupancy-box']", "Occupancy Button");
+    
+    // Search button
+    private final Button searchButton = new Button("[data-selenium='searchButton']", "Search Button");
 
     /**
      * Search for a destination
      * @param destinationText Name of the destination
      */
     public void searchDestination(String destinationText) {
-        LogUtils.logAction("AgodaHomePage", "Searching for destination: " + destinationText);
+        LogUtils.logAction(this.toString(), "Searching for destination: " + destinationText);
         
         try {
             // First clear and enter the text
@@ -35,9 +47,9 @@ public class AgodaHomePage extends BasePage {
             SelenideElement firstSuggestion = $("[data-selenium='autosuggest-item']");
             firstSuggestion.click();
             
-            LogUtils.logSuccess("AgodaHomePage", "Selected destination: " + destinationText);
+            LogUtils.logSuccess(this.toString(), "Selected destination: " + destinationText);
         } catch (Exception e) {
-            LogUtils.logError("AgodaHomePage", "Failed to search for destination: " + destinationText, e);
+            LogUtils.logError(this.toString(), "Failed to search for destination: " + destinationText, e);
             throw e;
         }
     }
@@ -48,7 +60,7 @@ public class AgodaHomePage extends BasePage {
      * @param checkOutOffset Days from today for check-out
      */
     public void setDates(int checkInOffset, int checkOutOffset) {
-        LogUtils.logAction("AgodaHomePage", "Setting dates with check-in offset: " + checkInOffset + ", check-out offset: " + checkOutOffset);
+        LogUtils.logAction(this.toString(), "Setting dates with check-in offset: " + checkInOffset + ", check-out offset: " + checkOutOffset);
         
         try {
             // Click on the check-in box to open the date picker
@@ -63,14 +75,14 @@ public class AgodaHomePage extends BasePage {
             }
             
             if (availableDays.size() == 0) {
-                LogUtils.logWarning("AgodaHomePage", "No available days found using common selectors, trying generic approach");
+                LogUtils.logWarning(this.toString(), "No available days found using common selectors, trying generic approach");
                 // Just try to click any visible date elements that look like dates
-                Selenide.executeJavaScript(
+                executeJavaScript(
                     "document.querySelectorAll('[data-date]:not([disabled])').length > " + (checkInOffset + 1) + 
                     " ? document.querySelectorAll('[data-date]:not([disabled])')[" + checkInOffset + "].click() : null"
                 );
                 Selenide.sleep(500);
-                Selenide.executeJavaScript(
+                executeJavaScript(
                     "document.querySelectorAll('[data-date]:not([disabled])').length > " + (checkOutOffset + 1) + 
                     " ? document.querySelectorAll('[data-date]:not([disabled])')[" + checkOutOffset + "].click() : null"
                 );
@@ -84,11 +96,11 @@ public class AgodaHomePage extends BasePage {
                     if (checkOutOffset < availableDays.size()) {
                         availableDays.get(checkOutOffset).click();
                     } else {
-                        LogUtils.logWarning("AgodaHomePage", "Check-out offset exceeds available days, using last available date");
+                        LogUtils.logWarning(this.toString(), "Check-out offset exceeds available days, using last available date");
                         availableDays.last().click();
                     }
                 } else {
-                    LogUtils.logWarning("AgodaHomePage", "Check-in offset exceeds available days, using first available date");
+                    LogUtils.logWarning(this.toString(), "Check-in offset exceeds available days, using first available date");
                     availableDays.first().click();
                     Selenide.sleep(500);
                     int lastIndex = Math.min(5, availableDays.size() - 1);
@@ -96,9 +108,9 @@ public class AgodaHomePage extends BasePage {
                 }
             }
             
-            LogUtils.logSuccess("AgodaHomePage", "Dates set successfully");
+            LogUtils.logSuccess(this.toString(), "Dates set successfully");
         } catch (Exception e) {
-            LogUtils.logError("AgodaHomePage", "Failed to set dates", e);
+            LogUtils.logError(this.toString(), "Failed to set dates", e);
             throw e;
         }
     }
@@ -109,7 +121,7 @@ public class AgodaHomePage extends BasePage {
      * @param children Number of children
      */
     public void setOccupancy(int adults, int children) {
-        LogUtils.logAction("AgodaHomePage", "Setting occupancy: " + adults + " adults, " + children + " children");
+        LogUtils.logAction(this.toString(), "Setting occupancy: " + adults + " adults, " + children + " children");
         
         try {
             // Open occupancy panel
@@ -180,14 +192,14 @@ public class AgodaHomePage extends BasePage {
                 "setOccupancy(" + adults + ", " + children + ");";
             
             // Execute the JavaScript to set occupancy
-            Selenide.executeJavaScript(setOccupancyScript);
+            executeJavaScript(setOccupancyScript);
             
             // Wait for the occupancy popup to close
             Selenide.sleep(2000);
             
-            LogUtils.logSuccess("AgodaHomePage", "Occupancy set successfully using JavaScript");
+            LogUtils.logSuccess(this.toString(), "Occupancy set successfully using JavaScript");
         } catch (Exception e) {
-            LogUtils.logError("AgodaHomePage", "Failed to set occupancy", e);
+            LogUtils.logError(this.toString(), "Failed to set occupancy", e);
             throw e;
         }
     }
@@ -196,7 +208,7 @@ public class AgodaHomePage extends BasePage {
      * Perform search with current criteria
      */
     public void clickSearch() {
-        LogUtils.logAction("AgodaHomePage", "Clicking search button");
+        LogUtils.logAction(this.toString(), "Clicking search button");
         try {
             // The search button might be different in the actual website
             // So let's try a few options
@@ -209,9 +221,9 @@ public class AgodaHomePage extends BasePage {
             }
             
             searchBtn.click();
-            LogUtils.logSuccess("AgodaHomePage", "Search button clicked successfully");
+            LogUtils.logSuccess(this.toString(), "Search button clicked successfully");
         } catch (Exception e) {
-            LogUtils.logError("AgodaHomePage", "Failed to click search button", e);
+            LogUtils.logError(this.toString(), "Failed to click search button", e);
             throw e;
         }
     }
@@ -227,7 +239,7 @@ public class AgodaHomePage extends BasePage {
             }
             return 2; // Default value
         } catch (Exception e) {
-            LogUtils.logWarning("AgodaHomePage", "Failed to get adult count, returning default value");
+            LogUtils.logWarning(this.toString(), "Failed to get adult count, returning default value");
             return 2; // Default value
         }
     }
@@ -243,7 +255,7 @@ public class AgodaHomePage extends BasePage {
             }
             return 0; // Default value
         } catch (Exception e) {
-            LogUtils.logWarning("AgodaHomePage", "Failed to get child count, returning default value");
+            LogUtils.logWarning(this.toString(), "Failed to get child count, returning default value");
             return 0; // Default value
         }
     }

@@ -15,7 +15,8 @@ import static com.codeborne.selenide.Selenide.*;
 
 /**
  * BasePage: Parent class for all page objects.
- * Contains common methods like navigation, waits, and getting page title.
+ * Contains page-specific operations and delegates browser operations to BrowserUtils
+ * and JavaScript operations to JavaScriptUtils.
  */
 public abstract class BasePage {
     protected final String pageName;
@@ -37,53 +38,37 @@ public abstract class BasePage {
 
     /**
      * Opens a given URL in the browser.
+     * Delegates to BrowserUtils for browser operations.
      * @param url Full URL of the page.
      */
     public void openPage(String url) {
         LogUtils.logAction(this.toString(), "Opening page: " + url);
-        try {
-            open(url);
-            LogUtils.logSuccess(this.toString(), "Page opened successfully: " + url);
-        } catch (Exception e) {
-            LogUtils.logError(this.toString(), "Failed to open page: " + url, e);
-            throw e;
-        }
+        BrowserUtils.openUrl(url);
     }
 
     /**
      * Get current page title.
+     * Delegates to BrowserUtils for browser operations.
      * @return Page title string.
      */
     public String getPageTitle() {
         LogUtils.logAction(this.toString(), "Getting page title");
-        try {
-            String title = title();
-            LogUtils.logSuccess(this.toString(), "Page title: " + title);
-            return title;
-        } catch (Exception e) {
-            LogUtils.logError(this.toString(), "Failed to get page title", e);
-            throw e;
-        }
+        return BrowserUtils.getTitle();
     }
     
     /**
-     * Get current page URL
+     * Get current page URL.
+     * Delegates to BrowserUtils for browser operations.
      * @return Current URL string
      */
     public String getCurrentUrl() {
         LogUtils.logAction(this.toString(), "Getting current URL");
-        try {
-            String url = WebDriverRunner.url();
-            LogUtils.logSuccess(this.toString(), "Current URL: " + url);
-            return url;
-        } catch (Exception e) {
-            LogUtils.logError(this.toString(), "Failed to get current URL", e);
-            throw e;
-        }
+        return BrowserUtils.getCurrentUrl();
     }
     
     /**
      * Wait for element to be visible
+     * This is retained in BasePage as it's commonly used in page-specific interactions
      * @param element SelenideElement to wait for
      */
     protected void waitForElementVisible(SelenideElement element) {
@@ -99,6 +84,7 @@ public abstract class BasePage {
 
     /**
      * Wait for element to be clickable
+     * This is retained in BasePage as it's commonly used in page-specific interactions
      * @param element SelenideElement to wait for
      */
     protected void waitForElementClickable(SelenideElement element) {
@@ -113,7 +99,7 @@ public abstract class BasePage {
     }
 
     /**
-     * Scroll element into view
+     * Scroll element into view using JavaScriptUtils
      * @param element SelenideElement to scroll to
      */
     protected void scrollIntoView(SelenideElement element) {
@@ -129,6 +115,7 @@ public abstract class BasePage {
 
     /**
      * Check if element exists and is visible
+     * This is retained in BasePage as it's commonly used in page-specific interactions
      * @param element SelenideElement to check
      * @return true if element exists and is visible
      */
@@ -146,6 +133,7 @@ public abstract class BasePage {
     
     /**
      * Wait for page to load completely
+     * This is a page-specific operation so it belongs in BasePage
      */
     public void waitForPageToLoad() {
         LogUtils.logAction(this.toString(), "Waiting for page to load completely");
@@ -174,37 +162,26 @@ public abstract class BasePage {
     }
     
     /**
-     * Refresh current page
+     * Refresh current page - delegates to BrowserUtils
      */
     public void refreshPage() {
         LogUtils.logAction(this.toString(), "Refreshing page");
-        try {
-            refresh();
-            waitForPageToLoad();
-            LogUtils.logSuccess(this.toString(), "Page refreshed successfully");
-        } catch (Exception e) {
-            LogUtils.logError(this.toString(), "Failed to refresh page", e);
-            throw e;
-        }
+        BrowserUtils.refresh();
+        waitForPageToLoad();
     }
     
     /**
-     * Navigate back
+     * Navigate back - delegates to BrowserUtils
      */
     public void goBack() {
         LogUtils.logAction(this.toString(), "Navigating back");
-        try {
-            back();
-            waitForPageToLoad();
-            LogUtils.logSuccess(this.toString(), "Navigated back successfully");
-        } catch (Exception e) {
-            LogUtils.logError(this.toString(), "Failed to navigate back", e);
-            throw e;
-        }
+        BrowserUtils.back();
+        waitForPageToLoad();
     }
     
     /**
      * Take screenshot of current page
+     * This is a page-specific operation so it belongs in BasePage
      * @return Path to the screenshot file
      */
     public String takeScreenshot() {
@@ -220,50 +197,31 @@ public abstract class BasePage {
     }
     
     /**
-     * Execute JavaScript on the page
+     * Execute JavaScript on the page - delegates to JavaScriptUtils
      * @param script JavaScript code to execute
      * @param args Arguments to pass to the script
      * @return Result of script execution
      */
     protected Object executeJavaScript(String script, Object... args) {
         LogUtils.logAction(this.toString(), "Executing JavaScript");
-        try {
-            Object result = JavaScriptUtils.executeJs(script, args);
-            LogUtils.logSuccess(this.toString(), "JavaScript executed successfully");
-            return result;
-        } catch (Exception e) {
-            LogUtils.logError(this.toString(), "Failed to execute JavaScript", e);
-            throw e;
-        }
+        return JavaScriptUtils.executeJs(script, args);
     }
     
     /**
-     * Switch to frame by locator
+     * Switch to frame by locator - delegates to BrowserUtils
      * @param locator Frame locator
      */
     protected void switchToFrame(By locator) {
         LogUtils.logAction(this.toString(), "Switching to frame: " + locator);
-        try {
-            BrowserUtils.switchToFrame(locator);
-            LogUtils.logSuccess(this.toString(), "Switched to frame successfully");
-        } catch (Exception e) {
-            LogUtils.logError(this.toString(), "Failed to switch to frame", e);
-            throw e;
-        }
+        BrowserUtils.switchToFrame(locator);
     }
     
     /**
-     * Switch back to default content
+     * Switch back to default content - delegates to BrowserUtils
      */
     protected void switchToDefaultContent() {
         LogUtils.logAction(this.toString(), "Switching to default content");
-        try {
-            BrowserUtils.switchToDefaultContent();
-            LogUtils.logSuccess(this.toString(), "Switched to default content successfully");
-        } catch (Exception e) {
-            LogUtils.logError(this.toString(), "Failed to switch to default content", e);
-            throw e;
-        }
+        BrowserUtils.switchToDefaultContent();
     }
     
     @Override
