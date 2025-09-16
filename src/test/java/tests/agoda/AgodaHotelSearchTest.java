@@ -206,4 +206,5 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
             LogUtils.logWarning("AgodaHotelSearchTest", "Error during tab cleanup: " + e.getMessage());
         }
     }
+   
 }
