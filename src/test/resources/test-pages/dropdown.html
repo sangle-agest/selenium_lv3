@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Test Page</title>
+</head>
+<body>
+    <h1>Dropdown Test</h1>
+    
+    <select id="dropdown">
+        <option value="">Please select an option</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+    </select>
+    
+    <div id="selected-value">Selected: <span id="selected-text">Please select an option</span></div>
+    
+    <script>
+        document.getElementById('dropdown').addEventListener('change', function() {
+            var selectedOption = this.options[this.selectedIndex].text;
+            document.getElementById('selected-text').textContent = selectedOption;
+        });
+    </script>
+</body>
+</html>

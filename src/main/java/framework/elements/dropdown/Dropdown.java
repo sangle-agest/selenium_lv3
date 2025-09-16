@@ -88,13 +88,13 @@ public class Dropdown extends BaseElement {
      * Get selected option text
      */
     public String getSelectedText() {
-        LogUtils.logAction(toString(), "Getting selected option text");
+        LogUtils.logAction("Dropdown '" + getName() + "'", "Getting selected option text");
         try {
             String text = getElement().getSelectedOption().getText();
-            LogUtils.logSuccess(toString(), "Got selected text: " + text);
+            LogUtils.logSuccess("Dropdown '" + getName() + "'", "Got selected text: " + text);
             return text;
         } catch (Exception e) {
-            LogUtils.logError(toString(), "Failed to get selected text", e);
+            LogUtils.logError("Dropdown '" + getName() + "'", "Failed to get selected text", e);
             throw e;
         }
     }
@@ -184,19 +184,30 @@ public class Dropdown extends BaseElement {
     public int getOptionsCount() {
         try {
             int count = getElement().getOptions().size();
-            LogUtils.logAction(toString(), "Got options count: " + count);
+            LogUtils.logAction("Dropdown '" + getName() + "'", "Got options count: " + count);
             return count;
         } catch (Exception e) {
-            LogUtils.logWarning(toString(), "Failed to get options count: " + e.getMessage());
+            LogUtils.logWarning("Dropdown '" + getName() + "'", "Failed to get options count: " + e.getMessage());
             return 0;
         }
     }
 
     @Override
     public String toString() {
-        return String.format("Dropdown '%s' with %d options, selected: '%s'", 
-            getName(), 
-            getOptionsCount(), 
-            getSelectedText());
+        try {
+            int count = getElement().getOptions().size();
+            String selectedText = "unknown";
+            try {
+                selectedText = getElement().getSelectedOption().getText();
+            } catch (Exception e) {
+                // Ignore
+            }
+            return String.format("Dropdown '%s' with %d options, selected: '%s'", 
+                getName(), 
+                count, 
+                selectedText);
+        } catch (Exception e) {
+            return String.format("Dropdown '%s'", getName());
+        }
     }
 }
