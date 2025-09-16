@@ -12,15 +12,25 @@ public class TextBox extends BaseElement {
     }
 
     /**
-     * Enter text into the field
+     * Enter text into the field (void version)
      * @param text Text to enter
      */
     public void setText(String text) {
+        setTextAndChain(text);
+    }
+    
+    /**
+     * Enter text into the field with method chaining
+     * @param text Text to enter
+     * @return this textbox for method chaining
+     */
+    public TextBox setTextAndChain(String text) {
         LogUtils.logAction(toString(), "Setting text: " + text);
         try {
             waitForVisible();
-            element.setValue(text);
+            getElement().setValue(text);
             LogUtils.logSuccess(toString(), "Text set successfully");
+            return this;
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to set text", e);
             throw e;
@@ -31,13 +41,14 @@ public class TextBox extends BaseElement {
      * Clear existing text and enter new text
      * @param text Text to enter
      */
-    public void clearAndType(String text) {
+    public TextBox clearAndType(String text) {
         LogUtils.logAction(toString(), "Clearing and typing text: " + text);
         try {
             waitForVisible();
-            element.clear();
-            element.setValue(text);
+            getElement().clear();
+            getElement().setValue(text);
             LogUtils.logSuccess(toString(), "Text cleared and typed successfully");
+            return this;
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to clear and type text", e);
             throw e;
@@ -48,12 +59,13 @@ public class TextBox extends BaseElement {
      * Append text to existing content
      * @param text Text to append
      */
-    public void appendText(String text) {
+    public TextBox appendText(String text) {
         LogUtils.logAction(toString(), "Appending text: " + text);
         try {
             waitForVisible();
-            element.append(text);
+            getElement().append(text);
             LogUtils.logSuccess(toString(), "Text appended successfully");
+            return this;
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to append text", e);
             throw e;
@@ -63,11 +75,12 @@ public class TextBox extends BaseElement {
     /**
      * Press Enter key
      */
-    public void pressEnter() {
+    public TextBox pressEnter() {
         LogUtils.logAction(toString(), "Pressing Enter key");
         try {
-            element.pressEnter();
+            getElement().pressEnter();
             LogUtils.logSuccess(toString(), "Enter key pressed successfully");
+            return this;
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to press Enter key", e);
             throw e;
@@ -77,11 +90,12 @@ public class TextBox extends BaseElement {
     /**
      * Press Tab key
      */
-    public void pressTab() {
+    public TextBox pressTab() {
         LogUtils.logAction(toString(), "Pressing Tab key");
         try {
-            element.pressTab();
+            getElement().pressTab();
             LogUtils.logSuccess(toString(), "Tab key pressed successfully");
+            return this;
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to press Tab key", e);
             throw e;
@@ -91,12 +105,13 @@ public class TextBox extends BaseElement {
     /**
      * Clear the text field
      */
-    public void clear() {
+    public TextBox clear() {
         LogUtils.logAction(toString(), "Clearing text field");
         try {
             waitForVisible();
-            element.clear();
+            getElement().clear();
             LogUtils.logSuccess(toString(), "Text field cleared successfully");
+            return this;
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to clear text field", e);
             throw e;
@@ -120,7 +135,7 @@ public class TextBox extends BaseElement {
     @Override
     public String toString() {
         try {
-            String value = element.getValue();
+            String value = getElement().getValue();
             return String.format("TextBox '%s' [%s] {value: '%s'}", getName(), getLocator(), 
                 value.length() > 20 ? value.substring(0, 17) + "..." : value);
         } catch (Exception e) {

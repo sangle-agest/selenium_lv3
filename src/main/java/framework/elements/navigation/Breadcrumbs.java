@@ -43,7 +43,7 @@ public class Breadcrumbs extends BaseElement {
     public List<String> getSegments() {
         LogUtils.logAction(toString(), "Getting breadcrumb segments");
         try {
-            ElementsCollection segments = element.$$(segmentLocator);
+            ElementsCollection segments = getElement().$$(segmentLocator);
             List<String> segmentTexts = new ArrayList<>();
             
             for (SelenideElement segment : segments) {
@@ -65,7 +65,7 @@ public class Breadcrumbs extends BaseElement {
     public String getSegment(int index) {
         LogUtils.logAction(toString(), "Getting breadcrumb segment at index " + index);
         try {
-            ElementsCollection segments = element.$$(segmentLocator);
+            ElementsCollection segments = getElement().$$(segmentLocator);
             
             if (index < 0 || index >= segments.size()) {
                 LogUtils.logWarning(toString(), "Invalid segment index: " + index);
@@ -87,7 +87,7 @@ public class Breadcrumbs extends BaseElement {
     public void clickSegment(int index) {
         LogUtils.logAction(toString(), "Clicking breadcrumb segment at index " + index);
         try {
-            ElementsCollection segments = element.$$(segmentLocator);
+            ElementsCollection segments = getElement().$$(segmentLocator);
             
             if (index < 0 || index >= segments.size()) {
                 LogUtils.logWarning(toString(), "Invalid segment index: " + index);
@@ -104,12 +104,21 @@ public class Breadcrumbs extends BaseElement {
     }
     
     /**
+     * Click on breadcrumb segment by index (0-based) with method chaining
+     * @return this Breadcrumbs for method chaining
+     */
+    public Breadcrumbs clickSegmentAndChain(int index) {
+        clickSegment(index);
+        return this;
+    }
+    
+    /**
      * Click on breadcrumb segment by text
      */
     public void clickSegment(String segmentText) {
         LogUtils.logAction(toString(), "Clicking breadcrumb segment: " + segmentText);
         try {
-            ElementsCollection segments = element.$$(segmentLocator);
+            ElementsCollection segments = getElement().$$(segmentLocator);
             boolean found = false;
             
             for (SelenideElement segment : segments) {
@@ -130,6 +139,15 @@ public class Breadcrumbs extends BaseElement {
             LogUtils.logError(toString(), "Failed to click segment: " + segmentText, e);
             throw e;
         }
+    }
+    
+    /**
+     * Click on breadcrumb segment by text with method chaining
+     * @return this Breadcrumbs for method chaining
+     */
+    public Breadcrumbs clickSegmentAndChain(String segmentText) {
+        clickSegment(segmentText);
+        return this;
     }
     
     /**
@@ -155,7 +173,7 @@ public class Breadcrumbs extends BaseElement {
     public int getSegmentCount() {
         LogUtils.logAction(toString(), "Getting segment count");
         try {
-            int count = element.$$(segmentLocator).size();
+            int count = getElement().$$(segmentLocator).size();
             LogUtils.logSuccess(toString(), "Segment count: " + count);
             return count;
         } catch (Exception e) {
@@ -179,6 +197,15 @@ public class Breadcrumbs extends BaseElement {
     }
     
     /**
+     * Click the home/first segment with method chaining
+     * @return this Breadcrumbs for method chaining
+     */
+    public Breadcrumbs clickHomeAndChain() {
+        clickHome();
+        return this;
+    }
+    
+    /**
      * Click the current/last segment
      */
     public void clickCurrent() {
@@ -191,6 +218,15 @@ public class Breadcrumbs extends BaseElement {
             LogUtils.logError(toString(), "Failed to click current segment", e);
             throw e;
         }
+    }
+    
+    /**
+     * Click the current/last segment with method chaining
+     * @return this Breadcrumbs for method chaining
+     */
+    public Breadcrumbs clickCurrentAndChain() {
+        clickCurrent();
+        return this;
     }
     
     @Override

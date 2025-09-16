@@ -19,7 +19,16 @@ public class FileUpload extends BaseElement {
         if (!file.exists()) {
             throw new IllegalArgumentException("File not found: " + filePath);
         }
-        element.uploadFile(file);
+        getElement().uploadFile(file);
+    }
+    
+    /**
+     * Upload a file by providing its path with method chaining
+     * @return this FileUpload for method chaining
+     */
+    public FileUpload uploadFileAndChain(String filePath) {
+        uploadFile(filePath);
+        return this;
     }
 
     /**
@@ -30,12 +39,21 @@ public class FileUpload extends BaseElement {
             uploadFile(filePath);
         }
     }
+    
+    /**
+     * Upload multiple files with method chaining
+     * @return this FileUpload for method chaining
+     */
+    public FileUpload uploadFilesAndChain(String... filePaths) {
+        uploadFiles(filePaths);
+        return this;
+    }
 
     /**
      * Get the name of the uploaded file
      */
     public String getUploadedFileName() {
-        String value = element.getValue();
+        String value = getElement().getValue();
         if (value != null && !value.isEmpty()) {
             // Extract filename from full path
             return value.substring(value.lastIndexOf(File.separator) + 1);

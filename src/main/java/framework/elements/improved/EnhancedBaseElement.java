@@ -1,4 +1,4 @@
-package framework.elements.core;
+package framework.elements.improved;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -15,9 +15,9 @@ import static com.codeborne.selenide.Selenide.$;
 import com.codeborne.selenide.Selenide;
 
 /**
- * Base class for all web elements providing common functionality
+ * Enhanced base element with additional features and improvements
  */
-public abstract class BaseElement {
+public abstract class EnhancedBaseElement {
     // Lazy initialization using Supplier
     protected final Supplier<SelenideElement> elementSupplier;
     protected final String name;
@@ -28,7 +28,7 @@ public abstract class BaseElement {
      * @param locator CSS or XPath selector
      * @param name Descriptive name for logging and debugging
      */
-    public BaseElement(String locator, String name) {
+    public EnhancedBaseElement(String locator, String name) {
         this.elementSupplier = () -> $(locator);
         this.name = name;
         this.locator = locator;
@@ -38,7 +38,7 @@ public abstract class BaseElement {
      * Constructor using locator as the name
      * @param locator CSS or XPath selector
      */
-    public BaseElement(String locator) {
+    public EnhancedBaseElement(String locator) {
         this.elementSupplier = () -> $(locator);
         this.name = locator;
         this.locator = locator;
@@ -93,18 +93,7 @@ public abstract class BaseElement {
     }
 
     // Actions
-    /**
-     * Click on the element (void version)
-     */
-    public void click() {
-        clickAndChain();
-    }
-    
-    /**
-     * Click on the element with method chaining
-     * @return this element for method chaining
-     */
-    public BaseElement clickAndChain() {
+    public EnhancedBaseElement click() {
         LogUtils.logAction(toString(), "Clicking");
         try {
             waitForClickable();
@@ -154,7 +143,7 @@ public abstract class BaseElement {
     }
 
     // Wait Conditions
-    public BaseElement waitForVisible() {
+    public EnhancedBaseElement waitForVisible() {
         LogUtils.logAction(toString(), "Waiting to be visible");
         try {
             getElement().shouldBe(Condition.visible, Duration.ofMillis(ConfigManager.getElementTimeout()));
@@ -166,7 +155,7 @@ public abstract class BaseElement {
         }
     }
 
-    public BaseElement waitForClickable() {
+    public EnhancedBaseElement waitForClickable() {
         LogUtils.logAction(toString(), "Waiting to be clickable");
         try {
             getElement().shouldBe(Condition.visible, Duration.ofMillis(ConfigManager.getElementTimeout()));
@@ -179,7 +168,7 @@ public abstract class BaseElement {
         }
     }
 
-    public BaseElement waitForExist() {
+    public EnhancedBaseElement waitForExist() {
         LogUtils.logAction(toString(), "Waiting to exist");
         try {
             getElement().shouldBe(Condition.exist, Duration.ofMillis(ConfigManager.getElementTimeout()));
@@ -191,7 +180,7 @@ public abstract class BaseElement {
         }
     }
 
-    public BaseElement waitForNotVisible() {
+    public EnhancedBaseElement waitForNotVisible() {
         LogUtils.logAction(toString(), "Waiting to be not visible");
         try {
             getElement().shouldBe(Condition.hidden, Duration.ofMillis(ConfigManager.getElementTimeout()));
@@ -204,7 +193,7 @@ public abstract class BaseElement {
     }
 
     // New Enhanced Wait Methods
-    public BaseElement waitForText(String expectedText) {
+    public EnhancedBaseElement waitForText(String expectedText) {
         LogUtils.logAction(toString(), "Waiting for text: " + expectedText);
         try {
             getElement().shouldHave(Condition.exactText(expectedText), 
@@ -217,7 +206,7 @@ public abstract class BaseElement {
         }
     }
 
-    public BaseElement waitForTextContains(String partialText) {
+    public EnhancedBaseElement waitForTextContains(String partialText) {
         LogUtils.logAction(toString(), "Waiting for text containing: " + partialText);
         try {
             getElement().shouldHave(Condition.text(partialText), 
@@ -230,7 +219,7 @@ public abstract class BaseElement {
         }
     }
 
-    public BaseElement waitForAttributeValue(String attribute, String value) {
+    public EnhancedBaseElement waitForAttributeValue(String attribute, String value) {
         LogUtils.logAction(toString(), 
             String.format("Waiting for attribute %s to have value %s", attribute, value));
         try {
@@ -246,18 +235,7 @@ public abstract class BaseElement {
     }
 
     // Mouse Actions
-    /**
-     * Hover over the element (void version)
-     */
-    public void hover() {
-        hoverAndChain();
-    }
-    
-    /**
-     * Hover over the element with method chaining
-     * @return this element for method chaining
-     */
-    public BaseElement hoverAndChain() {
+    public EnhancedBaseElement hover() {
         LogUtils.logAction(toString(), "Hovering");
         try {
             getElement().hover();
@@ -268,19 +246,8 @@ public abstract class BaseElement {
             throw e;
         }
     }
-    
-    /**
-     * Right click on the element (void version)
-     */
-    public void rightClick() {
-        rightClickAndChain();
-    }
-    
-    /**
-     * Right click on the element with method chaining
-     * @return this element for method chaining
-     */
-    public BaseElement rightClickAndChain() {
+
+    public EnhancedBaseElement rightClick() {
         LogUtils.logAction(toString(), "Right clicking");
         try {
             getElement().contextClick();
@@ -292,7 +259,7 @@ public abstract class BaseElement {
         }
     }
 
-    public BaseElement doubleClick() {
+    public EnhancedBaseElement doubleClick() {
         LogUtils.logAction(toString(), "Double clicking");
         try {
             getElement().doubleClick();
@@ -305,7 +272,7 @@ public abstract class BaseElement {
     }
 
     // Scroll
-    public BaseElement scrollTo() {
+    public EnhancedBaseElement scrollTo() {
         LogUtils.logAction(toString(), "Scrolling to element");
         try {
             getElement().scrollTo();
@@ -317,7 +284,7 @@ public abstract class BaseElement {
         }
     }
 
-    public BaseElement scrollIntoView() {
+    public EnhancedBaseElement scrollIntoView() {
         LogUtils.logAction(toString(), "Scrolling element into view");
         try {
             Selenide.executeJavaScript(
@@ -381,11 +348,11 @@ public abstract class BaseElement {
     }
 
     // Custom Wait Conditions
-    public BaseElement waitForCondition(WebElementCondition condition) {
+    public EnhancedBaseElement waitForCondition(WebElementCondition condition) {
         return waitForCondition(condition, ConfigManager.getElementTimeout());
     }
 
-    public BaseElement waitForCondition(WebElementCondition condition, long timeoutMillis) {
+    public EnhancedBaseElement waitForCondition(WebElementCondition condition, long timeoutMillis) {
         LogUtils.logAction(toString(), "Waiting for condition: " + condition);
         try {
             getElement().shouldBe(condition, Duration.ofMillis(timeoutMillis));
@@ -397,7 +364,7 @@ public abstract class BaseElement {
         }
     }
     
-    // Execute with retry for stale element cases
+    // New: Execute with retry for stale element cases
     public <T> T executeWithRetry(Function<SelenideElement, T> action, String actionDescription) {
         LogUtils.logAction(toString(), actionDescription);
         Exception lastException = null;
@@ -423,7 +390,7 @@ public abstract class BaseElement {
     }
     
     // Wait for AJAX calls to complete
-    public BaseElement waitForAjaxComplete() {
+    public EnhancedBaseElement waitForAjaxComplete() {
         LogUtils.logAction(toString(), "Waiting for AJAX calls to complete");
         try {
             Selenide.executeJavaScript(

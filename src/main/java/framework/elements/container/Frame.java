@@ -12,12 +12,21 @@ public class Frame extends BaseElement {
     }
 
     /**
-     * Switch to this frame
+     * Switch to this frame (void version)
      */
     public void switchTo() {
         waitForVisible();
-        element.scrollTo();
-        Selenide.switchTo().frame(element);
+        getElement().scrollTo();
+        Selenide.switchTo().frame(getElement());
+    }
+
+    /**
+     * Switch to this frame with method chaining
+     * @return this frame for method chaining
+     */
+    public Frame switchToAndChain() {
+        switchTo();
+        return this;
     }
 
     /**

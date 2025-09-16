@@ -25,7 +25,7 @@ public class AutoCompleteBox extends BaseElement {
         LogUtils.logAction(toString(), "Typing text and selecting first suggestion: " + text);
         try {
             waitForVisible();
-            element.setValue(text);
+            getElement().setValue(text);
             SelenideElement firstSuggestion = suggestions.first();
             String selectedText = firstSuggestion.getText();
             firstSuggestion.click();
@@ -34,6 +34,16 @@ public class AutoCompleteBox extends BaseElement {
             LogUtils.logError(toString(), "Failed to type and select first suggestion", e);
             throw e;
         }
+    }
+    
+    /**
+     * Type text and select first suggestion with method chaining
+     * @param text Text to type
+     * @return this AutoCompleteBox for method chaining
+     */
+    public AutoCompleteBox typeAndSelectFirstAndChain(String text) {
+        typeAndSelectFirst(text);
+        return this;
     }
 
     /**
@@ -46,7 +56,7 @@ public class AutoCompleteBox extends BaseElement {
             index, text));
         try {
             waitForVisible();
-            element.setValue(text);
+            getElement().setValue(text);
             SelenideElement suggestion = suggestions.get(index);
             String selectedText = suggestion.getText();
             suggestion.click();
@@ -56,6 +66,17 @@ public class AutoCompleteBox extends BaseElement {
             LogUtils.logError(toString(), "Failed to type and select suggestion by index", e);
             throw e;
         }
+    }
+    
+    /**
+     * Type text and select suggestion by index with method chaining
+     * @param text Text to type
+     * @param index Index of suggestion to select
+     * @return this AutoCompleteBox for method chaining
+     */
+    public AutoCompleteBox typeAndSelectAndChain(String text, int index) {
+        typeAndSelect(text, index);
+        return this;
     }
 
     /**
@@ -68,7 +89,7 @@ public class AutoCompleteBox extends BaseElement {
             suggestionText));
         try {
             waitForVisible();
-            element.setValue(text);
+            getElement().setValue(text);
             SelenideElement suggestion = suggestions.findBy(
                 com.codeborne.selenide.Condition.exactText(suggestionText));
             suggestion.click();
@@ -78,6 +99,17 @@ public class AutoCompleteBox extends BaseElement {
                 String.format("Failed to type and select suggestion: '%s'", suggestionText), e);
             throw e;
         }
+    }
+    
+    /**
+     * Type text and select suggestion by exact text with method chaining
+     * @param text Text to type
+     * @param suggestionText Exact text of suggestion to select
+     * @return this AutoCompleteBox for method chaining
+     */
+    public AutoCompleteBox typeAndSelectByTextAndChain(String text, String suggestionText) {
+        typeAndSelectByText(text, suggestionText);
+        return this;
     }
 
     /**
@@ -90,7 +122,7 @@ public class AutoCompleteBox extends BaseElement {
             containsText));
         try {
             waitForVisible();
-            element.setValue(text);
+            getElement().setValue(text);
             SelenideElement suggestion = suggestions.findBy(
                 com.codeborne.selenide.Condition.text(containsText));
             String selectedText = suggestion.getText();
@@ -102,6 +134,17 @@ public class AutoCompleteBox extends BaseElement {
                 String.format("Failed to type and select suggestion containing: '%s'", containsText), e);
             throw e;
         }
+    }
+    
+    /**
+     * Type text and select suggestion that contains text with method chaining
+     * @param text Text to type
+     * @param containsText Text that suggestion should contain
+     * @return this AutoCompleteBox for method chaining
+     */
+    public AutoCompleteBox typeAndSelectByContainsAndChain(String text, String containsText) {
+        typeAndSelectByContains(text, containsText);
+        return this;
     }
 
     /**

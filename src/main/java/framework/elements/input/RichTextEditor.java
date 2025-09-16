@@ -1,10 +1,8 @@
 package framework.elements.input;
 
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
 import framework.elements.core.BaseElement;
 import framework.utils.LogUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
 /**
@@ -54,7 +52,7 @@ public class RichTextEditor extends BaseElement {
                     break;
                 default:
                     // For other editors, use the content-editable div
-                    element.sendKeys(text);
+                    getElement().sendKeys(text);
             }
             
             LogUtils.logSuccess(toString(), "Text set successfully");
@@ -86,11 +84,11 @@ public class RichTextEditor extends BaseElement {
                 case QUILL:
                     // Focus the editor first
                     Selenide.executeJavaScript("document.querySelector('.ql-editor').focus()");
-                    element.sendKeys(text);
+                    getElement().sendKeys(text);
                     break;
                 default:
                     // For other editors, simply send keys
-                    element.sendKeys(text);
+                    getElement().sendKeys(text);
             }
             
             LogUtils.logSuccess(toString(), "Text inserted successfully");
@@ -124,7 +122,7 @@ public class RichTextEditor extends BaseElement {
                     break;
                 default:
                     // For other editors, get the HTML content
-                    content = element.getAttribute("innerHTML");
+                    content = getElement().getAttribute("innerHTML");
             }
             
             LogUtils.logSuccess(toString(), "Got text from editor: " + 
@@ -159,9 +157,9 @@ public class RichTextEditor extends BaseElement {
                     break;
                 default:
                     // For other editors, clear via select all and delete
-                    element.click();
-                    element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-                    element.sendKeys(Keys.DELETE);
+                    getElement().click();
+                    getElement().sendKeys(Keys.chord(Keys.CONTROL, "a"));
+                    getElement().sendKeys(Keys.DELETE);
             }
             
             LogUtils.logSuccess(toString(), "Editor cleared successfully");
@@ -231,13 +229,13 @@ public class RichTextEditor extends BaseElement {
                     // For other editors, use keyboard shortcuts
                     switch (formatType) {
                         case BOLD:
-                            element.sendKeys(Keys.chord(Keys.CONTROL, "b"));
+                            getElement().sendKeys(Keys.chord(Keys.CONTROL, "b"));
                             break;
                         case ITALIC:
-                            element.sendKeys(Keys.chord(Keys.CONTROL, "i"));
+                            getElement().sendKeys(Keys.chord(Keys.CONTROL, "i"));
                             break;
                         case UNDERLINE:
-                            element.sendKeys(Keys.chord(Keys.CONTROL, "u"));
+                            getElement().sendKeys(Keys.chord(Keys.CONTROL, "u"));
                             break;
                     }
             }
@@ -299,7 +297,7 @@ public class RichTextEditor extends BaseElement {
                     ready = Selenide.executeJavaScript("return document.querySelector('.ql-editor') !== null");
                     break;
                 default:
-                    ready = element.isDisplayed();
+                    ready = getElement().isDisplayed();
             }
             
             LogUtils.logSuccess(toString(), "Editor is " + (ready ? "ready" : "not ready"));
