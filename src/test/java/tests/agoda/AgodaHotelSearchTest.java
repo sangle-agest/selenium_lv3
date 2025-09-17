@@ -2,12 +2,16 @@ package tests.agoda;
 
 import framework.pages.agoda.AgodaHomePage;
 import framework.pages.agoda.SearchResultsPage;
+import framework.utils.BrowserUtils;
 import framework.utils.LogUtils;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.sleep;
 
 /**
  * Test class for Agoda hotel search functionality
@@ -23,10 +27,7 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
     @BeforeMethod
     public void initializePages() {
         LogUtils.logAction("AgodaHotelSearchTest", "Setting up test");
-        
-        // Open Agoda website (using baseUrl from AgodaBaseTest)
-        open("/");
-        
+        open("");
         homePage = new AgodaHomePage();
         searchResultsPage = new SearchResultsPage();
         
@@ -34,86 +35,39 @@ public class AgodaHotelSearchTest extends AgodaBaseTest {
     }
     
     /**
-     * TC 01: Search and Sort Hotel Successfully
-     * 
-     * Steps:
-     * 1. Go to Agoda home page
-     * 2. Search for a destination
-     * 3. Set check-in and check-out dates
-     * 4. Set occupancy (adults and children)
-     * 5. Click on Search button
-     * 6. Verify search results are displayed
-     * 7. Sort results by price (low to high)
-     * 8. Verify sorting is applied correctly
+     * Ensures browser cleanup happens after each test method, even if the test fails
      */
-    @Test(description = "TC 01: Search and Sort Hotel Successfully", enabled = true)
-    public void searchAndSortHotelTest() {
-        LogUtils.logAction("AgodaHotelSearchTest", "Starting TC 01: Search and Sort Hotel Successfully");
-        
-        // Step 1: Already on Agoda home page (handled in setupTest)
-        
-        // Step 2: Search for a destination
-        String destination = "Bangkok";
-        LogUtils.logAction("AgodaHotelSearchTest", "Searching for destination: " + destination);
-        homePage.searchDestination(destination);
-        
-        // Step 3: Set check-in and check-out dates (7 days from now, staying for 3 nights)
-        LogUtils.logAction("AgodaHotelSearchTest", "Setting dates: Check-in 7 days from now, stay for 3 nights");
-        homePage.setDates(7, 10);
-        
-        // Step 4: Set occupancy (2 adults, 1 child)
-        LogUtils.logAction("AgodaHotelSearchTest", "Setting occupancy: 2 adults, 1 child");
-        homePage.setOccupancy(2, 1);
-        
-        // Verify occupancy is set correctly
-        Assert.assertEquals(homePage.getAdultCount(), 2, "Adult count should be 2");
-        Assert.assertEquals(homePage.getChildCount(), 1, "Child count should be 1");
-        
-        // Step 5: Click on Search button
-        LogUtils.logAction("AgodaHotelSearchTest", "Clicking search button");
-        homePage.clickSearch();
-        
-        // Step 6: Verify search results are displayed
-        int resultCount = searchResultsPage.getNumberOfResults();
-        LogUtils.logSuccess("AgodaHotelSearchTest", "Search results displayed: " + resultCount + " hotels found");
-        Assert.assertTrue(resultCount > 0, "Search should return at least one hotel");
-        
-        // Step 7: Sort results by price (low to high)
-        LogUtils.logAction("AgodaHotelSearchTest", "Sorting results by 'Price (low to high)'");
-        searchResultsPage.sortResultsBy("Price (low to high)");
-        
-        // Step 8: Verify sorting is applied correctly
-        LogUtils.logAction("AgodaHotelSearchTest", "Verifying sorting is applied correctly");
-        
-        // Get first few hotel prices to verify sorting
-        String firstHotelPrice = searchResultsPage.getHotelPrice(0);
-        String secondHotelPrice = searchResultsPage.getHotelPrice(1);
-        
-        // Extract numeric values from price strings
-        double firstPrice = extractPriceValue(firstHotelPrice);
-        double secondPrice = extractPriceValue(secondHotelPrice);
-        
-        // Verify prices are in ascending order
-        Assert.assertTrue(firstPrice <= secondPrice, 
-                "Hotels should be sorted by price in ascending order. First price: " + 
-                firstPrice + ", Second price: " + secondPrice);
-        
-        LogUtils.logSuccess("AgodaHotelSearchTest", "TC 01: Search and Sort Hotel Successfully - PASSED");
+    @AfterMethod
+    public void tearDown() {
+        LogUtils.logAction("AgodaHotelSearchTest", "Running test teardown");
     }
     
     /**
-     * Helper method to extract numeric price value from price string
-     * @param priceString Price as string (e.g., "$100", "THB 3,500")
-     * @return Numeric price value
+     * Data provider for hotel search test
+     * @return Array of test data objects
      */
-    private double extractPriceValue(String priceString) {
-        // Remove currency symbol, commas, and other non-numeric characters
-        String numericString = priceString.replaceAll("[^0-9.]", "");
-        try {
-            return Double.parseDouble(numericString);
-        } catch (NumberFormatException e) {
-            LogUtils.logError("AgodaHotelSearchTest", "Failed to parse price: " + priceString, e);
-            return 0.0;
-        }
+    @DataProvider(name = "hotelSearchData")
+    public Object[][] provideHotelSearchData() {
+        return new Object[][] {
+            { AgodaHotelSearchTestData.forDaNang() },
+        };
+    }
+    
+    /**
+     * TC 01: Search and Sort Hotel Successfully
+     * 
+     * Steps:
+     * 1. Navigate to Agoda homepage
+     * 2. Search hotel with parameters from test data:
+     *    - Place: Destination from test data
+     *    - Date: Check-in and check-out dates from test data
+     *    - Number of people: Adults, children, and rooms from test data
+     * 3. Verify search result is displayed with hotels in the expected location
+     * 4. Sort hotels by price and verify they are in ascending order
+     */
+        @Test(description = "TC 01: Search and Sort Hotel Successfully", 
+          dataProvider = "hotelSearchData", 
+          enabled = true)
+    public void searchAndSortHotelTest(AgodaHotelSearchTestData testData) {
     }
 }

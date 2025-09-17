@@ -1,0 +1,71 @@
+{
+  "AgodaHomePage": {
+    "searchBox": {
+      "name": "Search Box",
+      "locator": "[data-selenium='textInput']",
+      "type": "TextBox"
+    },
+    "checkInButton": {
+      "name": "Check-in Button",
+      "locator": "[data-element-name='check-in-box']",
+      "type": "Button"
+    },
+    "occupancyButton": {
+      "name": "Occupancy Button",
+      "locator": "[data-element-name='occupancy-box']",
+      "type": "Button"
+    },
+    "searchButton": {
+      "name": "Search Button",
+      "locator": "[data-selenium='searchButton']",
+      "type": "Button"
+    },
+    "adultValue": {
+      "name": "Adult Value",
+      "locator": "[data-selenium='adultValue']",
+      "type": "Element"
+    },
+    "childValue": {
+      "name": "Child Value",
+      "locator": "[data-selenium='childValue']",
+      "type": "Element"
+    }
+  },
+  "SearchResultsPage": {
+    "sortButton": {
+      "name": "Sort Button",
+      "locator": "[data-selenium='sortDropdown'], [data-element-name='sort-dropdown'], button[data-testid='sorter-dropdown'], button[data-testid='sort-dropdown'], [data-element-name*='sort'], button[class*='sort'], [role='button'][aria-label*='sort'], [role='button'][class*='sort'], .sort-bar",
+      "type": "Button"
+    },
+    "priceAscendingOption": {
+      "name": "Price Ascending Option",
+      "locator": "[data-selenium='sortByPriceAsc'], [data-value='price'], [data-testid='price-asc']",
+      "type": "Button"
+    },
+    "hotelItems": {
+      "name": "Hotel Items",
+      "locator": "div[data-selenium='hotel-item'], [data-selenium='mock-hotel-item'], [data-testid='property-card']",
+      "type": "ElementCollection"
+    },
+    "priceList": {
+      "name": "Hotel Prices",
+      "locator": "div[data-selenium='hotel-item'] [data-selenium='display-price'], [data-selenium='mock-hotel-item'] [data-selenium='display-price']",
+      "type": "ElementCollection"
+    },
+    "starRatingFilters": {
+      "name": "Star Rating Filters",
+      "locator": "[data-selenium='star-rating-filter']",
+      "type": "ElementCollection"
+    },
+    "hotelNames": {
+      "name": "Hotel Names",
+      "locator": "div[data-selenium='hotel-item'] [data-selenium='hotel-name'], [data-selenium='mock-hotel-item'] [data-selenium='hotel-name']",
+      "type": "ElementCollection"
+    },
+    "hotelLocations": {
+      "name": "Hotel Locations",
+      "locator": "div[data-selenium='hotel-item'] [data-selenium='hotel-address'], [data-selenium='mock-hotel-item'] [data-selenium='hotel-address']",
+      "type": "ElementCollection"
+    }
+  }
+}

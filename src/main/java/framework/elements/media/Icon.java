@@ -17,7 +17,7 @@ public class Icon extends BaseElement {
     public String getIconType() {
         LogUtils.logAction(toString(), "Getting icon type/class");
         try {
-            String className = element.getAttribute("class");
+            String className = getElement().getAttribute("class");
             // Common icon class patterns: fa-*, icon-*, material-icons, etc.
             String iconType = className != null ? className : "";
             LogUtils.logSuccess(toString(), "Got icon type: " + iconType);

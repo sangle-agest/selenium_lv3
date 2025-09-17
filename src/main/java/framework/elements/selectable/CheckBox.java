@@ -28,6 +28,15 @@ public class CheckBox extends BaseElement {
             throw e;
         }
     }
+    
+    /**
+     * Check the checkbox with method chaining
+     * @return this CheckBox for method chaining
+     */
+    public CheckBox checkAndChain() {
+        check();
+        return this;
+    }
 
     /**
      * Uncheck the checkbox
@@ -46,6 +55,15 @@ public class CheckBox extends BaseElement {
             throw e;
         }
     }
+    
+    /**
+     * Uncheck the checkbox with method chaining
+     * @return this CheckBox for method chaining
+     */
+    public CheckBox uncheckAndChain() {
+        uncheck();
+        return this;
+    }
 
     /**
      * Check if the checkbox is checked
@@ -53,7 +71,7 @@ public class CheckBox extends BaseElement {
     public boolean isChecked() {
         LogUtils.logAction(toString(), "Getting checkbox state");
         try {
-            boolean checked = element.isSelected();
+            boolean checked = getElement().isSelected();
             LogUtils.logSuccess(toString(), "Checkbox is " + (checked ? "checked" : "unchecked"));
             return checked;
         } catch (Exception e) {
@@ -78,6 +96,15 @@ public class CheckBox extends BaseElement {
             LogUtils.logError(toString(), "Failed to toggle checkbox", e);
             throw e;
         }
+    }
+    
+    /**
+     * Toggle checkbox state with method chaining
+     * @return this CheckBox for method chaining
+     */
+    public CheckBox toggleAndChain() {
+        toggle();
+        return this;
     }
 
     @Override

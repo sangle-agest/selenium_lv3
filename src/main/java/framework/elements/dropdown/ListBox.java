@@ -17,8 +17,17 @@ public class ListBox extends BaseElement {
     public void selectByTexts(String... texts) {
         waitForClickable();
         for (String text : texts) {
-            element.selectOption(text);
+            getElement().selectOption(text);
         }
+    }
+    
+    /**
+     * Select multiple options by visible text with method chaining
+     * @return this ListBox for method chaining
+     */
+    public ListBox selectByTextsAndChain(String... texts) {
+        selectByTexts(texts);
+        return this;
     }
 
     /**
@@ -27,22 +36,31 @@ public class ListBox extends BaseElement {
     public void selectByValues(String... values) {
         waitForClickable();
         for (String value : values) {
-            element.selectOptionByValue(value);
+            getElement().selectOptionByValue(value);
         }
+    }
+    
+    /**
+     * Select multiple options by values with method chaining
+     * @return this ListBox for method chaining
+     */
+    public ListBox selectByValuesAndChain(String... values) {
+        selectByValues(values);
+        return this;
     }
 
     /**
      * Get all selected options text
      */
     public List<String> getSelectedTexts() {
-        return element.getSelectedOptions().texts();
+        return getElement().getSelectedOptions().texts();
     }
 
     /**
      * Get all selected option values
      */
     public List<String> getSelectedValues() {
-        return element.getSelectedOptions().stream()
+        return getElement().getSelectedOptions().stream()
                 .map(option -> option.getValue())
                 .toList();
     }
@@ -52,8 +70,17 @@ public class ListBox extends BaseElement {
      */
     public void deselectAll() {
         getSelectedTexts().forEach(text -> {
-            element.selectOption(text); // clicking again deselects in multi-select
+            getElement().selectOption(text); // clicking again deselects in multi-select
         });
+    }
+    
+    /**
+     * Deselect all options with method chaining
+     * @return this ListBox for method chaining
+     */
+    public ListBox deselectAllAndChain() {
+        deselectAll();
+        return this;
     }
 
     /**
@@ -62,16 +89,25 @@ public class ListBox extends BaseElement {
     public void deselectByTexts(String... texts) {
         for (String text : texts) {
             if (getSelectedTexts().contains(text)) {
-                element.selectOption(text); // clicking again deselects in multi-select
+                getElement().selectOption(text); // clicking again deselects in multi-select
             }
         }
+    }
+    
+    /**
+     * Deselect options by visible text with method chaining
+     * @return this ListBox for method chaining
+     */
+    public ListBox deselectByTextsAndChain(String... texts) {
+        deselectByTexts(texts);
+        return this;
     }
 
     /**
      * Check if multiple selection is supported
      */
     public boolean isMultiple() {
-        return "multiple".equals(element.getAttribute("multiple"));
+        return "multiple".equals(getElement().getAttribute("multiple"));
     }
 
     @Override
@@ -79,6 +115,6 @@ public class ListBox extends BaseElement {
         return String.format("ListBox '%s' [%d selected of %d options]", 
             getName(), 
             getSelectedTexts().size(),
-            element.getOptions().size());
+            getElement().getOptions().size());
     }
 }

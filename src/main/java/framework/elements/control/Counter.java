@@ -43,6 +43,16 @@ public class Counter {
             currentValue = getValue();
         }
     }
+    
+    /**
+     * Set counter to specific value with method chaining
+     * @param targetValue Desired value
+     * @return this counter for method chaining
+     */
+    public Counter setValueAndChain(int targetValue) {
+        setValue(targetValue);
+        return this;
+    }
 
     /**
      * Increment counter by 1
@@ -51,6 +61,15 @@ public class Counter {
         incrementButton.waitForClickable();
         incrementButton.click();
     }
+    
+    /**
+     * Increment counter by 1 with method chaining
+     * @return this counter for method chaining
+     */
+    public Counter incrementAndChain() {
+        increment();
+        return this;
+    }
 
     /**
      * Decrement counter by 1
@@ -58,6 +77,15 @@ public class Counter {
     public void decrement() {
         decrementButton.waitForClickable();
         decrementButton.click();
+    }
+    
+    /**
+     * Decrement counter by 1 with method chaining
+     * @return this counter for method chaining
+     */
+    public Counter decrementAndChain() {
+        decrement();
+        return this;
     }
 
     /**

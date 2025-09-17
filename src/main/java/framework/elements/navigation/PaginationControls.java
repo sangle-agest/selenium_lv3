@@ -56,7 +56,7 @@ public class PaginationControls extends BaseElement {
     public void nextPage() {
         LogUtils.logAction(toString(), "Going to next page");
         try {
-            SelenideElement nextButton = element.$(nextButtonLocator);
+            SelenideElement nextButton = getElement().$(nextButtonLocator);
             
             if (!nextButton.isEnabled()) {
                 LogUtils.logWarning(toString(), "Next button is disabled - already on last page");
@@ -73,12 +73,21 @@ public class PaginationControls extends BaseElement {
     }
     
     /**
+     * Go to next page with method chaining
+     * @return this PaginationControls for method chaining
+     */
+    public PaginationControls nextPageAndChain() {
+        nextPage();
+        return this;
+    }
+    
+    /**
      * Go to previous page
      */
     public void previousPage() {
         LogUtils.logAction(toString(), "Going to previous page");
         try {
-            SelenideElement prevButton = element.$(previousButtonLocator);
+            SelenideElement prevButton = getElement().$(previousButtonLocator);
             
             if (!prevButton.isEnabled()) {
                 LogUtils.logWarning(toString(), "Previous button is disabled - already on first page");
@@ -95,12 +104,21 @@ public class PaginationControls extends BaseElement {
     }
     
     /**
+     * Go to previous page with method chaining
+     * @return this PaginationControls for method chaining
+     */
+    public PaginationControls previousPageAndChain() {
+        previousPage();
+        return this;
+    }
+    
+    /**
      * Get current page number
      */
     public int getCurrentPage() {
         LogUtils.logAction(toString(), "Getting current page number");
         try {
-            String pageText = element.$(activePageLocator).getText().trim();
+            String pageText = getElement().$(activePageLocator).getText().trim();
             int currentPage;
             
             // Try to parse the page number from text
@@ -159,7 +177,7 @@ public class PaginationControls extends BaseElement {
     public boolean hasNextPage() {
         LogUtils.logAction(toString(), "Checking if has next page");
         try {
-            SelenideElement nextButton = element.$(nextButtonLocator);
+            SelenideElement nextButton = getElement().$(nextButtonLocator);
             boolean hasNext = nextButton.isDisplayed() && nextButton.isEnabled();
             LogUtils.logSuccess(toString(), "Has next page: " + hasNext);
             return hasNext;
@@ -175,7 +193,7 @@ public class PaginationControls extends BaseElement {
     public boolean hasPreviousPage() {
         LogUtils.logAction(toString(), "Checking if has previous page");
         try {
-            SelenideElement prevButton = element.$(previousButtonLocator);
+            SelenideElement prevButton = getElement().$(previousButtonLocator);
             boolean hasPrev = prevButton.isDisplayed() && prevButton.isEnabled();
             LogUtils.logSuccess(toString(), "Has previous page: " + hasPrev);
             return hasPrev;
@@ -200,6 +218,15 @@ public class PaginationControls extends BaseElement {
     }
     
     /**
+     * Go to first page with method chaining
+     * @return this PaginationControls for method chaining
+     */
+    public PaginationControls goToFirstPageAndChain() {
+        goToFirstPage();
+        return this;
+    }
+    
+    /**
      * Go to last page
      */
     public void goToLastPage() {
@@ -212,6 +239,15 @@ public class PaginationControls extends BaseElement {
             LogUtils.logError(toString(), "Failed to go to last page", e);
             throw e;
         }
+    }
+    
+    /**
+     * Go to last page with method chaining
+     * @return this PaginationControls for method chaining
+     */
+    public PaginationControls goToLastPageAndChain() {
+        goToLastPage();
+        return this;
     }
     
     @Override

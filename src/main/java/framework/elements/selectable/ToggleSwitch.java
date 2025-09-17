@@ -28,6 +28,15 @@ public class ToggleSwitch extends BaseElement {
             throw e;
         }
     }
+    
+    /**
+     * Turn on the toggle switch with method chaining
+     * @return this ToggleSwitch for method chaining
+     */
+    public ToggleSwitch turnOnAndChain() {
+        turnOn();
+        return this;
+    }
 
     /**
      * Turn off the toggle switch
@@ -46,6 +55,15 @@ public class ToggleSwitch extends BaseElement {
             throw e;
         }
     }
+    
+    /**
+     * Turn off the toggle switch with method chaining
+     * @return this ToggleSwitch for method chaining
+     */
+    public ToggleSwitch turnOffAndChain() {
+        turnOff();
+        return this;
+    }
 
     /**
      * Check if the toggle switch is on
@@ -53,9 +71,9 @@ public class ToggleSwitch extends BaseElement {
     public boolean isOn() {
         LogUtils.logAction(toString(), "Checking if toggle switch is on");
         try {
-            boolean on = element.isSelected() || 
-                         (element.getAttribute("aria-checked") != null && 
-                          element.getAttribute("aria-checked").equals("true"));
+            boolean on = getElement().isSelected() || 
+                         (getElement().getAttribute("aria-checked") != null && 
+                          getElement().getAttribute("aria-checked").equals("true"));
             LogUtils.logSuccess(toString(), "Toggle switch is " + (on ? "ON" : "OFF"));
             return on;
         } catch (Exception e) {
@@ -80,6 +98,15 @@ public class ToggleSwitch extends BaseElement {
             LogUtils.logError(toString(), "Failed to toggle switch", e);
             throw e;
         }
+    }
+    
+    /**
+     * Toggle switch state with method chaining
+     * @return this ToggleSwitch for method chaining
+     */
+    public ToggleSwitch toggleAndChain() {
+        toggle();
+        return this;
     }
 
     @Override

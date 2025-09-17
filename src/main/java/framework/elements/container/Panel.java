@@ -21,14 +21,14 @@ public class Panel extends BaseElement {
     }
 
     /**
-     * Expand the panel
+     * Expand the panel (void version)
      */
     public void expand() {
         LogUtils.logAction(toString(), "Expanding panel");
         try {
             if (!isExpanded()) {
-                element.$(expandButtonLocator).click();
-                element.$(contentLocator).shouldBe(Condition.visible);
+                getElement().$(expandButtonLocator).click();
+                getElement().$(contentLocator).shouldBe(Condition.visible);
                 LogUtils.logSuccess(toString(), "Panel expanded successfully");
             } else {
                 LogUtils.logAction(toString(), "Panel is already expanded");
@@ -40,14 +40,23 @@ public class Panel extends BaseElement {
     }
 
     /**
-     * Collapse the panel
+     * Expand the panel with method chaining
+     * @return this panel for method chaining
+     */
+    public Panel expandAndChain() {
+        expand();
+        return this;
+    }
+
+    /**
+     * Collapse the panel (void version)
      */
     public void collapse() {
         LogUtils.logAction(toString(), "Collapsing panel");
         try {
             if (isExpanded()) {
-                element.$(collapseButtonLocator).click();
-                element.$(contentLocator).shouldBe(Condition.hidden);
+                getElement().$(collapseButtonLocator).click();
+                getElement().$(contentLocator).shouldBe(Condition.hidden);
                 LogUtils.logSuccess(toString(), "Panel collapsed successfully");
             } else {
                 LogUtils.logAction(toString(), "Panel is already collapsed");
@@ -59,12 +68,21 @@ public class Panel extends BaseElement {
     }
 
     /**
+     * Collapse the panel with method chaining
+     * @return this panel for method chaining
+     */
+    public Panel collapseAndChain() {
+        collapse();
+        return this;
+    }
+
+    /**
      * Check if panel is expanded
      */
     public boolean isExpanded() {
         LogUtils.logAction(toString(), "Checking if panel is expanded");
         try {
-            boolean expanded = element.$(contentLocator).is(Condition.visible);
+            boolean expanded = getElement().$(contentLocator).is(Condition.visible);
             LogUtils.logSuccess(toString(), expanded ? "Panel is expanded" : "Panel is collapsed");
             return expanded;
         } catch (Exception e) {
@@ -74,7 +92,7 @@ public class Panel extends BaseElement {
     }
 
     /**
-     * Toggle panel state
+     * Toggle panel state (void version)
      */
     public void toggle() {
         LogUtils.logAction(toString(), "Toggling panel state");
@@ -95,12 +113,21 @@ public class Panel extends BaseElement {
     }
 
     /**
+     * Toggle panel state with method chaining
+     * @return this panel for method chaining
+     */
+    public Panel toggleAndChain() {
+        toggle();
+        return this;
+    }
+
+    /**
      * Get panel title
      */
     public String getTitle() {
         LogUtils.logAction(toString(), "Getting panel title");
         try {
-            String title = element.$("[role='heading']").getText();
+            String title = getElement().$("[role='heading']").getText();
             LogUtils.logSuccess(toString(), "Got panel title: " + title);
             return title;
         } catch (Exception e) {
@@ -115,7 +142,7 @@ public class Panel extends BaseElement {
     public String getContent() {
         LogUtils.logAction(toString(), "Getting panel content");
         try {
-            String content = element.$(contentLocator).getText();
+            String content = getElement().$(contentLocator).getText();
             LogUtils.logSuccess(toString(), "Got panel content");
             return content;
         } catch (Exception e) {
@@ -132,16 +159,34 @@ public class Panel extends BaseElement {
     }
 
     /**
-     * Wait for panel to be expanded
+     * Wait for panel to be expanded (void version)
      */
     public void waitForExpanded() {
-        element.$(contentLocator).shouldBe(Condition.visible);
+        getElement().$(contentLocator).shouldBe(Condition.visible);
     }
 
     /**
-     * Wait for panel to be collapsed
+     * Wait for panel to be expanded with method chaining
+     * @return this panel for method chaining
+     */
+    public Panel waitForExpandedAndChain() {
+        waitForExpanded();
+        return this;
+    }
+
+    /**
+     * Wait for panel to be collapsed (void version)
      */
     public void waitForCollapsed() {
-        element.$(contentLocator).shouldBe(Condition.hidden);
+        getElement().$(contentLocator).shouldBe(Condition.hidden);
+    }
+
+    /**
+     * Wait for panel to be collapsed with method chaining
+     * @return this panel for method chaining
+     */
+    public Panel waitForCollapsedAndChain() {
+        waitForCollapsed();
+        return this;
     }
 }

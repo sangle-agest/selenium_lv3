@@ -21,7 +21,7 @@ public class Form extends BaseElement {
      */
     public void fill(Map<String, String> data) {
         for (Map.Entry<String, String> entry : data.entrySet()) {
-            SelenideElement field = element.$(entry.getKey());
+            SelenideElement field = getElement().$(entry.getKey());
             String tagName = field.getTagName().toLowerCase();
             
             switch (tagName) {
@@ -57,17 +57,17 @@ public class Form extends BaseElement {
     }
 
     /**
-     * Submit the form
+     * Submit the form (void version)
      */
     public void submit() {
-        element.submit();
+        getElement().submit();
     }
 
     /**
      * Reset form to default values
      */
     public void reset() {
-        element.findAll("input, select, textarea").forEach(field -> {
+        getElement().findAll("input, select, textarea").forEach(field -> {
             String tagName = field.getTagName().toLowerCase();
             if ("input".equals(tagName)) {
                 String type = field.getAttribute("type");
@@ -96,7 +96,7 @@ public class Form extends BaseElement {
      */
     public Map<String, String> getFormData() {
         Map<String, String> data = new java.util.HashMap<>();
-        element.findAll("input, select, textarea").forEach(field -> {
+        getElement().findAll("input, select, textarea").forEach(field -> {
             String name = field.getAttribute("name");
             if (name != null) {
                 String value = field.getValue();
@@ -112,13 +112,13 @@ public class Form extends BaseElement {
      * Check if form is valid
      */
     public boolean isValid() {
-        return Boolean.parseBoolean(Selenide.executeJavaScript("return arguments[0].checkValidity()", element).toString());
+        return Boolean.parseBoolean(Selenide.executeJavaScript("return arguments[0].checkValidity()", getElement()).toString());
     }
 
     /**
      * Get validation message
      */
     public String getValidationMessage() {
-        return Selenide.executeJavaScript("return arguments[0].validationMessage", element).toString();
+        return Selenide.executeJavaScript("return arguments[0].validationMessage", getElement()).toString();
     }
 }

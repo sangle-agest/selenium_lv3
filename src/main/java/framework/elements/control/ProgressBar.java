@@ -21,7 +21,7 @@ public class ProgressBar extends BaseElement {
      * Get progress value (0-100)
      */
     public int getProgress() {
-        String value = element.getAttribute(valueAttribute);
+        String value = getElement().getAttribute(valueAttribute);
         if (value != null && !value.isEmpty()) {
             try {
                 return Integer.parseInt(value);
@@ -35,7 +35,7 @@ public class ProgressBar extends BaseElement {
             }
         }
         // Try getting width percentage if value attribute is not available
-        String style = element.getAttribute("style");
+        String style = getElement().getAttribute("style");
         if (style != null && style.contains("width:")) {
             try {
                 String width = style.split("width:")[1].split("%")[0].trim();
@@ -60,6 +60,15 @@ public class ProgressBar extends BaseElement {
             }
         }
     }
+    
+    /**
+     * Wait until progress reaches 100% with method chaining
+     * @return this ProgressBar for method chaining
+     */
+    public ProgressBar waitUntilCompleteAndChain() {
+        waitUntilComplete();
+        return this;
+    }
 
     /**
      * Wait until progress reaches specific value
@@ -73,6 +82,15 @@ public class ProgressBar extends BaseElement {
                 break;
             }
         }
+    }
+    
+    /**
+     * Wait until progress reaches specific value with method chaining
+     * @return this ProgressBar for method chaining
+     */
+    public ProgressBar waitUntilValueAndChain(int expectedValue) {
+        waitUntilValue(expectedValue);
+        return this;
     }
 
     @Override

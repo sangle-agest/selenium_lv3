@@ -1,0 +1,71 @@
+{
+  "VietjetHomePage": {
+    "originInput": {
+      "name": "Origin Input",
+      "locator": "input[name='originInput']",
+      "type": "TextBox"
+    },
+    "destinationInput": {
+      "name": "Destination Input",
+      "locator": "input[name='destinationInput']",
+      "type": "TextBox"
+    },
+    "departDatePicker": {
+      "name": "Departure Date Picker",
+      "locator": "#departDate",
+      "type": "Button"
+    },
+    "returnDatePicker": {
+      "name": "Return Date Picker",
+      "locator": "#returnDate",
+      "type": "Button"
+    },
+    "searchButton": {
+      "name": "Search Flight Button",
+      "locator": "button.search-flight-btn",
+      "type": "Button"
+    },
+    "oneWayRadio": {
+      "name": "One Way Radio Button",
+      "locator": "input[value='oneway']",
+      "type": "Button"
+    },
+    "roundTripRadio": {
+      "name": "Round Trip Radio Button",
+      "locator": "input[value='roundtrip']",
+      "type": "Button"
+    },
+    "passengersDropdown": {
+      "name": "Passengers Dropdown",
+      "locator": ".passenger-dropdown",
+      "type": "Button"
+    }
+  },
+  "SearchResultsPage": {
+    "flightList": {
+      "name": "Flight List",
+      "locator": ".flight-list-item",
+      "type": "ElementCollection"
+    },
+    "filterButton": {
+      "name": "Filter Button",
+      "locator": ".filter-button",
+      "type": "Button"
+    },
+    "sortByPrice": {
+      "name": "Sort By Price",
+      "locator": ".sort-by-price",
+      "type": "Button"
+    },
+    "priceValues": {
+      "name": "Price Values",
+      "locator": ".price-value",
+      "type": "ElementCollection"
+    },
+    "selectFlightButtons": {
+      "name": "Select Flight Buttons",
+      "locator": ".select-flight-button",
+      "type": "ElementCollection"
+    }
+  }
+}

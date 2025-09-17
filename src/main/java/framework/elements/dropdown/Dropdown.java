@@ -13,61 +13,88 @@ public class Dropdown extends BaseElement {
     }
 
     /**
-     * Select option by visible text
+     * Select option by visible text (void version)
      */
     public void selectByVisibleText(String text) {
         LogUtils.logAction(toString(), "Selecting option by text: " + text);
         try {
             waitForClickable();
-            element.selectOption(text);
+            getElement().selectOption(text);
             LogUtils.logSuccess(toString(), "Option selected successfully");
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to select option by text", e);
             throw e;
         }
     }
+    
+    /**
+     * Select option by visible text with method chaining
+     * @return this dropdown for method chaining
+     */
+    public Dropdown selectByVisibleTextAndChain(String text) {
+        selectByVisibleText(text);
+        return this;
+    }
 
     /**
-     * Select option by value attribute
+     * Select option by value attribute (void version)
      */
     public void selectByValue(String value) {
         LogUtils.logAction(toString(), "Selecting option by value: " + value);
         try {
             waitForClickable();
-            element.selectOptionByValue(value);
+            getElement().selectOptionByValue(value);
             LogUtils.logSuccess(toString(), "Option selected successfully");
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to select option by value", e);
             throw e;
         }
     }
+    
+    /**
+     * Select option by value attribute with method chaining
+     * @return this dropdown for method chaining
+     */
+    public Dropdown selectByValueAndChain(String value) {
+        selectByValue(value);
+        return this;
+    }
 
     /**
-     * Select option by index
+     * Select option by index (void version)
      */
     public void selectByIndex(int index) {
         LogUtils.logAction(toString(), "Selecting option by index: " + index);
         try {
             waitForClickable();
-            element.selectOption(index);
+            getElement().selectOption(index);
             LogUtils.logSuccess(toString(), "Option selected successfully");
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to select option by index", e);
             throw e;
         }
     }
+    
+    /**
+     * Select option by index with method chaining
+     * @return this dropdown for method chaining
+     */
+    public Dropdown selectByIndexAndChain(int index) {
+        selectByIndex(index);
+        return this;
+    }
 
     /**
      * Get selected option text
      */
     public String getSelectedText() {
-        LogUtils.logAction(toString(), "Getting selected option text");
+        LogUtils.logAction("Dropdown '" + getName() + "'", "Getting selected option text");
         try {
-            String text = element.getSelectedOption().getText();
-            LogUtils.logSuccess(toString(), "Got selected text: " + text);
+            String text = getElement().getSelectedOption().getText();
+            LogUtils.logSuccess("Dropdown '" + getName() + "'", "Got selected text: " + text);
             return text;
         } catch (Exception e) {
-            LogUtils.logError(toString(), "Failed to get selected text", e);
+            LogUtils.logError("Dropdown '" + getName() + "'", "Failed to get selected text", e);
             throw e;
         }
     }
@@ -78,7 +105,7 @@ public class Dropdown extends BaseElement {
     public String getSelectedValue() {
         LogUtils.logAction(toString(), "Getting selected option value");
         try {
-            String value = element.getSelectedOption().getValue();
+            String value = getElement().getSelectedOption().getValue();
             LogUtils.logSuccess(toString(), "Got selected value: " + value);
             return value;
         } catch (Exception e) {
@@ -93,7 +120,7 @@ public class Dropdown extends BaseElement {
     public List<String> getAllOptions() {
         LogUtils.logAction(toString(), "Getting all option texts");
         try {
-            List<String> options = element.getOptions().texts();
+            List<String> options = getElement().getOptions().texts();
             LogUtils.logSuccess(toString(), String.format("Got %d options", options.size()));
             return options;
         } catch (Exception e) {
@@ -108,7 +135,7 @@ public class Dropdown extends BaseElement {
     public List<String> getAllValues() {
         LogUtils.logAction(toString(), "Getting all option values");
         try {
-            List<String> values = element.getOptions().stream()
+            List<String> values = getElement().getOptions().stream()
                     .map(option -> option.getValue())
                     .toList();
             LogUtils.logSuccess(toString(), String.format("Got %d option values", values.size()));
@@ -125,7 +152,7 @@ public class Dropdown extends BaseElement {
     public boolean hasOption(String text) {
         LogUtils.logAction(toString(), "Checking if option exists: " + text);
         try {
-            boolean exists = element.getOptions().texts().contains(text);
+            boolean exists = getElement().getOptions().texts().contains(text);
             LogUtils.logSuccess(toString(), String.format("Option '%s' %s", text, 
                 exists ? "exists" : "does not exist"));
             return exists;
@@ -156,20 +183,31 @@ public class Dropdown extends BaseElement {
      */
     public int getOptionsCount() {
         try {
-            int count = element.getOptions().size();
-            LogUtils.logAction(toString(), "Got options count: " + count);
+            int count = getElement().getOptions().size();
+            LogUtils.logAction("Dropdown '" + getName() + "'", "Got options count: " + count);
             return count;
         } catch (Exception e) {
-            LogUtils.logWarning(toString(), "Failed to get options count: " + e.getMessage());
+            LogUtils.logWarning("Dropdown '" + getName() + "'", "Failed to get options count: " + e.getMessage());
             return 0;
         }
     }
 
     @Override
     public String toString() {
-        return String.format("Dropdown '%s' with %d options, selected: '%s'", 
-            getName(), 
-            getOptionsCount(), 
-            getSelectedText());
+        try {
+            int count = getElement().getOptions().size();
+            String selectedText = "unknown";
+            try {
+                selectedText = getElement().getSelectedOption().getText();
+            } catch (Exception e) {
+                // Ignore
+            }
+            return String.format("Dropdown '%s' with %d options, selected: '%s'", 
+                getName(), 
+                count, 
+                selectedText);
+        } catch (Exception e) {
+            return String.format("Dropdown '%s'", getName());
+        }
     }
 }

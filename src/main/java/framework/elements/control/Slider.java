@@ -15,7 +15,7 @@ public class Slider extends BaseElement {
     }
 
     /**
-     * Move slider to specific percentage
+     * Move slider to specific percentage (void version)
      * @param percentage Value from 0 to 100
      */
     public void slideTo(int percentage) {
@@ -25,11 +25,11 @@ public class Slider extends BaseElement {
                 throw new IllegalArgumentException("Percentage must be between 0 and 100");
             }
 
-            int width = element.getSize().getWidth();
+            int width = getElement().getSize().getWidth();
             int xOffset = (int) (width * (percentage / 100.0)) - (width / 2);
 
             new Actions(Selenide.webdriver().object())
-                .clickAndHold(element)
+                .clickAndHold(getElement())
                 .moveByOffset(xOffset, 0)
                 .release()
                 .perform();
@@ -40,6 +40,16 @@ public class Slider extends BaseElement {
             throw e;
         }
     }
+    
+    /**
+     * Move slider to specific percentage with method chaining
+     * @param percentage Value from 0 to 100
+     * @return this slider for method chaining
+     */
+    public Slider slideToAndChain(int percentage) {
+        slideTo(percentage);
+        return this;
+    }
 
     /**
      * Get current value
@@ -47,7 +57,7 @@ public class Slider extends BaseElement {
     public String getValue() {
         LogUtils.logAction(toString(), "Getting slider value");
         try {
-            String value = element.getValue();
+            String value = getElement().getValue();
             LogUtils.logSuccess(toString(), "Got slider value: " + value);
             return value;
         } catch (Exception e) {
@@ -57,13 +67,13 @@ public class Slider extends BaseElement {
     }
 
     /**
-     * Move slider by offset
+     * Move slider by offset (void version)
      */
     public void moveByOffset(int xOffset) {
         LogUtils.logAction(toString(), String.format("Moving slider by offset: %d", xOffset));
         try {
             new Actions(Selenide.webdriver().object())
-                .clickAndHold(element)
+                .clickAndHold(getElement())
                 .moveByOffset(xOffset, 0)
                 .release()
                 .perform();
@@ -72,6 +82,15 @@ public class Slider extends BaseElement {
             LogUtils.logError(toString(), "Failed to move slider by offset", e);
             throw e;
         }
+    }
+    
+    /**
+     * Move slider by offset with method chaining
+     * @return this slider for method chaining
+     */
+    public Slider moveByOffsetAndChain(int xOffset) {
+        moveByOffset(xOffset);
+        return this;
     }
 
     /**

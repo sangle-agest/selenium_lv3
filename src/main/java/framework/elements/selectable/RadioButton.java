@@ -28,6 +28,15 @@ public class RadioButton extends BaseElement {
             throw e;
         }
     }
+    
+    /**
+     * Select the radio button with method chaining
+     * @return this RadioButton for method chaining
+     */
+    public RadioButton selectAndChain() {
+        select();
+        return this;
+    }
 
     /**
      * Check if the radio button is selected
@@ -35,7 +44,7 @@ public class RadioButton extends BaseElement {
     public boolean isSelected() {
         LogUtils.logAction(toString(), "Checking if radio button is selected");
         try {
-            boolean selected = element.isSelected();
+            boolean selected = getElement().isSelected();
             LogUtils.logSuccess(toString(), "Radio button is " + (selected ? "selected" : "not selected"));
             return selected;
         } catch (Exception e) {

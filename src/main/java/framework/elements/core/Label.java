@@ -60,7 +60,8 @@ public class Label extends BaseElement {
     @Override
     public String toString() {
         try {
-            String text = getText().trim();
+            // Avoid calling getText() directly to prevent infinite recursion
+            String text = getElement().getText().trim();
             return String.format("Label '%s' [%s] {text: '%s'}", 
                 getName(), getLocator(),
                 text.length() > 20 ? text.substring(0, 17) + "..." : text);

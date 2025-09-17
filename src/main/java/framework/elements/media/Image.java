@@ -79,7 +79,7 @@ public class Image extends BaseElement {
     public boolean isLoaded() {
         LogUtils.logAction(toString(), "Checking if image is loaded");
         try {
-            boolean loaded = element.isImage();
+            boolean loaded = getElement().isImage();
             LogUtils.logSuccess(toString(), "Image is " + (loaded ? "loaded" : "not loaded"));
             return loaded;
         } catch (Exception e) {
@@ -94,7 +94,7 @@ public class Image extends BaseElement {
     public int getNaturalWidth() {
         LogUtils.logAction(toString(), "Getting natural image width");
         try {
-            int naturalWidth = Integer.parseInt(Selenide.executeJavaScript("return arguments[0].naturalWidth", element).toString());
+            int naturalWidth = Integer.parseInt(Selenide.executeJavaScript("return arguments[0].naturalWidth", getElement()).toString());
             LogUtils.logSuccess(toString(), "Got natural width: " + naturalWidth);
             return naturalWidth;
         } catch (Exception e) {
@@ -109,7 +109,7 @@ public class Image extends BaseElement {
     public int getNaturalHeight() {
         LogUtils.logAction(toString(), "Getting natural image height");
         try {
-            int naturalHeight = Integer.parseInt(Selenide.executeJavaScript("return arguments[0].naturalHeight", element).toString());
+            int naturalHeight = Integer.parseInt(Selenide.executeJavaScript("return arguments[0].naturalHeight", getElement()).toString());
             LogUtils.logSuccess(toString(), "Got natural height: " + naturalHeight);
             return naturalHeight;
         } catch (Exception e) {

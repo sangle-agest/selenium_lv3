@@ -17,39 +17,58 @@ public class Button extends BaseElement {
     /**
      * Submit form (if button is submit type)
      */
+    /**
+     * Submit form (void version)
+     */
     public void submit() {
+        submitAndChain();
+    }
+
+    /**
+     * Submit form with method chaining
+     * @return this button for method chaining
+     */
+    public Button submitAndChain() {
         LogUtils.logAction(toString(), "Submitting form");
         try {
-            element.submit();
+            getElement().submit();
             LogUtils.logSuccess(toString(), "Form submitted successfully");
+            return this;
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to submit form", e);
             throw e;
         }
     }
-
+    
     /**
-     * Focus the button using JavaScript
+     * Focus the button using JavaScript (void version)
      */
     public void focus() {
+        focusAndChain();
+    }
+
+    /**
+     * Focus the button using JavaScript with method chaining
+     * @return this button for method chaining
+     */
+    public Button focusAndChain() {
         LogUtils.logAction(toString(), "Focusing button");
         try {
-            Selenide.executeJavaScript("arguments[0].focus();", element);
+            Selenide.executeJavaScript("arguments[0].focus();", getElement());
             LogUtils.logSuccess(toString(), "Button focused successfully");
+            return this;
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to focus button", e);
             throw e;
         }
-    }
-
-    /**
+    }    /**
      * Press and hold the button using Actions
      */
     public void pressAndHold() {
         LogUtils.logAction(toString(), "Pressing and holding button");
         try {
             new Actions(Selenide.webdriver().object())
-                .clickAndHold(element)
+                .clickAndHold(getElement())
                 .perform();
             LogUtils.logSuccess(toString(), "Button pressed and held successfully");
         } catch (Exception e) {
@@ -80,7 +99,7 @@ public class Button extends BaseElement {
     public void pressSpace() {
         LogUtils.logAction(toString(), "Pressing space key");
         try {
-            element.sendKeys(Keys.SPACE);
+            getElement().sendKeys(Keys.SPACE);
             LogUtils.logSuccess(toString(), "Space key pressed successfully");
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to press space key", e);
@@ -94,7 +113,7 @@ public class Button extends BaseElement {
     public void pressEnter() {
         LogUtils.logAction(toString(), "Pressing enter key");
         try {
-            element.sendKeys(Keys.ENTER);
+            getElement().sendKeys(Keys.ENTER);
             LogUtils.logSuccess(toString(), "Enter key pressed successfully");
         } catch (Exception e) {
             LogUtils.logError(toString(), "Failed to press enter key", e);
